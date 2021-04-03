@@ -1,0 +1,11 @@
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\DAL.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\DAL.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\Consts.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\ModeloDB.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\ModeloDB.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\bin\Debug\Consts.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\obj\Debug\DAL.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\DAL\obj\Debug\DAL.pdb

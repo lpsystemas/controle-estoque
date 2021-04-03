@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0722612A-391C-45D0-8C8D-F0224E98DB67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBackUpBancoDeDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackUpBancoDeDados.Designer.cs">
+      <DependentUpon>frmBackUpBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCategoria.Designer.cs">
+      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroProduto.Designer.cs">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroSubCategoria.Designer.cs">
+      <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroTipoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroTipoPagamento.Designer.cs">
+      <DependentUpon>frmCadastroTipoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroUnidadeDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroUnidadeDeMedida.Designer.cs">
+      <DependentUpon>frmCadastroUnidadeDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracaoBancoDeDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracaoBancoDeDados.Designer.cs">
+      <DependentUpon>frmConfiguracaoBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModeloDeFormularioDeCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModeloDeFormularioDeCadastro.Designer.cs">
+      <DependentUpon>frmModeloDeFormularioDeCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarCategoria.Designer.cs">
+      <DependentUpon>frmPesquisarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarProduto.Designer.cs">
+      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarSubCategoria.Designer.cs">
+      <DependentUpon>frmPesquisarSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarTipoDePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarTipoDePagamento.Designer.cs">
+      <DependentUpon>frmPesquisarTipoDePagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisarUnidadeDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarUnidadeDeMedida.Designer.cs">
+      <DependentUpon>frmPesquisarUnidadeDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBackUpBancoDeDados.pt-BR.resx">
+      <DependentUpon>frmBackUpBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackUpBancoDeDados.resx">
+      <DependentUpon>frmBackUpBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCategoria.resx">
+      <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroProduto.resx">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroSubCategoria.resx">
+      <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroTipoPagamento.resx">
+      <DependentUpon>frmCadastroTipoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroUnidadeDeMedida.resx">
+      <DependentUpon>frmCadastroUnidadeDeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracaoBancoDeDados.resx">
+      <DependentUpon>frmConfiguracaoBancoDeDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModeloDeFormularioDeCadastro.resx">
+      <DependentUpon>frmModeloDeFormularioDeCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarCategoria.resx">
+      <DependentUpon>frmPesquisarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarProduto.resx">
+      <DependentUpon>frmPesquisarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarSubCategoria.resx">
+      <DependentUpon>frmPesquisarSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarTipoDePagamento.resx">
+      <DependentUpon>frmPesquisarTipoDePagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarUnidadeDeMedida.resx">
+      <DependentUpon>frmPesquisarUnidadeDeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38d5416f-6813-4939-9342-f001f64ab3ba}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexaoDB\ModeloDB.csproj">
+      <Project>{9b3f8d76-3465-4978-83c6-b88a5e340587}</Project>
+      <Name>ModeloDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Consts\Consts.csproj">
+      <Project>{30e00c1a-4a6a-4be2-8bcf-9edcfbc05751}</Project>
+      <Name>Consts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cf84dd02-c46b-4155-ac06-aaa4da1436cd}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ferramentas\Ferramentas.csproj">
+      <Project>{5b36c280-af56-4b99-826c-295b7cf42268}</Project>
+      <Name>Ferramentas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avançar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localizar.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar1.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarregaImagem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarregaImagem2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_Image.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

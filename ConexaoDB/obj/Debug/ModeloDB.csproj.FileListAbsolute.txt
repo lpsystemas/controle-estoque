@@ -1,0 +1,5 @@
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\bin\Debug\ModeloDB.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\bin\Debug\ModeloDB.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.csproj.CoreCompileInputs.cache
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.pdb
