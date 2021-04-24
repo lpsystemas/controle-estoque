@@ -52,6 +52,9 @@
       this.pbFotoPrd = new System.Windows.Forms.PictureBox();
       this.btnCarregarFotoPrd = new System.Windows.Forms.Button();
       this.btnRemoverFotoPrd = new System.Windows.Forms.Button();
+      this.btnNovaUndMed = new System.Windows.Forms.Button();
+      this.btnNovaCategoria = new System.Windows.Forms.Button();
+      this.btnNovaSubCategoria = new System.Windows.Forms.Button();
       this.pnDados.SuspendLayout();
       this.pnBotoes.SuspendLayout();
       this.panel1.SuspendLayout();
@@ -60,6 +63,9 @@
       // 
       // pnDados
       // 
+      this.pnDados.Controls.Add(this.btnNovaSubCategoria);
+      this.pnDados.Controls.Add(this.btnNovaCategoria);
+      this.pnDados.Controls.Add(this.btnNovaUndMed);
       this.pnDados.Controls.Add(this.btnRemoverFotoPrd);
       this.pnDados.Controls.Add(this.btnCarregarFotoPrd);
       this.pnDados.Controls.Add(this.panel1);
@@ -252,6 +258,27 @@
       this.btnRemoverFotoPrd.UseVisualStyleBackColor = true;
       this.btnRemoverFotoPrd.Click += new System.EventHandler(this.btnRemoverFotoPrd_Click);
       // 
+      // btnNovaUndMed
+      // 
+      resources.ApplyResources(this.btnNovaUndMed, "btnNovaUndMed");
+      this.btnNovaUndMed.Name = "btnNovaUndMed";
+      this.btnNovaUndMed.UseVisualStyleBackColor = true;
+      this.btnNovaUndMed.Click += new System.EventHandler(this.btnNovaUndMed_Click);
+      // 
+      // btnNovaCategoria
+      // 
+      resources.ApplyResources(this.btnNovaCategoria, "btnNovaCategoria");
+      this.btnNovaCategoria.Name = "btnNovaCategoria";
+      this.btnNovaCategoria.UseVisualStyleBackColor = true;
+      this.btnNovaCategoria.Click += new System.EventHandler(this.btnNovaCategoria_Click);
+      // 
+      // btnNovaSubCategoria
+      // 
+      resources.ApplyResources(this.btnNovaSubCategoria, "btnNovaSubCategoria");
+      this.btnNovaSubCategoria.Name = "btnNovaSubCategoria";
+      this.btnNovaSubCategoria.UseVisualStyleBackColor = true;
+      this.btnNovaSubCategoria.Click += new System.EventHandler(this.btnNovaSubCategoria_Click);
+      // 
       // frmCadastroProduto
       // 
       resources.ApplyResources(this, "$this");
@@ -291,5 +318,8 @@
     private System.Windows.Forms.Button btnRemoverFotoPrd;
     private System.Windows.Forms.Button btnCarregarFotoPrd;
     private System.Windows.Forms.PictureBox pbFotoPrd;
+    private System.Windows.Forms.Button btnNovaSubCategoria;
+    private System.Windows.Forms.Button btnNovaCategoria;
+    private System.Windows.Forms.Button btnNovaUndMed;
   }
 }

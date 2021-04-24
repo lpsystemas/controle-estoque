@@ -194,7 +194,7 @@ namespace GUI
     {
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
 
-      this.ComboBox();
+      this.ConfiguraComboBox();
     }
 
     private void txtValorPagoPrd_KeyPress(object sender, KeyPressEventArgs e)
@@ -339,7 +339,7 @@ namespace GUI
       pbFotoPrd.Image = null;
     }
 
-    private void ComboBox()
+    private void ConfiguraComboBox()
     {
       //ComboBox Categoria
       cboCatPrd.DataSource = QueryDB.Utils.CarregaComboBoxCategoria();
@@ -353,9 +353,9 @@ namespace GUI
         cboSubCatPrd.DisplayMember = "SCAT_NOME";
         cboSubCatPrd.ValueMember = "SCAT_COD";
       }
-      catch
+      catch(Exception)
       {
-
+        throw new WarningException("O combobox de categoria não pode ser vazio. Favor selecionar uma categoria.");
       }
 
       //ComboBox Unidade De Medida
@@ -365,5 +365,32 @@ namespace GUI
     }
 
     #endregion
+
+    private void btnNovaUndMed_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroUnidadeDeMedida frmUmed = new frmCadastroUnidadeDeMedida())
+      {
+        frmUmed.ShowDialog();
+        this.ConfiguraComboBox();
+      }
+    }
+
+    private void btnNovaCategoria_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroCategoria frmCategoria = new frmCadastroCategoria())
+      {
+        frmCategoria.ShowDialog();
+        this.ConfiguraComboBox();
+      }
+    }
+
+    private void btnNovaSubCategoria_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroSubCategoria frmSubCategoria = new frmCadastroSubCategoria())
+      {
+        frmSubCategoria.ShowDialog();
+        this.ConfiguraComboBox();
+      }
+    }
   }
 }

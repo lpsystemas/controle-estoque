@@ -118,10 +118,89 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnNovaSubCategoria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnNovaSubCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 239</value>
+  </data>
+  <data name="btnNovaSubCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnNovaSubCategoria.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="btnNovaSubCategoria.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btnNovaSubCategoria.Name" xml:space="preserve">
+    <value>btnNovaSubCategoria</value>
+  </data>
+  <data name="&gt;&gt;btnNovaSubCategoria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNovaSubCategoria.Parent" xml:space="preserve">
+    <value>pnDados</value>
+  </data>
+  <data name="&gt;&gt;btnNovaSubCategoria.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnNovaCategoria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNovaCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 202</value>
+  </data>
+  <data name="btnNovaCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 23</value>
+  </data>
+  <data name="btnNovaCategoria.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="btnNovaCategoria.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Name" xml:space="preserve">
+    <value>btnNovaCategoria</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Parent" xml:space="preserve">
+    <value>pnDados</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnNovaUndMed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 163</value>
+  </data>
+  <data name="btnNovaUndMed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 23</value>
+  </data>
+  <data name="btnNovaUndMed.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnNovaUndMed.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btnNovaUndMed.Name" xml:space="preserve">
+    <value>btnNovaUndMed</value>
+  </data>
+  <data name="&gt;&gt;btnNovaUndMed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNovaUndMed.Parent" xml:space="preserve">
+    <value>pnDados</value>
+  </data>
+  <data name="&gt;&gt;btnNovaUndMed.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="btnRemoverFotoPrd.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnRemoverFotoPrd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
@@ -134,7 +213,6 @@
   <data name="btnRemoverFotoPrd.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 38</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnRemoverFotoPrd.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
@@ -151,7 +229,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;btnRemoverFotoPrd.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="btnCarregarFotoPrd.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
@@ -181,7 +259,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;btnCarregarFotoPrd.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="pbFotoPrd.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -229,7 +307,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lblFoto.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -256,13 +334,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblFoto.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="lblCategoria.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 188</value>
+    <value>123, 188</value>
   </data>
   <data name="lblCategoria.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
@@ -283,13 +361,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblCategoria.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="lblSubCat.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblSubCat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 226</value>
+    <value>123, 226</value>
   </data>
   <data name="lblSubCat.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
@@ -310,10 +388,10 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblSubCat.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="cboCatPrd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 204</value>
+    <value>126, 204</value>
   </data>
   <data name="cboCatPrd.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
@@ -331,10 +409,10 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;cboCatPrd.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="cboSubCatPrd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 242</value>
+    <value>126, 241</value>
   </data>
   <data name="cboSubCatPrd.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
@@ -352,10 +430,10 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;cboSubCatPrd.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="cboUmedPrd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 164</value>
+    <value>126, 165</value>
   </data>
   <data name="cboUmedPrd.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 21</value>
@@ -373,13 +451,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;cboUmedPrd.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="lblUmed.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblUmed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 148</value>
+    <value>126, 149</value>
   </data>
   <data name="lblUmed.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 13</value>
@@ -400,13 +478,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblUmed.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="txtQuantidadePrd.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 242</value>
   </data>
   <data name="txtQuantidadePrd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 20</value>
+    <value>110, 20</value>
   </data>
   <data name="txtQuantidadePrd.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -424,7 +502,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtQuantidadePrd.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="lblQuantidade.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -451,13 +529,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblQuantidade.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="txtValorVendaPrd.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 204</value>
   </data>
   <data name="txtValorVendaPrd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 20</value>
+    <value>107, 20</value>
   </data>
   <data name="txtValorVendaPrd.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -475,7 +553,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtValorVendaPrd.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="lblValorVenda.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -502,13 +580,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblValorVenda.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="txtValorPagoPrd.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 165</value>
   </data>
   <data name="txtValorPagoPrd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 20</value>
+    <value>107, 20</value>
   </data>
   <data name="txtValorPagoPrd.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -526,7 +604,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtValorPagoPrd.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="lblValorPago.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -553,7 +631,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblValorPago.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="txtDescricaoPrd.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 101</value>
@@ -577,7 +655,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtDescricaoPrd.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="lblDescricao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -604,7 +682,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblDescricao.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="txtNomePrd.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 62</value>
@@ -625,7 +703,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtNomePrd.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="txtCodigoPrd.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -649,7 +727,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtCodigoPrd.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="lblNome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -676,7 +754,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblNome.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="lblCodigo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -703,7 +781,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblCodigo.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="pnDados.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 5</value>
