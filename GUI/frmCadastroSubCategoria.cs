@@ -49,10 +49,7 @@ namespace GUI
     private void frmCadastroSubCategoria_Load(object sender, EventArgs e)
     {
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-
-      cbCategoria.DataSource = QueryDB.CarregarCategoria();
-      cbCategoria.DisplayMember = "CAT_NOME";
-      cbCategoria.ValueMember = "CAT_COD";
+      ConfiguraComboBoxCategoria();
     }
 
     private void btnInserir_Click(object sender, EventArgs e)
@@ -158,6 +155,21 @@ namespace GUI
       txtCodigoSubCategoria.Clear();
       txtNomeSubCategoria.Clear();
     }
+    private void ConfiguraComboBoxCategoria()
+    {
+      cbCategoria.DataSource = QueryDB.CarregarCategoria();
+      cbCategoria.DisplayMember = "CAT_NOME";
+      cbCategoria.ValueMember = "CAT_COD";
+    }
     #endregion
+
+    private void btnNovaCategoria_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroCategoria frmCategoria = new frmCadastroCategoria())
+      {
+        frmCategoria.ShowDialog();
+        this.ConfiguraComboBoxCategoria();
+      }
+    }
   }
 }

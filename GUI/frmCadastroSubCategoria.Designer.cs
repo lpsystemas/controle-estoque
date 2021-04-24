@@ -35,12 +35,14 @@
       this.txtNomeSubCategoria = new System.Windows.Forms.TextBox();
       this.lblCategoria = new System.Windows.Forms.Label();
       this.cbCategoria = new System.Windows.Forms.ComboBox();
+      this.btnNovaCategoria = new System.Windows.Forms.Button();
       this.pnDados.SuspendLayout();
       this.pnBotoes.SuspendLayout();
       this.SuspendLayout();
       // 
       // pnDados
       // 
+      this.pnDados.Controls.Add(this.btnNovaCategoria);
       this.pnDados.Controls.Add(this.cbCategoria);
       this.pnDados.Controls.Add(this.lblCategoria);
       this.pnDados.Controls.Add(this.txtNomeSubCategoria);
@@ -103,6 +105,13 @@
       resources.ApplyResources(this.cbCategoria, "cbCategoria");
       this.cbCategoria.Name = "cbCategoria";
       // 
+      // btnNovaCategoria
+      // 
+      resources.ApplyResources(this.btnNovaCategoria, "btnNovaCategoria");
+      this.btnNovaCategoria.Name = "btnNovaCategoria";
+      this.btnNovaCategoria.UseVisualStyleBackColor = true;
+      this.btnNovaCategoria.Click += new System.EventHandler(this.btnNovaCategoria_Click);
+      // 
       // frmCadastroSubCategoria
       // 
       resources.ApplyResources(this, "$this");
@@ -123,5 +132,6 @@
     private System.Windows.Forms.TextBox txtCodigoSubCategoria;
     private System.Windows.Forms.Label lblCodigoSubCategoria;
     private System.Windows.Forms.ComboBox cbCategoria;
+    private System.Windows.Forms.Button btnNovaCategoria;
   }
 }

@@ -118,13 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnNovaCategoria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 178</value>
+  </data>
+  <data name="btnNovaCategoria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnNovaCategoria.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnNovaCategoria.Text" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Name" xml:space="preserve">
+    <value>btnNovaCategoria</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.Parent" xml:space="preserve">
+    <value>pnDados</value>
+  </data>
+  <data name="&gt;&gt;btnNovaCategoria.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="cbCategoria.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 178</value>
   </data>
   <data name="cbCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>354, 28</value>
+    <value>354, 21</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -138,7 +162,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;cbCategoria.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblCategoria.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -154,7 +178,7 @@
     <value>11, 155</value>
   </data>
   <data name="lblCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
+    <value>65, 13</value>
   </data>
   <data name="lblCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -172,13 +196,13 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblCategoria.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtNomeSubCategoria.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 110</value>
   </data>
   <data name="txtNomeSubCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>720, 26</value>
+    <value>720, 20</value>
   </data>
   <data name="txtNomeSubCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -193,7 +217,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtNomeSubCategoria.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblNomeSubCategoria.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -205,7 +229,7 @@
     <value>11, 87</value>
   </data>
   <data name="lblNomeSubCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
+    <value>43, 13</value>
   </data>
   <data name="lblNomeSubCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -223,7 +247,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblNomeSubCategoria.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtCodigoSubCategoria.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -232,7 +256,7 @@
     <value>15, 41</value>
   </data>
   <data name="txtCodigoSubCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
+    <value>100, 20</value>
   </data>
   <data name="txtCodigoSubCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -247,7 +271,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;txtCodigoSubCategoria.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblCodigoSubCategoria.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -259,7 +283,7 @@
     <value>11, 18</value>
   </data>
   <data name="lblCodigoSubCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
+    <value>50, 13</value>
   </data>
   <data name="lblCodigoSubCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -277,7 +301,7 @@
     <value>pnDados</value>
   </data>
   <data name="&gt;&gt;lblCodigoSubCategoria.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;pnDados.Name" xml:space="preserve">
     <value>pnDados</value>
@@ -379,10 +403,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>778, 544</value>
+    <value>519, 354</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Cadastro de SubCategoria</value>
