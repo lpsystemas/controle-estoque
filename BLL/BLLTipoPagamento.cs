@@ -35,7 +35,7 @@ namespace BLL
     public void IncluirTipoDePagamento(ModeloTipoPagamento modelo)
     {
       if (modelo.TPagtoNome.Trim().Length == 0)
-        throw new Exception("O nome da categoria é obrigatória");
+        throw new Exception("O nome do tipo de pagamento é obrigatório");
 
       DALObj.Incluir(modelo);
     }
@@ -43,10 +43,10 @@ namespace BLL
     public void AlterarTipoDePagamento(ModeloTipoPagamento modelo)
     {
       if (modelo.TPagtoCod <= 0)
-        throw new Exception("O Código da categoria é obrigatória");
+        throw new Exception("O código do tipo de pagamento é obrigatório");
 
       if (modelo.TPagtoNome.Trim().Length == 0)
-        throw new Exception("O nome da categoria é obrigatória");
+        throw new Exception("O nome do tipo de pagamento é obrigatório");
 
       DALObj.Alterar(modelo);
     }
