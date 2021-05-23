@@ -15,5 +15,11 @@ namespace Consts
       Alterar_Excluir_Cancelar = 3
     }
 
+    public enum TipoClienteFornecedor
+    {
+      Pessoa_Fisica = 0,
+      Pessoa_Juridica = 1
+    }
+
   }
 }

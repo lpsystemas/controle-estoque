@@ -3,3 +3,7 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\bin\Debug\ModeloDB.p
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.csproj.CoreCompileInputs.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\bin\Debug\Consts.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\bin\Debug\Consts.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.csprojAssemblyReference.cache
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\ConexaoDB\obj\Debug\ModeloDB.csproj.CopyComplete

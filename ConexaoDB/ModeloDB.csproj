@@ -47,11 +47,18 @@
     <Compile Include="ITipoPagamento.cs" />
     <Compile Include="IUnidadeDeMedida.cs" />
     <Compile Include="ModeloCategoria.cs" />
+    <Compile Include="ModeloCliente.cs" />
     <Compile Include="ModeloProduto.cs" />
     <Compile Include="ModeloSubCategoria.cs" />
     <Compile Include="ModeloTipoPagamento.cs" />
     <Compile Include="ModeloUnidadeDeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consts\Consts.csproj">
+      <Project>{30e00c1a-4a6a-4be2-8bcf-9edcfbc05751}</Project>
+      <Name>Consts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
