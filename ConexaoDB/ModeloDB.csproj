@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICategoria.cs" />
+    <Compile Include="ICliente.cs" />
     <Compile Include="IProduto.cs" />
     <Compile Include="ISubCategoria.cs" />
     <Compile Include="ITipoPagamento.cs" />
