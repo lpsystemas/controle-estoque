@@ -8,6 +8,7 @@ namespace ModeloDB
     void Alterar(ModeloCliente modelo);
     void Excluir(int codigo);
     DataTable Localizar(string nome);
-    ModeloCliente CarregaCliente(int codigo);
+    ModeloCliente CarregaClientePorCodigo(int codigo);
+    ModeloCliente CarregaClientePorCpfCnpj(string cpfCnpj);
   }
 }

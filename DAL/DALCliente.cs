@@ -60,8 +60,7 @@ namespace DAL
         conexao.Desconectar();
       }
     }
-
-    public ModeloCliente CarregaCliente(int codigo)
+    public ModeloCliente CarregaClientePorCodigo(int codigo)
     {
       ModeloCliente modelo_Cliente = new ModeloCliente();
 
@@ -111,15 +110,68 @@ namespace DAL
           modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
           modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
           modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
-
-
         }
 
         conexao.Desconectar();
         return modelo_Cliente;
       }
     }
+    public ModeloCliente CarregaClientePorCpfCnpj(string cpfCnpj)
+    {
+      ModeloCliente modelo_Cliente = new ModeloCliente();
 
+      using (SqlCommand command = new SqlCommand())
+      {
+        command.Connection = conexao.ObjetoConexao;
+
+        command.CommandText = @"SELECT CLIENTE.CLI_COD,
+                                       CLIENTE.CLI_NOME,
+                                       CLIENTE.CLI_CPFCNPJ,
+                                       CLIENTE.CLI_RGIE,
+                                       CLIENTE.CLI_RSOCIAL,
+                                       CLIENTE.CLI_TIPO,
+                                       CLIENTE.CLI_CEP,
+                                       CLIENTE.CLI_ENDERECO,
+                                       CLIENTE.CLI_BAIRRO,
+                                       CLIENTE.CLI_FONE,
+                                       CLIENTE.CLI_CEL,
+                                       CLIENTE.CLI_EMAIL,
+                                       CLIENTE.CLI_ENDNUMERO,
+                                       CLIENTE.CLI_CIDADE,
+                                       CLIENTE.CLI_ESTADO
+	                                     FROM CLIENTE (NOLOCK)
+                                 WHERE CLIENTE.CLI_CPFCNPJ = @CPFCNPJ";
+
+        command.Parameters.AddWithValue("@CPFCNPJ", cpfCnpj);
+
+        conexao.Conectar();
+        SqlDataReader registro = command.ExecuteReader();
+
+        if (registro.HasRows)
+        {
+          registro.Read();
+
+          modelo_Cliente.CliCod = Convert.ToInt32(registro["CLI_COD"]);
+          modelo_Cliente.CliNome = Convert.ToString(registro["CLI_NOME"]);
+          modelo_Cliente.CliCpfCnpj = Convert.ToString(registro["CLI_CPFCNPJ"]);
+          modelo_Cliente.CliRgInscricaoEstadual = Convert.ToString(registro["CLI_RGIE"]);
+          modelo_Cliente.CliRazaoSocial = Convert.ToString(registro["CLI_RSOCIAL"]);
+          modelo_Cliente.CliTipo = Convert.ToInt32(registro["CLI_TIPO"]);
+          modelo_Cliente.CliCep = Convert.ToString(registro["CLI_CEP"]);
+          modelo_Cliente.CliEndereco = Convert.ToString(registro["CLI_ENDERECO"]);
+          modelo_Cliente.CliBairro = Convert.ToString(registro["CLI_BAIRRO"]);
+          modelo_Cliente.CliTelefone = Convert.ToString(registro["CLI_FONE"]);
+          modelo_Cliente.CliCelular = Convert.ToString(registro["CLI_CEL"]);
+          modelo_Cliente.CliEmail = Convert.ToString(registro["CLI_EMAIL"]);
+          modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
+          modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
+          modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
+        }
+
+        conexao.Desconectar();
+        return modelo_Cliente;
+      }
+    }
     public void Excluir(int codigo)
     {
       using (SqlCommand command = new SqlCommand())
@@ -135,7 +187,6 @@ namespace DAL
         conexao.Desconectar();
       }
     }
-
     public void Incluir(ModeloCliente modelo)
     {
       using (SqlCommand command = new SqlCommand())
@@ -144,6 +195,7 @@ namespace DAL
 
         command.CommandText = @"INSERT INTO CLIENTE(CLI_NOME, CLI_CPFCNPJ, CLI_RGIE, CLI_RSOCIAL, CLI_TIPO, CLI_CEP, CLI_ENDERECO, 
                                                     CLI_BAIRRO, CLI_FONE, CLI_CEL, CLI_EMAIL, CLI_ENDNUMERO, CLI_CIDADE, CLI_ESTADO) 
+                                             
                                              VALUES(@NOME, @CPFCNPJ, @RGIE, @RSOCIAL, @TIPO, @CEP, @ENDERECO, @BAIRRO, @FONE, @CEL,
                                                     @EMAIL, @ENDNUMERO, @CIDADE, @ESTADO); SELECT @@IDENTITY;";
 
@@ -167,7 +219,6 @@ namespace DAL
         conexao.Desconectar();
       }
     }
-
     public DataTable Localizar(string nome)
     {
       using (DataTable tabela = new DataTable())
