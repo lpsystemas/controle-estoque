@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-  class DALCliente : ICliente
+  public class DALCliente : ICliente
   {
     private DALConexao conexao;
 
