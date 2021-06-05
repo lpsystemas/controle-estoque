@@ -173,46 +173,46 @@
     <value>Cadastro</value>
   </data>
   <data name="categoriaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="categoriaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Categoria</value>
   </data>
   <data name="subCategoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="subCategoriaToolStripMenuItem.Text" xml:space="preserve">
     <value>SubCategoria</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Unidade de Medida</value>
   </data>
   <data name="tPagtotoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="tPagtotoolStripMenuItem1.Text" xml:space="preserve">
     <value>Tipo de Pagamento</value>
   </data>
   <data name="produtoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="produtoToolStripMenuItem1.Text" xml:space="preserve">
     <value>Produto</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>174, 6</value>
   </data>
   <data name="clienteToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="clienteToolStripMenuItem1.Text" xml:space="preserve">
     <value>Cliente</value>
   </data>
   <data name="fornecedorToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="fornecedorToolStripMenuItem1.Text" xml:space="preserve">
     <value>Fornecedor</value>
@@ -405,6 +405,12 @@
   <data name="&gt;&gt;unidadeDeMedidaToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tPagtotoolStripMenuItem1.Name" xml:space="preserve">
+    <value>tPagtotoolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;tPagtotoolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;produtoToolStripMenuItem1.Name" xml:space="preserve">
     <value>produtoToolStripMenuItem1</value>
   </data>
@@ -487,12 +493,6 @@
     <value>sobreToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;sobreToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tPagtotoolStripMenuItem1.Name" xml:space="preserve">
-    <value>tPagtotoolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;tPagtotoolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -9,10 +9,6 @@ namespace GUI
 {
   public partial class frmCadastroCategoria : GUI.frmModeloDeFormularioDeCadastro
   {
-    private const string Inserir = "Inserir";
-    private const string Alterar = "Alterar";
-    private const string Excluir = "Excluir";
-
     public DALConexao Conexao
     {
       get

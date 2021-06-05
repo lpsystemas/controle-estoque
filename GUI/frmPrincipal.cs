@@ -173,5 +173,13 @@ namespace GUI
         frmTipoPagto.ShowDialog();
       }
     }
+
+    private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroCliente frmCliente = new frmCadastroCliente())
+      {
+        frmCliente.ShowDialog();
+      }
+    }
   }
 }

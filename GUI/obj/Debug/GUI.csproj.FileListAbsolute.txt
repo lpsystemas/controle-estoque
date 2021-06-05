@@ -28,10 +28,11 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmBackUpBan
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CopyComplete
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\GUI.exe.config
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\GUI.exe
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\GUI.pdb
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\pt-BR\GUI.resources.dll
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\pt-BR\GUI.resources.dll
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.exe
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroCliente.resources
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe.config
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\pt-BR\Sistema de Controle De Estoque.resources.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\pt-BR\Sistema de Controle De Estoque.resources.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\Sistema de Controle De Estoque.exe
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\Sistema de Controle De Estoque.pdb

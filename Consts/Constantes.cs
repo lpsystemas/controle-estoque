@@ -8,6 +8,10 @@ namespace Consts
 {
   public class Constantes
   {
+    public const string Inserir = "Inserir";
+    public const string Alterar = "Alterar";
+    public const string Excluir = "Excluir";
+
     public enum OperacaoFormulario
     {
       Inserir_Localizar = 1,

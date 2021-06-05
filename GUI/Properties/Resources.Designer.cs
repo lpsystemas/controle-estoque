@@ -171,6 +171,42 @@ namespace GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CPF:.
+        /// </summary>
+        internal static string SCaptionCPF {
+            get {
+                return ResourceManager.GetString("SCaptionCPF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CNPJ:.
+        /// </summary>
+        internal static string SCaptionCPNJ {
+            get {
+                return ResourceManager.GetString("SCaptionCPNJ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inscrição Estadual:.
+        /// </summary>
+        internal static string SCaptionInscEstadual {
+            get {
+                return ResourceManager.GetString("SCaptionInscEstadual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RG:.
+        /// </summary>
+        internal static string SCaptionRG {
+            get {
+                return ResourceManager.GetString("SCaptionRG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Favor informar o nome do banco de dados..
         /// </summary>
         internal static string SInformarNomeBancoArquivoConfig {

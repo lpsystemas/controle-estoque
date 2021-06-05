@@ -169,4 +169,16 @@
   <data name="SInformarServidorArquivoConfig" xml:space="preserve">
     <value>Favor informar o nome do Servidor de banco de dados.</value>
   </data>
+  <data name="SCaptionCPF" xml:space="preserve">
+    <value>CPF:</value>
+  </data>
+  <data name="SCaptionCPNJ" xml:space="preserve">
+    <value>CNPJ:</value>
+  </data>
+  <data name="SCaptionInscEstadual" xml:space="preserve">
+    <value>Inscrição Estadual:</value>
+  </data>
+  <data name="SCaptionRG" xml:space="preserve">
+    <value>RG:</value>
+  </data>
 </root>

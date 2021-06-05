@@ -43,6 +43,7 @@
       this.categoriaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.subCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.unidadeDeMedidaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+      this.tPagtotoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.produtoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
       this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@
       this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.tPagtotoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.menuStripPrincipal.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -127,6 +127,7 @@
       // 
       this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
       resources.ApplyResources(this.clienteToolStripMenuItem, "clienteToolStripMenuItem");
+      this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
       // 
       // fornecedorToolStripMenuItem
       // 
@@ -164,6 +165,12 @@
       this.unidadeDeMedidaToolStripMenuItem1.Name = "unidadeDeMedidaToolStripMenuItem1";
       resources.ApplyResources(this.unidadeDeMedidaToolStripMenuItem1, "unidadeDeMedidaToolStripMenuItem1");
       this.unidadeDeMedidaToolStripMenuItem1.Click += new System.EventHandler(this.unidadeDeMedidaToolStripMenuItem1_Click);
+      // 
+      // tPagtotoolStripMenuItem1
+      // 
+      this.tPagtotoolStripMenuItem1.Name = "tPagtotoolStripMenuItem1";
+      resources.ApplyResources(this.tPagtotoolStripMenuItem1, "tPagtotoolStripMenuItem1");
+      this.tPagtotoolStripMenuItem1.Click += new System.EventHandler(this.tPagtotoolStripMenuItem1_Click);
       // 
       // produtoToolStripMenuItem1
       // 
@@ -247,12 +254,6 @@
       // 
       this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
       resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
-      // 
-      // tPagtotoolStripMenuItem1
-      // 
-      this.tPagtotoolStripMenuItem1.Name = "tPagtotoolStripMenuItem1";
-      resources.ApplyResources(this.tPagtotoolStripMenuItem1, "tPagtotoolStripMenuItem1");
-      this.tPagtotoolStripMenuItem1.Click += new System.EventHandler(this.tPagtotoolStripMenuItem1_Click);
       // 
       // frmPrincipal
       // 
