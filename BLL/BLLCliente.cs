@@ -49,13 +49,13 @@ namespace BLL
         throw new Exception("O nome do Cliente é obrigatório");
 
       if (modelo.CliCpfCnpj.Trim().Length == 0)
-        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");
+        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");  
 
-      if (modelo.CliRgInscricaoEstadual.Trim().Length == 0)
-        throw new Exception("O campo RG/IE do cliente é obrigatório");
-
-      if (modelo.CliTelefone.Trim().Length == 0 || modelo.CliCelular.Trim().Length == 0)
+      if (modelo.CliCelular.Trim().Length == 0)
         throw new Exception("O campo Telefone/Celular do Cliente é obrigatório");
+
+      if (modelo.CliEmail.Trim().Length == 0)
+        throw new Exception("O campo E-mail do Cliente é obrigatório");
 
       DALObj.Incluir(modelo);
     }

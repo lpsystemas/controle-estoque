@@ -1,7 +1,9 @@
 ﻿using BLL;
 using DAL;
 using GUI.Properties;
+using ModeloDB;
 using System;
+using System.Windows.Forms;
 using static Consts.Constantes;
 
 namespace GUI
@@ -63,7 +65,25 @@ namespace GUI
 
     private void btnLocalizar_Click(object sender, EventArgs e)
     {
+      //using (frmPesquisarCategoria pesquisar = new frmPesquisarCategoria())
+      //{
+      //  pesquisar.ShowDialog();
 
+      //  if (pesquisar.codigo != 0)
+      //  {
+      //    ModeloCategoria modeloCategoria = QueryDB.CarregaCategoria(pesquisar.codigo);
+
+      //    txtCodigo.Text = Convert.ToString(modeloCategoria.CatCod);
+      //    txtNome.Text = modeloCategoria.CatNome;
+
+      //    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+      //  }
+      //  else
+      //  {
+      //    this.LimparDadosDaTela();
+      //    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+      //  }
+      //}
     }
 
     private void btnAlterar_Click(object sender, EventArgs e)
@@ -75,12 +95,71 @@ namespace GUI
 
     private void btnExcluir_Click(object sender, EventArgs e)
     {
+      try
+      {
+        DialogResult exclusao = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
 
+        if (exclusao.ToString() == "Yes")
+        {
+          QueryDB.ExcluirCliente(Convert.ToInt32(txtCodCliente.Text));
+
+          LimparDadosDaTela();
+          AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+        }
+      }
+      catch
+      {
+        MessageBox.Show("Impossivél excluir o registro. \nO registro está sendo utilizado em outro local.");
+        this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+      }
     }
 
     private void btnSalvar_Click(object sender, EventArgs e)
     {
+      try
+      {
+        ModeloCliente modeloCliente = new ModeloCliente();
 
+        modeloCliente.CliNome = txtNomeCliente.Text;
+        modeloCliente.CliRazaoSocial = txtRazaoSocial.Text;
+        modeloCliente.CliCpfCnpj = txtCpfCnpj.Text;
+        modeloCliente.CliRgInscricaoEstadual = txtRgInscEstadual.Text;
+        modeloCliente.CliCep = txtCEP.Text;
+        modeloCliente.CliEndereco = txtEndereco.Text;
+        modeloCliente.CliEndNumero = txtNumero.Text;
+        modeloCliente.CliBairro = txtBairro.Text;
+        modeloCliente.CliCidade = txtCidade.Text;
+        modeloCliente.CliEstado = txtEstadoUF.Text;
+        modeloCliente.CliTelefone = txtTelefone.Text;
+        modeloCliente.CliCelular = txtCelular.Text;
+        modeloCliente.CliEmail = txtEmail.Text;
+
+        if (rbTipoFisica.Checked)
+          modeloCliente.CliTipo = Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica);
+        else
+          modeloCliente.CliTipo = Convert.ToInt32(TipoClienteFornecedor.Pessoa_Juridica);
+    
+
+        if (this.operacao == Inserir)
+        {
+          QueryDB.IncluirCliente(modeloCliente);
+          MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloCliente.CliCod.ToString());
+        }
+        else
+        {
+          modeloCliente.CliCod = Convert.ToInt32(txtCodCliente.Text);
+
+          QueryDB.AlterarCliente(modeloCliente);
+          MessageBox.Show("Cadastro alterado com sucesso!!");
+        }
+
+        this.LimparDadosDaTela();
+        this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+      }
+      catch (Exception Error)
+      {
+        MessageBox.Show(Error.Message);
+      }
     }
 
     private void btnCancelar_Click(object sender, EventArgs e)
@@ -92,7 +171,7 @@ namespace GUI
     private void frmCadastroCliente_Load(object sender, EventArgs e)
     {
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-      ConfiguraVisibilidade();
+      ConfiguraVisibilidadeCamposNaTela();
     }
 
     private void rbTipoFisica_CheckedChanged(object sender, EventArgs e)
@@ -116,8 +195,10 @@ namespace GUI
       }
     }
 
-    private void ConfiguraVisibilidade()
+    private void ConfiguraVisibilidadeCamposNaTela()
     {
+      txtCodCliente.Enabled = false;
+
       lblRazaoSocial.Visible = false;
       txtRazaoSocial.Visible = false;
     }
