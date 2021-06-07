@@ -206,13 +206,19 @@ namespace GUI
 
     private void txtCEP_Leave(object sender, EventArgs e)
     {
-      if(BuscaEndereco.verificaCEP(txtCEP.Text))
+      if (BuscaEndereco.verificaCEP(txtCEP.Text))
       {
         txtEndereco.Text = BuscaEndereco.endereco;
         txtBairro.Text = BuscaEndereco.bairro;
         txtCidade.Text = BuscaEndereco.cidade;
         txtEstadoUF.Text = BuscaEndereco.estado;
       }
+      else
+      {
+        MessageBox.Show("CEP não encontrado");
+        txtCEP.Focus();
+      }
+        
     }
   }
 }

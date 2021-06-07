@@ -4,3 +4,6 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\obj\Debug\Ferramen
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.CoreCompileInputs.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\bin\Debug\Consts.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\bin\Debug\Consts.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Ferramentas\obj\Debug\Ferramentas.csproj.CopyComplete

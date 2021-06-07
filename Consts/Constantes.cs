@@ -12,6 +12,8 @@ namespace Consts
     public const string Alterar = "Alterar";
     public const string Excluir = "Excluir";
 
+    public const string CepNaoEncontrado = "0";
+    public const string CepEncontrado = "1";
     public enum OperacaoFormulario
     {
       Inserir_Localizar = 1,
@@ -24,6 +26,5 @@ namespace Consts
       Pessoa_Fisica = 0,
       Pessoa_Juridica = 1
     }
-
   }
 }
