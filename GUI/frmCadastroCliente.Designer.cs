@@ -269,6 +269,7 @@ namespace GUI
       // 
       resources.ApplyResources(this.txtCEP, "txtCEP");
       this.txtCEP.Name = "txtCEP";
+      this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
       // 
       // lblCEP
       // 

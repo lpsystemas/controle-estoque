@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Ferramentas
 {
     public class BuscaEndereco
     {
-        static public String cep = "";
-        static public String cidade = "";
-        static public String estado = "";
-        static public String endereco = "";
-        static public String bairro = "";
+        static public String cep = string.Empty;
+        static public String cidade = string.Empty;
+        static public String estado = string.Empty;
+        static public String endereco = string.Empty;
+        static public String bairro = string.Empty;
 
         public static Boolean verificaCEP(String CEP)
         {
@@ -32,11 +29,11 @@ namespace Ferramentas
             }
             catch (Exception ex)
             {
-                endereco = "";
-                bairro = "";
-                cidade = "";
-                estado = "";
-                cep = "";
+                endereco = string.Empty;
+                bairro = string.Empty;
+                cidade = string.Empty;
+                estado = string.Empty;
+                cep = string.Empty;
             }
             return flag;
         }

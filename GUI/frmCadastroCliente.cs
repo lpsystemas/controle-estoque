@@ -5,6 +5,7 @@ using ModeloDB;
 using System;
 using System.Windows.Forms;
 using static Consts.Constantes;
+using Ferramentas;
 
 namespace GUI
 {
@@ -201,6 +202,17 @@ namespace GUI
 
       lblRazaoSocial.Visible = false;
       txtRazaoSocial.Visible = false;
+    }
+
+    private void txtCEP_Leave(object sender, EventArgs e)
+    {
+      if(BuscaEndereco.verificaCEP(txtCEP.Text))
+      {
+        txtEndereco.Text = BuscaEndereco.endereco;
+        txtBairro.Text = BuscaEndereco.bairro;
+        txtCidade.Text = BuscaEndereco.cidade;
+        txtEstadoUF.Text = BuscaEndereco.estado;
+      }
     }
   }
 }
