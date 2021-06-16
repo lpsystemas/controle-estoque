@@ -52,7 +52,7 @@ namespace BLL
         throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");  
 
       if (modelo.CliCelular.Trim().Length == 0)
-        throw new Exception("O campo Telefone/Celular do Cliente é obrigatório");
+        throw new Exception("O campo Celular do Cliente é obrigatório");
 
       if (modelo.CliEmail.Trim().Length == 0)
         throw new Exception("O campo E-mail do Cliente é obrigatório");
@@ -74,8 +74,8 @@ namespace BLL
       if (modelo.CliRgInscricaoEstadual.Trim().Length == 0)
         throw new Exception("O campo RG/IE do cliente é obrigatório");
 
-      if (modelo.CliTelefone.Trim().Length == 0 || modelo.CliCelular.Trim().Length == 0)
-        throw new Exception("O campo Telefone/Celular do Cliente é obrigatório");
+      if (modelo.CliCelular.Trim().Length == 0)
+        throw new Exception("O campo Celular do Cliente é obrigatório");
 
       DALObj.Alterar(modelo);
     }
