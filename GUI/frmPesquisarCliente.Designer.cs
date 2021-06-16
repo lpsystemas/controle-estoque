@@ -53,6 +53,7 @@ namespace GUI
       this.dgvDados.RowHeadersVisible = false;
       this.dgvDados.RowTemplate.Height = 28;
       this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+      this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
       // 
       // btnLocalizar
       // 

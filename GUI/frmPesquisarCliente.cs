@@ -42,6 +42,7 @@ namespace GUI
     {
       BackColor = Color.LightBlue;
       btnLocalizar.Enabled = false;
+      rbNomeCliente.Checked = true;
 
       btnLocalizar_Click(sender, e);
       ConfiguraColunasGrid();

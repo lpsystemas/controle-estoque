@@ -46,6 +46,7 @@ namespace GUI
     private void frmPesquisarProduto_Load(object sender, EventArgs e)
     {
       BackColor = Color.LightBlue;
+
       btnLocalizar_Click(sender, e);
       ConfiguraColunasGrid();
       ConfiguraVisibilidadeGrid();
@@ -115,7 +116,6 @@ namespace GUI
       dgvDados.Columns[12].Width = 100;
       dgvDados.Columns[12].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
     }
-
     public void ConfiguraVisibilidadeGrid()
     {
       dgvDados.Columns["PRO_FOTO"].Visible = false;

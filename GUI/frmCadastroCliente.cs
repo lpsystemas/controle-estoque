@@ -66,25 +66,43 @@ namespace GUI
 
     private void btnLocalizar_Click(object sender, EventArgs e)
     {
-      //using (frmPesquisarCategoria pesquisar = new frmPesquisarCategoria())
-      //{
-      //  pesquisar.ShowDialog();
+      using (frmPesquisarCliente pesquisar = new frmPesquisarCliente())
+      {
+        pesquisar.ShowDialog();
 
-      //  if (pesquisar.codigo != 0)
-      //  {
-      //    ModeloCategoria modeloCategoria = QueryDB.CarregaCategoria(pesquisar.codigo);
+        if (pesquisar.codigo != 0)
+        {
+          ModeloCliente modeloCliente = QueryDB.CarregaCliente(pesquisar.codigo);
 
-      //    txtCodigo.Text = Convert.ToString(modeloCategoria.CatCod);
-      //    txtNome.Text = modeloCategoria.CatNome;
+          txtCodCliente.Text = Convert.ToString(modeloCliente.CliCod);
+          txtNomeCliente.Text = modeloCliente.CliNome;
 
-      //    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
-      //  }
-      //  else
-      //  {
-      //    this.LimparDadosDaTela();
-      //    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-      //  }
-      //}
+          if (modeloCliente.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica))
+            rbTipoFisica.Checked = true;
+          else
+            rbTipoJuridica.Checked = true;
+
+          txtRazaoSocial.Text = modeloCliente.CliRazaoSocial;
+          txtCpfCnpj.Text = modeloCliente.CliCpfCnpj;
+          txtRgInscEstadual.Text = modeloCliente.CliRgInscricaoEstadual;
+          txtCEP.Text = modeloCliente.CliCep;
+          txtEndereco.Text = modeloCliente.CliEndereco;
+          txtNumero.Text = modeloCliente.CliEndNumero;
+          txtBairro.Text = modeloCliente.CliBairro;
+          txtCidade.Text = modeloCliente.CliCidade;
+          txtEstadoUF.Text = modeloCliente.CliEstado;
+          txtTelefone.Text = modeloCliente.CliTelefone;
+          txtCelular.Text = modeloCliente.CliCelular;
+          txtEmail.Text = modeloCliente.CliEmail;
+
+          this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+        }
+        else
+        {
+          this.LimparDadosDaTela();
+          this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+        }
+      }
     }
 
     private void btnAlterar_Click(object sender, EventArgs e)
