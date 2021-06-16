@@ -124,6 +124,12 @@
     <Compile Include="frmPesquisarCategoria.Designer.cs">
       <DependentUpon>frmPesquisarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPesquisarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisarCliente.Designer.cs">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPesquisarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisarCategoria.resx">
       <DependentUpon>frmPesquisarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisarCliente.resx">
+      <DependentUpon>frmPesquisarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPesquisarProduto.resx">
       <DependentUpon>frmPesquisarProduto.cs</DependentUpon>

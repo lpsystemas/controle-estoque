@@ -122,46 +122,46 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="categoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="categoriaToolStripMenuItem.Text" xml:space="preserve">
     <value>Categoria</value>
   </data>
   <data name="subToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="subToolStripMenuItem.Text" xml:space="preserve">
     <value>SubCategoria</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem.Text" xml:space="preserve">
     <value>Unidade de Medida</value>
   </data>
   <data name="tipoDePagamentotoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="tipoDePagamentotoolStripMenuItem1.Text" xml:space="preserve">
     <value>Tipo de Pagamento</value>
   </data>
   <data name="produtoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="produtoToolStripMenuItem.Text" xml:space="preserve">
     <value>Produto</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>174, 6</value>
   </data>
   <data name="clienteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="clienteToolStripMenuItem.Text" xml:space="preserve">
     <value>Cliente</value>
   </data>
   <data name="fornecedorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>177, 22</value>
   </data>
   <data name="fornecedorToolStripMenuItem.Text" xml:space="preserve">
     <value>Fornecedor</value>
@@ -173,46 +173,46 @@
     <value>Cadastro</value>
   </data>
   <data name="categoriaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="categoriaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Categoria</value>
   </data>
   <data name="subCategoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="subCategoriaToolStripMenuItem.Text" xml:space="preserve">
     <value>SubCategoria</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="unidadeDeMedidaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Unidade de Medida</value>
   </data>
   <data name="tPagtotoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="tPagtotoolStripMenuItem1.Text" xml:space="preserve">
     <value>Tipo de Pagamento</value>
   </data>
   <data name="produtoToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="produtoToolStripMenuItem1.Text" xml:space="preserve">
     <value>Produto</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="clienteToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="clienteToolStripMenuItem1.Text" xml:space="preserve">
     <value>Cliente</value>
   </data>
   <data name="fornecedorToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="fornecedorToolStripMenuItem1.Text" xml:space="preserve">
     <value>Fornecedor</value>

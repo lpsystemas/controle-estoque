@@ -26,5 +26,10 @@ namespace Consts
       Pessoa_Fisica = 0,
       Pessoa_Juridica = 1
     }
+    public enum TipoPesquisaCliente
+    {
+      Nome = 0,
+      CPF_CNPJ = 1
+    }
   }
 }

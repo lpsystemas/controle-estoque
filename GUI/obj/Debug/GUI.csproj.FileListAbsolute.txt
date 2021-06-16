@@ -1,3 +1,7 @@
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe.config
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\pt-BR\Sistema de Controle De Estoque.resources.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\BLL.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Consts.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\DAL.dll
@@ -11,6 +15,7 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Ferramentas.pdb
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmBackUpBancoDeDados.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroCategoria.resources
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroCliente.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroProduto.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroTipoPagamento.resources
@@ -18,6 +23,7 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroU
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmConfiguracaoBancoDeDados.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmModeloDeFormularioDeCadastro.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmPesquisarCategoria.resources
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmPesquisarCliente.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmPesquisarProduto.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmPesquisarSubCategoria.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmPesquisarTipoDePagamento.resources
@@ -27,12 +33,7 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.Properties.R
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmBackUpBancoDeDados.pt-BR.resources
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CopyComplete
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.frmCadastroCliente.resources
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe.config
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.exe
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\Sistema de Controle De Estoque.pdb
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\bin\Debug\pt-BR\Sistema de Controle De Estoque.resources.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\pt-BR\Sistema de Controle De Estoque.resources.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\Sistema de Controle De Estoque.exe
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\GUI\obj\Debug\Sistema de Controle De Estoque.pdb

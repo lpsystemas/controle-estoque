@@ -181,5 +181,13 @@ namespace GUI
         frmCliente.ShowDialog();
       }
     }
+
+    private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+    {
+      using (frmPesquisarCliente pesquisar = new frmPesquisarCliente())
+      {
+        pesquisar.ShowDialog();
+      }
+    }
   }
 }

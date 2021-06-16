@@ -187,6 +187,7 @@
       // 
       this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
       resources.ApplyResources(this.clienteToolStripMenuItem1, "clienteToolStripMenuItem1");
+      this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
       // 
       // fornecedorToolStripMenuItem1
       // 

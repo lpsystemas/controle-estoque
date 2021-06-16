@@ -85,9 +85,9 @@ namespace BLL
       DALObj.Excluir(codigo);
     }
 
-    public DataTable LocalizarCliente(string nome)
+    public DataTable LocalizarCliente(int tipoPesquisa, string valorPesquisa)
     {
-      return DALObj.Localizar(nome);
+      return DALObj.Localizar(tipoPesquisa, valorPesquisa);
     }
 
     public ModeloCliente CarregaCliente(int codigo)

@@ -1,11 +1,9 @@
 ﻿using ModeloDB;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Consts.Constantes;
+
 
 namespace DAL
 {
@@ -219,11 +217,18 @@ namespace DAL
         conexao.Desconectar();
       }
     }
-    public DataTable Localizar(string nome)
+    public DataTable Localizar(int tipoPesquisaCliente, string valorPesquisa)
     {
+      string filter = string.Empty;
+
+      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisaCliente.Nome))
+        filter = "CLIENTE.CLI_NOME LIKE '{0}%'";
+      else
+        filter = "CLIENTE.CLI_CPFCNPJ = '{0}'";
+
       using (DataTable tabela = new DataTable())
       {
-        string sql = string.Format(@"SELECT CLIENTE.CLI_COD,
+        string sql = string.Format($@"SELECT CLIENTE.CLI_COD,
                                             CLIENTE.CLI_NOME,
                                             CLIENTE.CLI_CPFCNPJ,
                                             CLIENTE.CLI_RGIE,
@@ -239,7 +244,8 @@ namespace DAL
                                             CLIENTE.CLI_CIDADE,
                                             CLIENTE.CLI_ESTADO
 	                                     FROM CLIENTE (NOLOCK)
-                                      WHERE CLIENTE.CLI_NOME = LIKE '{0}%'", nome);       
+                                       WHERE {filter}", 
+                                             valorPesquisa);       
 
         SqlDataAdapter adapter = new SqlDataAdapter(sql, conexao.StringConexao);
         adapter.Fill(tabela);
