@@ -11,3 +11,5 @@ C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\obj\Debug\BLL.csproj.CoreC
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\obj\Debug\BLL.dll
 C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\obj\Debug\BLL.pdb
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\bin\Debug\Ferramentas.dll
+C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\BLL\bin\Debug\Ferramentas.pdb

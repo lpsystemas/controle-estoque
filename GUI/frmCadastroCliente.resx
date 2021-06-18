@@ -599,6 +599,33 @@
   <data name="&gt;&gt;gbEndereco.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblMsgConsistCpfCpnj.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMsgConsistCpfCpnj.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 16</value>
+  </data>
+  <data name="lblMsgConsistCpfCpnj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="lblMsgConsistCpfCpnj.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblMsgConsistCpfCpnj.Text" xml:space="preserve">
+    <value>Valor Incorreto</value>
+  </data>
+  <data name="&gt;&gt;lblMsgConsistCpfCpnj.Name" xml:space="preserve">
+    <value>lblMsgConsistCpfCpnj</value>
+  </data>
+  <data name="&gt;&gt;lblMsgConsistCpfCpnj.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMsgConsistCpfCpnj.Parent" xml:space="preserve">
+    <value>gbDadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;lblMsgConsistCpfCpnj.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="txtRgInscEstadual.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 74</value>
   </data>
@@ -618,7 +645,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;txtRgInscEstadual.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtCpfCnpj.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 32</value>
@@ -639,7 +666,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;txtCpfCnpj.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblRgInscEstadual.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -666,7 +693,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;lblRgInscEstadual.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblCpfCnpj.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -693,7 +720,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;lblCpfCnpj.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="txtRazaoSocial.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 74</value>
@@ -714,7 +741,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;txtRazaoSocial.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblRazaoSocial.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -741,7 +768,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;lblRazaoSocial.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="txtNomeCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 32</value>
@@ -762,7 +789,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;txtNomeCliente.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblNome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -789,7 +816,7 @@
     <value>gbDadosPessoais</value>
   </data>
   <data name="&gt;&gt;lblNome.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="gbDadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 55</value>

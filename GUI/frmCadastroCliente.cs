@@ -33,25 +33,6 @@ namespace GUI
     }
     private BLLCliente _queryDB = null;
 
-    public void LimparDadosDaTela()
-    {
-      txtCodCliente.Clear();
-      txtNomeCliente.Clear();
-      txtRazaoSocial.Clear();
-      txtCpfCnpj.Clear();
-      txtRgInscEstadual.Clear();
-      txtCEP.Clear();
-      txtEndereco.Clear();
-      txtNumero.Clear();
-      txtBairro.Clear();
-      txtCidade.Clear();
-      txtEstadoUF.Clear();
-      txtTelefone.Clear();
-      txtCelular.Clear();
-      txtEmail.Clear();
-      rbTipoFisica.Checked = true;
-
-    }
     public frmCadastroCliente()
     {
       InitializeComponent();
@@ -214,14 +195,6 @@ namespace GUI
       }
     }
 
-    private void ConfiguraVisibilidadeCamposNaTela()
-    {
-      txtCodCliente.Enabled = false;
-
-      lblRazaoSocial.Visible = false;
-      txtRazaoSocial.Visible = false;
-    }
-
     private void txtCEP_Leave(object sender, EventArgs e)
     {
       if (BuscaEndereco.verificaCEP(txtCEP.Text))
@@ -237,6 +210,110 @@ namespace GUI
         txtCEP.Focus();
       }
         
+    }
+
+    #region Métodos Auxiliares
+
+    private void ConfiguraVisibilidadeCamposNaTela()
+    {
+      txtCodCliente.Enabled = false;
+
+      lblRazaoSocial.Visible = false;
+      txtRazaoSocial.Visible = false;
+
+      lblMsgConsistCpfCpnj.Visible = false;
+    }
+    public void LimparDadosDaTela()
+    {
+      txtCodCliente.Clear();
+      txtNomeCliente.Clear();
+      txtRazaoSocial.Clear();
+      txtCpfCnpj.Clear();
+      txtRgInscEstadual.Clear();
+      txtCEP.Clear();
+      txtEndereco.Clear();
+      txtNumero.Clear();
+      txtBairro.Clear();
+      txtCidade.Clear();
+      txtEstadoUF.Clear();
+      txtTelefone.Clear();
+      txtCelular.Clear();
+      txtEmail.Clear();
+      rbTipoFisica.Checked = true;
+    }
+    private void FormataMascaraCampoCpfCnpj(TipoClienteFornecedor pessoa, TextBox valorCampoCpfCnpj)
+    {
+      switch(pessoa)
+      {
+        case TipoClienteFornecedor.Pessoa_Fisica:          
+          valorCampoCpfCnpj.MaxLength = 14;
+          
+          if(valorCampoCpfCnpj.Text.Length == 3)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          else if(valorCampoCpfCnpj.Text.Length == 7)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          else if(valorCampoCpfCnpj.Text.Length == 11)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "-";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          break;
+
+        case TipoClienteFornecedor.Pessoa_Juridica:
+          valorCampoCpfCnpj.MaxLength = 18;
+
+          if (valorCampoCpfCnpj.Text.Length == 2 || valorCampoCpfCnpj.Text.Length == 6)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          else if (valorCampoCpfCnpj.Text.Length == 10)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "/";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          else if (valorCampoCpfCnpj.Text.Length == 15)
+          {
+            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "-";
+            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
+          }
+          break;
+
+      }
+    }
+
+    #endregion
+
+    private void txtCpfCnpj_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      if(e.KeyChar != (char)8)
+      {
+        TipoClienteFornecedor pessoa = TipoClienteFornecedor.Pessoa_Fisica;
+
+        if (!rbTipoFisica.Checked)
+          pessoa = TipoClienteFornecedor.Pessoa_Juridica;
+
+        this.FormataMascaraCampoCpfCnpj(pessoa, txtCpfCnpj);
+      }
+
+      if (txtCpfCnpj.Text == string.Empty)
+        lblMsgConsistCpfCpnj.Visible = false;
+    }
+
+    private void txtCpfCnpj_Leave(object sender, EventArgs e)
+    {
+      if (rbTipoFisica.Checked == true)
+        lblMsgConsistCpfCpnj.Visible = true ? !Validacao.ValidaCpf(txtCpfCnpj.Text) : lblMsgConsistCpfCpnj.Visible = false;
+
+      if (rbTipoJuridica.Checked == true)
+        lblMsgConsistCpfCpnj.Visible = true ? !Validacao.ValidaCnpj(txtCpfCnpj.Text) : lblMsgConsistCpfCpnj.Visible = false;
+                                                                                                                            
     }
   }
 }

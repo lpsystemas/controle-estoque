@@ -64,6 +64,7 @@ namespace GUI
       this.lblCelular = new System.Windows.Forms.Label();
       this.txtTelefone = new System.Windows.Forms.TextBox();
       this.lblTelefone = new System.Windows.Forms.Label();
+      this.lblMsgConsistCpfCpnj = new System.Windows.Forms.Label();
       this.pnDados.SuspendLayout();
       this.pnBotoes.SuspendLayout();
       this.gbTipoCliente.SuspendLayout();
@@ -155,6 +156,7 @@ namespace GUI
       // 
       // gbDadosPessoais
       // 
+      this.gbDadosPessoais.Controls.Add(this.lblMsgConsistCpfCpnj);
       this.gbDadosPessoais.Controls.Add(this.txtRgInscEstadual);
       this.gbDadosPessoais.Controls.Add(this.txtCpfCnpj);
       this.gbDadosPessoais.Controls.Add(this.lblRgInscEstadual);
@@ -176,6 +178,8 @@ namespace GUI
       // 
       resources.ApplyResources(this.txtCpfCnpj, "txtCpfCnpj");
       this.txtCpfCnpj.Name = "txtCpfCnpj";
+      this.txtCpfCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpfCnpj_KeyPress);
+      this.txtCpfCnpj.Leave += new System.EventHandler(this.txtCpfCnpj_Leave);
       // 
       // lblRgInscEstadual
       // 
@@ -318,6 +322,12 @@ namespace GUI
       resources.ApplyResources(this.lblTelefone, "lblTelefone");
       this.lblTelefone.Name = "lblTelefone";
       // 
+      // lblMsgConsistCpfCpnj
+      // 
+      resources.ApplyResources(this.lblMsgConsistCpfCpnj, "lblMsgConsistCpfCpnj");
+      this.lblMsgConsistCpfCpnj.ForeColor = System.Drawing.Color.Crimson;
+      this.lblMsgConsistCpfCpnj.Name = "lblMsgConsistCpfCpnj";
+      // 
       // frmCadastroCliente
       // 
       resources.ApplyResources(this, "$this");
@@ -374,5 +384,6 @@ namespace GUI
     private System.Windows.Forms.Label lblCpfCnpj;
     private System.Windows.Forms.TextBox txtRazaoSocial;
     private System.Windows.Forms.Label lblRazaoSocial;
+    private System.Windows.Forms.Label lblMsgConsistCpfCpnj;
   }
 }

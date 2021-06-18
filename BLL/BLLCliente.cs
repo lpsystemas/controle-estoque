@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Ferramentas;
 using ModeloDB;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Consts.Constantes;
 
 namespace BLL
 {
@@ -49,7 +51,13 @@ namespace BLL
         throw new Exception("O nome do Cliente é obrigatório");
 
       if (modelo.CliCpfCnpj.Trim().Length == 0)
-        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");  
+        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");
+
+      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica) && !Validacao.ValidaCpf(modelo.CliCpfCnpj))
+        throw new Exception("O CPF digitado é inválido. Favor digitar um numero de CPF válido!");
+
+      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Juridica) && !Validacao.ValidaCnpj(modelo.CliCpfCnpj))
+        throw new Exception("O CNPJ digitado é inválido. Favor digitar um numero de CNPJ válido!");
 
       if (modelo.CliCelular.Trim().Length == 0)
         throw new Exception("O campo Celular do Cliente é obrigatório");
