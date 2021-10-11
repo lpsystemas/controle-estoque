@@ -1,6 +1,0 @@
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\bin\Debug\Consts.dll
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\bin\Debug\Consts.pdb
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\obj\Debug\Consts.csprojAssemblyReference.cache
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\obj\Debug\Consts.csproj.CoreCompileInputs.cache
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\obj\Debug\Consts.dll
-C:\LUCIO PESSOAL\PROJETOS LUCIO\ControleDeEstoque\Consts\obj\Debug\Consts.pdb

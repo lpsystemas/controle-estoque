@@ -2,7 +2,7 @@
 
 namespace Ferramentas
 {
-  public class Validacao
+  public static class Validacao
   {
     /// <summary>
     /// Método ValidaCpf

@@ -76,6 +76,12 @@ namespace BLL
       if (modelo.CliNome.Trim().Length == 0)
         throw new Exception("O nome do Cliente é obrigatório");
 
+      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica) && !Validacao.ValidaCpf(modelo.CliCpfCnpj))
+        throw new Exception("O CPF digitado é inválido. Favor digitar um numero de CPF válido!");
+
+      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Juridica) && !Validacao.ValidaCnpj(modelo.CliCpfCnpj))
+        throw new Exception("O CNPJ digitado é inválido. Favor digitar um numero de CNPJ válido!");
+
       if (modelo.CliCpfCnpj.Trim().Length == 0)
         throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");
 
