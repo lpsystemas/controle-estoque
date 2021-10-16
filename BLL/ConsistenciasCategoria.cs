@@ -10,7 +10,7 @@ namespace BLL
   {
     public static void ValidaCamposObrigatorios(ModeloCategoria modelo, string operacao)
     {
-      if (modelo.CatNome.Trim().Length == 0 && operacao == Inserir || operacao == Alterar)
+      if (modelo.CatNome.Trim().Length == 0)
         throw new Exception("O nome da categoria é obrigatória");
 
       if (modelo.CatCod <= 0 && operacao == Alterar)

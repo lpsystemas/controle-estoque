@@ -11,7 +11,7 @@ namespace BLL
 
     public static void ValidaCamposObrigatorios(ModeloUnidadeDeMedida modelo, string operacao)
     {
-      if (modelo.UmedNome.Trim().Length == 0 && operacao == Inserir || operacao == Alterar)
+      if (modelo.UmedNome.Trim().Length == 0)
         throw new Exception("O nome da Unidade de Medida é obrigatório");
 
       if (modelo.UmedCod <= 0 && operacao == Alterar)

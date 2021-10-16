@@ -10,7 +10,7 @@ namespace BLL
   {
     public static void ValidaCamposObrigatorios(ModeloTipoPagamento modelo, string operacao)
     {
-      if (modelo.TPagtoNome.Trim().Length == 0 && operacao == Inserir || operacao == Alterar)
+      if (modelo.TPagtoNome.Trim().Length == 0)
         throw new Exception("O nome do tipo de pagamento é obrigatório");
 
       if (modelo.TPagtoCod <= 0 && operacao == Alterar)
