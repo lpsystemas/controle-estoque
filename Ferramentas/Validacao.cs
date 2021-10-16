@@ -105,5 +105,10 @@ namespace Ferramentas
         return cnpj.EndsWith(digito);
       }
     }
+
+    public static bool ValidaCep(string cep)
+    {
+      return System.Text.RegularExpressions.Regex.IsMatch(cep, ("[0-9]{5}-[0-9]{3}"));
+    }
   }
 }

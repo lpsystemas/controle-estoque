@@ -70,14 +70,14 @@ namespace GUI
 
         if(this.operacao == Inserir)
         {
-          QueryDB.IncluirCategoria(modeloCategoria);
+          QueryDB.IncluirCategoria(modeloCategoria, operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloCategoria.CatCod.ToString());
         }
         else 
         {
           modeloCategoria.CatCod = Convert.ToInt32(txtCodigo.Text);
 
-          QueryDB.AlterarCategoria(modeloCategoria);
+          QueryDB.AlterarCategoria(modeloCategoria, operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 

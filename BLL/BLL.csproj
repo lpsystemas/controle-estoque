@@ -49,6 +49,12 @@
     <Compile Include="BLLTipoPagamento.cs" />
     <Compile Include="BLLUnidadeDeMedida.cs" />
     <Compile Include="BLLUtils.cs" />
+    <Compile Include="ConsistenciasProduto.cs" />
+    <Compile Include="ConsistenciasUnidadeDeMedida.cs" />
+    <Compile Include="ConsistenciasTipoPagamento.cs" />
+    <Compile Include="ConsistenciasSubCategoria.cs" />
+    <Compile Include="ConsistenciasCategoria.cs" />
+    <Compile Include="ConsistenciasCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

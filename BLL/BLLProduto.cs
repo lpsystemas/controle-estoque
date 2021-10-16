@@ -43,55 +43,15 @@ namespace BLL
 
     #endregion
 
-    public void IncluirProduto(ModeloProduto modelo)
+    public void IncluirProduto(ModeloProduto modelo, string operacao)
     {
-      if (modelo.ProdNome.Trim().Length == 0)
-        throw new Exception("O nome do Produto é obrigatório");
-
-      if (modelo.ProdDesc.Trim().Length == 0)
-        throw new Exception("A Descrição do Produto é obrigatória");
-
-      if(modelo.ProdValorVenda <= 0)
-        throw new Exception("O Valor de venda do Produto é obrigatório");
-
-      if (modelo.ProdQuantidade <= 0)
-        throw new Exception("O quantidade do Produto deve ser maior ou igual a zero");
-
-      if (modelo.UmedCod <= 0)
-        throw new Exception("O código da Unidade de Medida é obrigatório");
-
-      if (modelo.CatCod <= 0)
-        throw new Exception("O código da Categoria é obrigatório");
-
-      if (modelo.SCatCod <= 0)
-        throw new Exception("O código da SubCategoria é obrigatório");
-
+      ConsistenciasProduto.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Incluir(modelo);
     }
 
-    public void AlterarProduto(ModeloProduto modelo)
+    public void AlterarProduto(ModeloProduto modelo, string operacao)
     {
-      if(modelo.ProdCod <= 0)
-        throw new Exception("O código do Produto é obrigatório");
-
-      if (modelo.ProdNome.Trim().Length == 0)
-        throw new Exception("O Nome do Produto é obrigatório");
-
-      if (modelo.ProdDesc.Trim().Length == 0)
-        throw new Exception("A Descrição do Produto é obrigatória");
-
-      if (modelo.ProdValorVenda <= 0)
-        throw new Exception("O Valor de venda do Produto é obrigatório");
-
-      if (modelo.ProdQuantidade <= 0)
-        throw new Exception("O quantidade do Produto deve ser maior ou igual a zero");
-
-      if (modelo.UmedCod <= 0)
-        throw new Exception("O código da Unidade de Medida é obrigatório");
-
-      if (modelo.CatCod <= 0)
-        throw new Exception("O código da Categoria é obrigatório");      
-
+      ConsistenciasProduto.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Alterar(modelo);
     }
 

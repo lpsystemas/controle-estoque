@@ -101,14 +101,14 @@ namespace GUI
 
         if (this.operacao == Inserir)
         {
-          QueryDB.IncluirUnidadeDeMedida(modeloUmed);
+          QueryDB.IncluirUnidadeDeMedida(modeloUmed, operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloUmed.UmedCod.ToString());
         }
         else
         {
           modeloUmed.UmedCod = Convert.ToInt32(txtCodigoUmed.Text);
 
-          QueryDB.AlterarUnidadeDeMedida(modeloUmed);
+          QueryDB.AlterarUnidadeDeMedida(modeloUmed, operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 

@@ -135,14 +135,14 @@ namespace GUI
 
         if (this.operacao == Inserir)
         {
-          QueryDB.IncluirTipoDePagamento(modeloTipoPagamento);
+          QueryDB.IncluirTipoDePagamento(modeloTipoPagamento, operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloTipoPagamento.TPagtoCod.ToString());
         }
         else
         {
           modeloTipoPagamento.TPagtoCod = Convert.ToInt32(txtCodigo.Text);
 
-          QueryDB.AlterarTipoDePagamento(modeloTipoPagamento);
+          QueryDB.AlterarTipoDePagamento(modeloTipoPagamento, operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 

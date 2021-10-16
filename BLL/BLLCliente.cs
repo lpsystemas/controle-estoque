@@ -43,54 +43,22 @@ namespace BLL
     }
     private DALUtils _utils = null;
 
+    
     #endregion
 
-    public void IncluirCliente(ModeloCliente modelo)
+    public void IncluirCliente(ModeloCliente modelo, string operacao)
     {
-      if (modelo.CliNome.Trim().Length == 0)
-        throw new Exception("O nome do Cliente é obrigatório");
-
-      if (modelo.CliCpfCnpj.Trim().Length == 0)
-        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");
-
-      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica) && !Validacao.ValidaCpf(modelo.CliCpfCnpj))
-        throw new Exception("O CPF digitado é inválido. Favor digitar um numero de CPF válido!");
-
-      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Juridica) && !Validacao.ValidaCnpj(modelo.CliCpfCnpj))
-        throw new Exception("O CNPJ digitado é inválido. Favor digitar um numero de CNPJ válido!");
-
-      if (modelo.CliCelular.Trim().Length == 0)
-        throw new Exception("O campo Celular do Cliente é obrigatório");
-
-      if (modelo.CliEmail.Trim().Length == 0)
-        throw new Exception("O campo E-mail do Cliente é obrigatório");
-
+      ConsistenciasCliente.ValidaCamposObrigatorios(modelo, operacao);
+      ConsistenciasCliente.ValidaPreenchimentoCEP(modelo);
+      ConsistenciasCliente.ValidaPreenchimentoCpf_Cnpj(modelo); 
       DALObj.Incluir(modelo);
     }
 
-    public void AlterarCliente(ModeloCliente modelo)
+    public void AlterarCliente(ModeloCliente modelo, string operacao)
     {
-      if (modelo.CliCod <= 0)
-        throw new Exception("O Código do Cliente é obrigatório");
-
-      if (modelo.CliNome.Trim().Length == 0)
-        throw new Exception("O nome do Cliente é obrigatório");
-
-      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Fisica) && !Validacao.ValidaCpf(modelo.CliCpfCnpj))
-        throw new Exception("O CPF digitado é inválido. Favor digitar um numero de CPF válido!");
-
-      if (modelo.CliTipo == Convert.ToInt32(TipoClienteFornecedor.Pessoa_Juridica) && !Validacao.ValidaCnpj(modelo.CliCpfCnpj))
-        throw new Exception("O CNPJ digitado é inválido. Favor digitar um numero de CNPJ válido!");
-
-      if (modelo.CliCpfCnpj.Trim().Length == 0)
-        throw new Exception("O campo CPF/CNPJ do cliente é obrigatória");
-
-      if (modelo.CliRgInscricaoEstadual.Trim().Length == 0)
-        throw new Exception("O campo RG/IE do cliente é obrigatório");
-
-      if (modelo.CliCelular.Trim().Length == 0)
-        throw new Exception("O campo Celular do Cliente é obrigatório");
-
+      ConsistenciasCliente.ValidaCamposObrigatorios(modelo, operacao);
+      ConsistenciasCliente.ValidaPreenchimentoCEP(modelo);
+      ConsistenciasCliente.ValidaPreenchimentoCpf_Cnpj(modelo);
       DALObj.Alterar(modelo);
     }
 

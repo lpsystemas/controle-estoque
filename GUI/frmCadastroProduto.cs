@@ -153,7 +153,7 @@ namespace GUI
         {
           modeloProduto.CarregaImagem(this.foto);
 
-          QueryDB.IncluirProduto(modeloProduto);
+          QueryDB.IncluirProduto(modeloProduto, operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloProduto.ProdCod.ToString());
         }
         else
@@ -171,7 +171,7 @@ namespace GUI
             modeloProduto.CarregaImagem(this.foto);
           }          
 
-          QueryDB.AlterarProduto(modeloProduto);
+          QueryDB.AlterarProduto(modeloProduto, operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 

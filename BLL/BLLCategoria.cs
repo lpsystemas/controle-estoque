@@ -32,22 +32,15 @@ namespace BLL
 
     #endregion
 
-    public void IncluirCategoria(ModeloCategoria modelo)
+    public void IncluirCategoria(ModeloCategoria modelo, string operacao)
     {
-      if (modelo.CatNome.Trim().Length == 0)
-        throw new Exception("O nome da categoria é obrigatória");      
-     
+      ConsistenciasCategoria.ValidaCamposObrigatorios(modelo, operacao);      
       DALObj.Incluir(modelo);
     }
 
-    public void AlterarCategoria(ModeloCategoria modelo)
+    public void AlterarCategoria(ModeloCategoria modelo, string operacao)
     {
-      if (modelo.CatCod <= 0)
-        throw new Exception("O Código da categoria é obrigatória");
-
-      if (modelo.CatNome.Trim().Length == 0)
-        throw new Exception("O nome da categoria é obrigatória");      
-   
+      ConsistenciasCategoria.ValidaCamposObrigatorios(modelo, operacao);    
       DALObj.Alterar(modelo);
     }
 

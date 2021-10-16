@@ -40,14 +40,9 @@ namespace BLL
 
     #endregion
 
-    public void AlterarUnidadeDeMedida(ModeloUnidadeDeMedida modelo)
+    public void AlterarUnidadeDeMedida(ModeloUnidadeDeMedida modelo, string operacao)
     {
-      if (modelo.UmedCod <= 0)
-        throw new Exception("O Código da Unidade de Medida é obrigatória");
-
-      if (modelo.UmedNome.Trim().Length == 0)
-        throw new Exception("O nome da Unidade de Medida é obrigatório");
-      
+      ConsistenciasUnidadeDeMedida.ValidaCamposObrigatorios(modelo, operacao);    
       DALObj.Alterar(modelo);
     }
 
@@ -61,10 +56,9 @@ namespace BLL
       DALObj.Excluir(codigo);
     }
     
-    public void IncluirUnidadeDeMedida(ModeloUnidadeDeMedida modelo)
+    public void IncluirUnidadeDeMedida(ModeloUnidadeDeMedida modelo, string operacao)
     {
-      if (modelo.UmedNome.Trim().Length == 0)
-        throw new Exception("O nome da Unidade de Medida é obrigatório");
+      ConsistenciasUnidadeDeMedida.ValidaCamposObrigatorios(modelo, operacao);
 
       if (DAL.VerificaUnidadeDeMedidaCadastrada(modelo.UmedNome.Trim()))
         throw new Exception("Unidade já cadastrada");

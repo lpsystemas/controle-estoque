@@ -51,17 +51,9 @@ namespace BLL
 
     #endregion
 
-    public void AlterarSubCategoria(ModeloSubCategoria modelo)
+    public void AlterarSubCategoria(ModeloSubCategoria modelo, string operacao)
     {
-      if (modelo.CatCod <= 0)
-        throw new Exception("O Código da categoria é obrigatória");
-
-      if (modelo.SCatCod <= 0)
-        throw new Exception("O Código da SubCategoria é obrigatório");
-
-      if (modelo.SCatNome.Trim().Length == 0)
-        throw new Exception("O nome da SubCategoria é obrigatório"); 
-      
+      ConsistenciasSubCategoria.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Alterar(modelo);
     }
 
@@ -75,14 +67,9 @@ namespace BLL
       DALObj.Excluir(codigo);
     }
 
-    public void IncluirSubCategoria(ModeloSubCategoria modelo)
+    public void IncluirSubCategoria(ModeloSubCategoria modelo, string operacao)
     {
-      if (modelo.SCatNome.Trim().Length == 0)
-        throw new Exception("O nome da SubCategoria é obrigatório");
-
-      if (modelo.CatCod <= 0)
-        throw new Exception("O Código da Categoria é obrigatório");
-      
+      ConsistenciasSubCategoria.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Incluir(modelo);
     }
 

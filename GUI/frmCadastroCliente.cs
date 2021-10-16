@@ -142,14 +142,14 @@ namespace GUI
 
         if (this.operacao == Inserir)
         {
-          QueryDB.IncluirCliente(modeloCliente);
+          QueryDB.IncluirCliente(modeloCliente, this.operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloCliente.CliCod.ToString());
         }
         else
         {
           modeloCliente.CliCod = Convert.ToInt32(txtCodCliente.Text);
 
-          QueryDB.AlterarCliente(modeloCliente);
+          QueryDB.AlterarCliente(modeloCliente, this.operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 

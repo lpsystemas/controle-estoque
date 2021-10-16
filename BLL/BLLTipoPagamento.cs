@@ -32,22 +32,15 @@ namespace BLL
 
     #endregion
 
-    public void IncluirTipoDePagamento(ModeloTipoPagamento modelo)
+    public void IncluirTipoDePagamento(ModeloTipoPagamento modelo, string operacao)
     {
-      if (modelo.TPagtoNome.Trim().Length == 0)
-        throw new Exception("O nome do tipo de pagamento é obrigatório");
-
+      ConsistenciasTipoPagamento.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Incluir(modelo);
     }
 
-    public void AlterarTipoDePagamento(ModeloTipoPagamento modelo)
+    public void AlterarTipoDePagamento(ModeloTipoPagamento modelo, string operacao)
     {
-      if (modelo.TPagtoCod <= 0)
-        throw new Exception("O código do tipo de pagamento é obrigatório");
-
-      if (modelo.TPagtoNome.Trim().Length == 0)
-        throw new Exception("O nome do tipo de pagamento é obrigatório");
-
+      ConsistenciasTipoPagamento.ValidaCamposObrigatorios(modelo, operacao);
       DALObj.Alterar(modelo);
     }
 

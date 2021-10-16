@@ -104,14 +104,14 @@ namespace GUI
 
         if (this.operacao == Inserir)
         {
-          QueryDB.IncluirSubCategoria(modeloSubCategoria);
+          QueryDB.IncluirSubCategoria(modeloSubCategoria, operacao);
           MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloSubCategoria.SCatCod.ToString());
         }
         else
         {
           modeloSubCategoria.SCatCod = Convert.ToInt32(txtCodigoSubCategoria.Text);
 
-          QueryDB.AlterarSubCategoria(modeloSubCategoria);
+          QueryDB.AlterarSubCategoria(modeloSubCategoria, operacao);
           MessageBox.Show("Cadastro alterado com sucesso!!");
         }
 
