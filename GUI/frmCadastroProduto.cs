@@ -145,7 +145,7 @@ namespace GUI
         modeloProduto.ProdValorPago = Convert.ToDouble(txtValorPagoPrd.Text);
         modeloProduto.ProdValorVenda = Convert.ToDouble(txtValorVendaPrd.Text);
         modeloProduto.ProdQuantidade = Convert.ToDouble(txtQuantidadePrd.Text);
-        modeloProduto.CatCod = Convert.ToInt32(cboCatPrd.SelectedValue);
+        modeloProduto.CatCod = Convert.ToInt32(((DataRowView)cboCatPrd.SelectedValue)["SCAT_COD"]);
         modeloProduto.SCatCod = Convert.ToInt32(cboSubCatPrd.SelectedValue);
         modeloProduto.UmedCod = Convert.ToInt32(cboUmedPrd.SelectedValue);         
 
@@ -304,10 +304,11 @@ namespace GUI
     {
       try
       {
+        DataRowView categoria = (DataRowView)cboCatPrd.SelectedItem;
         cboSubCatPrd.Text = string.Empty;
-        cboSubCatPrd.DataSource = QueryDB.Utils.CarregaComboBoxSubCategoriaPorCategoria(Convert.ToInt32(cboCatPrd.SelectedValue));
         cboSubCatPrd.DisplayMember = "SCAT_NOME";
         cboSubCatPrd.ValueMember = "SCAT_COD";
+        cboSubCatPrd.DataSource = QueryDB.Utils.CarregaComboBoxSubCategoriaPorCategoria(Convert.ToInt32(categoria.Row["CAT_COD"]));        
       }
       catch
       {
@@ -348,10 +349,10 @@ namespace GUI
 
       //ComboBox SubCategoria
       try
-      {        
-        cboSubCatPrd.DataSource = QueryDB.Utils.CarregaComboBoxSubCategoriaPorCategoria(Convert.ToInt32(cboCatPrd.SelectedValue));
+      {
         cboSubCatPrd.DisplayMember = "SCAT_NOME";
         cboSubCatPrd.ValueMember = "SCAT_COD";
+        cboSubCatPrd.DataSource = QueryDB.Utils.CarregaComboBoxSubCategoriaPorCategoria(Convert.ToInt32(cboCatPrd.SelectedValue));
       }
       catch(Exception)
       {
