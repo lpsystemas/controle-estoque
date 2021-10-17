@@ -8,7 +8,6 @@ namespace BLL
 {
   public static class ConsistenciasProduto
   {
-
     public static void ValidaCamposObrigatorios(ModeloProduto modelo, string operacao)
     {
       if (modelo.ProdNome.Trim().Length == 0)

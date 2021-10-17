@@ -43,12 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLLCategoria.cs" />
+    <Compile Include="BLLFornecedor.cs" />
     <Compile Include="BLLCliente.cs" />
     <Compile Include="BLLProduto.cs" />
     <Compile Include="BLLSubCategoria.cs" />
     <Compile Include="BLLTipoPagamento.cs" />
     <Compile Include="BLLUnidadeDeMedida.cs" />
     <Compile Include="BLLUtils.cs" />
+    <Compile Include="ConsistenciasFornecedor.cs" />
     <Compile Include="ConsistenciasProduto.cs" />
     <Compile Include="ConsistenciasUnidadeDeMedida.cs" />
     <Compile Include="ConsistenciasTipoPagamento.cs" />

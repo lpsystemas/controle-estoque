@@ -177,11 +177,14 @@ namespace GUI
 
     private void btnLocalizar_Click(object sender, EventArgs e)
     {
-      if (rbNomeCliente.Checked == true)
-        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisaCliente.Nome), txtValorPesquisaCliente.Text); 
-      else
-        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisaCliente.CPF_CNPJ), txtValorPesquisaCliente.Text);
+      if(rbNomeCliente.Checked == true)
+        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.Nome), txtValorPesquisaCliente.Text); 
+      
+      if(rbCpfCliente.Checked == true)
+        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.CPF), txtValorPesquisaCliente.Text);
 
+      if (rbCnpjCliente.Checked == true)
+        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.CPNJ), txtValorPesquisaCliente.Text);
     }
 
     private void txtValorPesquisaCliente_TextChanged(object sender, EventArgs e)

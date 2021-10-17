@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICategoria.cs" />
+    <Compile Include="IFornecedor.cs" />
     <Compile Include="ICliente.cs" />
     <Compile Include="IProduto.cs" />
     <Compile Include="ISubCategoria.cs" />
     <Compile Include="ITipoPagamento.cs" />
     <Compile Include="IUnidadeDeMedida.cs" />
     <Compile Include="ModeloCategoria.cs" />
+    <Compile Include="ModeloFornecedor.cs" />
     <Compile Include="ModeloCliente.cs" />
     <Compile Include="ModeloProduto.cs" />
     <Compile Include="ModeloSubCategoria.cs" />

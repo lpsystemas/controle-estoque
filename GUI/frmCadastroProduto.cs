@@ -62,6 +62,15 @@ namespace GUI
     {
       this.operacao = Inserir;
 
+      if (string.IsNullOrEmpty(txtValorPagoPrd.Text))
+        txtValorPagoPrd.Text = "0,00";
+
+      if (string.IsNullOrEmpty(txtValorVendaPrd.Text))
+        txtValorVendaPrd.Text = "0,00";
+
+      if (string.IsNullOrEmpty(txtQuantidadePrd.Text))
+        txtQuantidadePrd.Text = "0,00";
+
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
     }
 
@@ -145,7 +154,7 @@ namespace GUI
         modeloProduto.ProdValorPago = Convert.ToDouble(txtValorPagoPrd.Text);
         modeloProduto.ProdValorVenda = Convert.ToDouble(txtValorVendaPrd.Text);
         modeloProduto.ProdQuantidade = Convert.ToDouble(txtQuantidadePrd.Text);
-        modeloProduto.CatCod = Convert.ToInt32(((DataRowView)cboCatPrd.SelectedValue)["SCAT_COD"]);
+        modeloProduto.CatCod = Convert.ToInt32(cboCatPrd.SelectedValue);
         modeloProduto.SCatCod = Convert.ToInt32(cboSubCatPrd.SelectedValue);
         modeloProduto.UmedCod = Convert.ToInt32(cboUmedPrd.SelectedValue);         
 
