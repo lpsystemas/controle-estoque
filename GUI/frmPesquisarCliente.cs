@@ -178,7 +178,7 @@ namespace GUI
     private void btnLocalizar_Click(object sender, EventArgs e)
     {
       if(rbNomeCliente.Checked == true)
-        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.Nome), txtValorPesquisaCliente.Text); 
+        dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.NOME), txtValorPesquisaCliente.Text); 
       
       if(rbCpfCliente.Checked == true)
         dgvDados.DataSource = QueryDB.LocalizarCliente(Convert.ToInt32(TipoPesquisa.CPF), txtValorPesquisaCliente.Text);

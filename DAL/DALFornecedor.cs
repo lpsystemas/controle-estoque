@@ -216,7 +216,7 @@ namespace DAL
     {
       string filter = string.Empty;
 
-      if (tipoPesquisaFornecedor == Convert.ToInt32(TipoPesquisa.Nome))
+      if (tipoPesquisaFornecedor == Convert.ToInt32(TipoPesquisa.NOME))
         filter = "FORNECEDOR.FOR_NOME LIKE '{0}%'";
 
       if (tipoPesquisaFornecedor == Convert.ToInt32(TipoPesquisa.CPNJ))

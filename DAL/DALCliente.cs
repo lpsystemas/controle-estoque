@@ -221,9 +221,10 @@ namespace DAL
     {
       string filter = string.Empty;
 
-      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.Nome))
+      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.NOME))
         filter = "CLIENTE.CLI_NOME LIKE '{0}%'";
-      else
+      
+      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPF) || tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPNJ))
         filter = "CLIENTE.CLI_CPFCNPJ = '{0}'";
 
       using (DataTable tabela = new DataTable())

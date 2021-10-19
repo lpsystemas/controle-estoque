@@ -28,9 +28,9 @@ namespace Consts
     }
     public enum TipoPesquisa
     {
-      Nome = 0,
-      CPF = 1,
-      CPNJ = 2
+      CPF = 0,
+      CPNJ = 1,
+      NOME = 2
 
     }
   }
