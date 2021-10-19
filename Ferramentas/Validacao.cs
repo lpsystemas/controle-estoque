@@ -1,4 +1,5 @@
 ﻿
+using System.Text.RegularExpressions;
 
 namespace Ferramentas
 {
@@ -51,7 +52,45 @@ namespace Ferramentas
           resto = 11 - resto;
 
         digito = digito + resto.ToString();
-        return cpf.EndsWith(digito);
+
+        //Verifica se o CPF será somente com numeros repetidos.
+        switch (cpf)
+        {
+          case "00000000000":
+            return false;
+          
+          case "11111111111":
+            return false;
+
+          case "22222222222":
+            return false;
+
+          case "33333333333":
+            return false;
+
+          case "44444444444":
+            return false;
+
+          case "55555555555":
+            return false;
+
+          case "66666666666":
+            return false;
+
+          case "77777777777":
+            return false;
+
+          case "88888888888":
+            return false;
+
+          case "99999999999":
+            return false;
+
+          default:
+            return cpf.EndsWith(digito);
+        }
+           
+       
       }
     }
     
@@ -108,7 +147,18 @@ namespace Ferramentas
 
     public static bool ValidaCep(string cep)
     {
-      return System.Text.RegularExpressions.Regex.IsMatch(cep, ("[0-9]{5}-[0-9]{3}"));
+      return Regex.IsMatch(cep, ("[0-9]{5}-[0-9]{3}"));
+    }
+
+    public static bool ValidaEmail(string txtEmail)
+    {
+      string strRegex = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}"
+            + "\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\"
+            + ".)+))([a-zA-Z]{2,4}|[0,9]{1,3})(\\]?)$";
+
+      Regex regexEmail = new Regex(strRegex);
+
+      return regexEmail.IsMatch(txtEmail);         
     }
   }
 }

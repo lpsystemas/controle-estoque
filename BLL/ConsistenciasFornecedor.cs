@@ -39,6 +39,12 @@ namespace BLL
         throw new Exception("CEP inválido!! \n Favor inserir um CEP válido para a busca correta do endereço.");
     }
 
+    public static void ValidaPreenchimentoEmail(ModeloFornecedor modelo)
+    {
+      if (!Validacao.ValidaEmail(modelo.ForEmail))
+        throw new Exception("Digite um E-mail válido");
+    }
+
     
   }
 }

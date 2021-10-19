@@ -50,7 +50,8 @@ namespace BLL
     {
       ConsistenciasCliente.ValidaCamposObrigatorios(modelo, operacao);
       ConsistenciasCliente.ValidaPreenchimentoCEP(modelo);
-      ConsistenciasCliente.ValidaPreenchimentoCpf_Cnpj(modelo); 
+      ConsistenciasCliente.ValidaPreenchimentoCpf_Cnpj(modelo);
+      ConsistenciasCliente.ValidaPreenchimentoEmail(modelo);
       DALObj.Incluir(modelo);
     }
 
@@ -59,6 +60,7 @@ namespace BLL
       ConsistenciasCliente.ValidaCamposObrigatorios(modelo, operacao);
       ConsistenciasCliente.ValidaPreenchimentoCEP(modelo);
       ConsistenciasCliente.ValidaPreenchimentoCpf_Cnpj(modelo);
+      ConsistenciasCliente.ValidaPreenchimentoEmail(modelo);
       DALObj.Alterar(modelo);
     }
 
