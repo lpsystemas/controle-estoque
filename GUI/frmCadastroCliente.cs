@@ -4,7 +4,8 @@ using GUI.Properties;
 using ModeloDB;
 using System;
 using System.Windows.Forms;
-using static Consts.Constantes;
+using static ConstsEnumerados.Constantes;
+using static ConstsEnumerados.Enumerados;
 using Ferramentas;
 
 namespace GUI
@@ -240,53 +241,7 @@ namespace GUI
       txtCelular.Clear();
       txtEmail.Clear();
       rbTipoFisica.Checked = true;
-    }
-    private void FormataMascaraCampoCpfCnpj(TipoClienteFornecedor pessoa, TextBox valorCampoCpfCnpj)
-    {
-      switch(pessoa)
-      {
-        case TipoClienteFornecedor.Pessoa_Fisica:          
-          valorCampoCpfCnpj.MaxLength = 14;
-          
-          if(valorCampoCpfCnpj.Text.Length == 3)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          else if(valorCampoCpfCnpj.Text.Length == 7)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          else if(valorCampoCpfCnpj.Text.Length == 11)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "-";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          break;
-
-        case TipoClienteFornecedor.Pessoa_Juridica:
-          valorCampoCpfCnpj.MaxLength = 18;
-
-          if (valorCampoCpfCnpj.Text.Length == 2 || valorCampoCpfCnpj.Text.Length == 6)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + ".";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          else if (valorCampoCpfCnpj.Text.Length == 10)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "/";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          else if (valorCampoCpfCnpj.Text.Length == 15)
-          {
-            valorCampoCpfCnpj.Text = valorCampoCpfCnpj.Text + "-";
-            valorCampoCpfCnpj.SelectionStart = valorCampoCpfCnpj.Text.Length + 1;
-          }
-          break;
-
-      }
-    }
+    }    
 
     #endregion
 
@@ -294,12 +249,12 @@ namespace GUI
     {
       if(e.KeyChar != (char)8)
       {
-        TipoClienteFornecedor pessoa = TipoClienteFornecedor.Pessoa_Fisica;
+        CampoParaFormatacao campo = CampoParaFormatacao.CPF;
 
         if (!rbTipoFisica.Checked)
-          pessoa = TipoClienteFornecedor.Pessoa_Juridica;
+          campo = CampoParaFormatacao.CNPJ;
 
-        this.FormataMascaraCampoCpfCnpj(pessoa, txtCpfCnpj);
+        FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtCpfCnpj);
       }
 
       if (txtCpfCnpj.Text == string.Empty)
@@ -314,6 +269,37 @@ namespace GUI
       if (rbTipoJuridica.Checked == true)
         lblMsgConsistCpfCpnj.Visible = true ? !Validacao.ValidaCnpj(txtCpfCnpj.Text) : lblMsgConsistCpfCpnj.Visible = false;
                                                                                                                             
+    }
+
+    private void txtCEP_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      if (e.KeyChar != (char)8)
+      {
+        CampoParaFormatacao campo = CampoParaFormatacao.CEP;
+        FormataMascaraDeCampos.FormataMascaraCEP(campo, txtCEP);
+      }
+    }
+
+    private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)8)//compara se é numero e habilita o backspace//8 valor da backspace na tabela ask
+        e.Handled = true;//volta verdadeiro e não faz nada ou seja não é numero
+      if (e.KeyChar != (char)8)
+      {
+        CampoParaFormatacao campo = CampoParaFormatacao.TELEFONE;
+        FormataMascaraDeCampos.FormataMascaraTelefone(campo, txtTelefone);
+      }
+    }
+
+    private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+    {
+      if (!char.IsNumber(e.KeyChar) && e.KeyChar != (char)8)//compara se é numero e habilita o backspace//8 valor da backspace na tabela ask
+        e.Handled = true;//volta verdadeiro e não faz nada ou seja não é numero
+      if (e.KeyChar != (char)8)
+      {
+        CampoParaFormatacao campo = CampoParaFormatacao.CELULAR;
+        FormataMascaraDeCampos.FormataMascaraTelefone(campo, txtCelular);
+      }
     }
   }
 }

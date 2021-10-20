@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using static Consts.Constantes; 
+using static ConstsEnumerados.Constantes; 
 
 
 

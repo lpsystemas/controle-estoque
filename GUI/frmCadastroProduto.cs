@@ -2,22 +2,18 @@
 using DAL;
 using ModeloDB;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
-using static Consts.Constantes;
+using static ConstsEnumerados.Enumerados;
+using static ConstsEnumerados.Constantes;
 
 namespace GUI
 {
   public partial class frmCadastroProduto : GUI.frmModeloDeFormularioDeCadastro
-  {
-    private const string Inserir = "Inserir";
-    private const string Alterar = "Alterar";
-    private const string Excluir = "Excluir";   
+  {    
     public string foto = string.Empty;
 
     public DALConexao Conexao

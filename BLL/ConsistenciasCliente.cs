@@ -1,8 +1,8 @@
 ﻿using Ferramentas;
 using ModeloDB;
 using System;
-using static Consts.Constantes;
-using System.Collections.Generic;
+using static ConstsEnumerados.Constantes;
+using static ConstsEnumerados.Enumerados;
 
 namespace BLL
 {

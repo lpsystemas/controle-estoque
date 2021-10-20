@@ -4,34 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consts
+namespace ConstsEnumerados
 {
   public class Constantes
   {
+    //Operação a ser executada pelo formulario
     public const string Inserir = "Inserir";
     public const string Alterar = "Alterar";
     public const string Excluir = "Excluir";
 
+    //Contantes de localização de CEP
     public const string CepNaoEncontrado = "0";
     public const string CepEncontrado = "1";
-    public enum OperacaoFormulario
-    {
-      Inserir_Localizar = 1,
-      Salvar_Cancelar = 2,
-      Alterar_Excluir_Cancelar = 3
-    }
 
-    public enum TipoClienteFornecedor
-    {
-      Pessoa_Fisica = 0,
-      Pessoa_Juridica = 1
-    }
-    public enum TipoPesquisa
-    {
-      CPF = 0,
-      CPNJ = 1,
-      NOME = 2
-
-    }
+    //Tabela de progresso para localização/configuração do bancos de dados
+    public const int metadeProgresso = 50;
+    public const int totalProgresso = 100;
   }
 }

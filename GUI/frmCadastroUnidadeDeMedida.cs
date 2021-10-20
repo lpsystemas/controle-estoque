@@ -2,21 +2,14 @@
 using DAL;
 using ModeloDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using static Consts.Constantes;
+using static ConstsEnumerados.Constantes;
+using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
   public partial class frmCadastroUnidadeDeMedida : GUI.frmModeloDeFormularioDeCadastro
-  {
-    private const string Inserir = "Inserir";
-    private const string Alterar = "Alterar";
-    private const string Excluir = "Excluir";
+  {    
     public frmCadastroUnidadeDeMedida()
     {
       InitializeComponent();

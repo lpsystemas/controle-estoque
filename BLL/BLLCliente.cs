@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Consts.Constantes;
+using static ConstsEnumerados.Constantes;
 
 namespace BLL
 {

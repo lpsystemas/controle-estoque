@@ -1,24 +1,14 @@
 ﻿using BLL;
-using DAL;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ConstsEnumerados.Constantes;
 
 namespace GUI
 {
   public partial class frmConfiguracaoBancoDeDados : Form
   {
-    const int metadeProgresso = 50;
-    const int totalProgresso = 100;
-
     public BLLUtils Utils
     {
       get { 

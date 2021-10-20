@@ -58,9 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Consts\Consts.csproj">
+    <ProjectReference Include="..\Consts\ConstsEnumerados.csproj">
       <Project>{30e00c1a-4a6a-4be2-8bcf-9edcfbc05751}</Project>
-      <Name>Consts</Name>
+      <Name>ConstsEnumerados</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

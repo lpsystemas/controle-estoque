@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{38D5416F-6813-4939-9342-F001F64AB3BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consts", "Consts\Consts.csproj", "{30E00C1A-4A6A-4BE2-8BCF-9EDCFBC05751}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstsEnumerados", "Consts\ConstsEnumerados.csproj", "{30E00C1A-4A6A-4BE2-8BCF-9EDCFBC05751}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferramentas", "Ferramentas\Ferramentas.csproj", "{5B36C280-AF56-4B99-826C-295B7CF42268}"
 EndProject

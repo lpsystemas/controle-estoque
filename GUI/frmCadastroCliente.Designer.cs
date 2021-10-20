@@ -38,6 +38,7 @@ namespace GUI
       this.rbTipoJuridica = new System.Windows.Forms.RadioButton();
       this.rbTipoFisica = new System.Windows.Forms.RadioButton();
       this.gbDadosPessoais = new System.Windows.Forms.GroupBox();
+      this.lblMsgConsistCpfCpnj = new System.Windows.Forms.Label();
       this.txtRgInscEstadual = new System.Windows.Forms.TextBox();
       this.txtCpfCnpj = new System.Windows.Forms.TextBox();
       this.lblRgInscEstadual = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@ namespace GUI
       this.lblCelular = new System.Windows.Forms.Label();
       this.txtTelefone = new System.Windows.Forms.TextBox();
       this.lblTelefone = new System.Windows.Forms.Label();
-      this.lblMsgConsistCpfCpnj = new System.Windows.Forms.Label();
       this.pnDados.SuspendLayout();
       this.pnBotoes.SuspendLayout();
       this.gbTipoCliente.SuspendLayout();
@@ -168,6 +168,12 @@ namespace GUI
       resources.ApplyResources(this.gbDadosPessoais, "gbDadosPessoais");
       this.gbDadosPessoais.Name = "gbDadosPessoais";
       this.gbDadosPessoais.TabStop = false;
+      // 
+      // lblMsgConsistCpfCpnj
+      // 
+      resources.ApplyResources(this.lblMsgConsistCpfCpnj, "lblMsgConsistCpfCpnj");
+      this.lblMsgConsistCpfCpnj.ForeColor = System.Drawing.Color.Crimson;
+      this.lblMsgConsistCpfCpnj.Name = "lblMsgConsistCpfCpnj";
       // 
       // txtRgInscEstadual
       // 
@@ -273,6 +279,7 @@ namespace GUI
       // 
       resources.ApplyResources(this.txtCEP, "txtCEP");
       this.txtCEP.Name = "txtCEP";
+      this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress);
       this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
       // 
       // lblCEP
@@ -306,6 +313,7 @@ namespace GUI
       // 
       resources.ApplyResources(this.txtCelular, "txtCelular");
       this.txtCelular.Name = "txtCelular";
+      this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
       // 
       // lblCelular
       // 
@@ -316,17 +324,12 @@ namespace GUI
       // 
       resources.ApplyResources(this.txtTelefone, "txtTelefone");
       this.txtTelefone.Name = "txtTelefone";
+      this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
       // 
       // lblTelefone
       // 
       resources.ApplyResources(this.lblTelefone, "lblTelefone");
       this.lblTelefone.Name = "lblTelefone";
-      // 
-      // lblMsgConsistCpfCpnj
-      // 
-      resources.ApplyResources(this.lblMsgConsistCpfCpnj, "lblMsgConsistCpfCpnj");
-      this.lblMsgConsistCpfCpnj.ForeColor = System.Drawing.Color.Crimson;
-      this.lblMsgConsistCpfCpnj.Name = "lblMsgConsistCpfCpnj";
       // 
       // frmCadastroCliente
       // 

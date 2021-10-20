@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using static Consts.Constantes;
+using static ConstsEnumerados.Enumerados;
 
 
 namespace DAL

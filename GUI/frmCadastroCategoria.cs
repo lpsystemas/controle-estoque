@@ -3,7 +3,8 @@ using DAL;
 using ModeloDB;
 using System;
 using System.Windows.Forms;
-using static Consts.Constantes;
+using static ConstsEnumerados.Constantes;
+using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
