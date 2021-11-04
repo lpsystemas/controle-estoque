@@ -189,5 +189,14 @@ namespace GUI
         pesquisar.ShowDialog();
       }
     }
+
+    private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      using (frmCadastroFornecedor frmFornecedor = new frmCadastroFornecedor())
+      {
+        frmFornecedor.ShowDialog();
+      }
+
+    }
   }
 }

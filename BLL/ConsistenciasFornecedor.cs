@@ -18,7 +18,7 @@ namespace BLL
         throw new Exception("O nome do Fornecedor é obrigatório");
 
       if (Convert.ToString(modelo.ForCnpj).Trim().Length == 0)
-        throw new Exception("O campo CNPJ é obrigatória");
+        throw new Exception("O campo CNPJ é obrigatório");
 
       if (Convert.ToString(modelo.ForCelular).Trim().Length == 0)
         throw new Exception("O campo Celular é obrigatório");
