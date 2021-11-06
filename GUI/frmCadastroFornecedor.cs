@@ -98,7 +98,7 @@ namespace GUI
             txtEstadoUF.Clear();
             txtTelefone.Clear();
             txtCelular.Clear();
-            txtEmail.Clear();            
+            txtEmail.Clear();
         }
         #endregion
 
@@ -147,6 +147,8 @@ namespace GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.LimparDadosDaTela();
+            lblMsgConsistCpnj.Visible = false;
+
             this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
         }
 
@@ -217,6 +219,42 @@ namespace GUI
             {
                 CampoParaFormatacao campo = CampoParaFormatacao.CELULAR;
                 FormataMascaraDeCampos.FormataMascaraTelefone(campo, txtCelular);
+            }
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            using (frmPesquisarFornecedor pesquisar = new frmPesquisarFornecedor())
+            {
+                pesquisar.ShowDialog();
+
+                if (pesquisar.codigo != 0)
+                {
+                    ModeloFornecedor modeloFornecedor = QueryDB.CarregaFornecedor(pesquisar.codigo);
+
+                    txtCodFornecedor.Text = Convert.ToString(modeloFornecedor.ForCod);
+                    txtNomeFornecedor.Text = modeloFornecedor.ForNome;
+
+                    txtRazaoSocial.Text = modeloFornecedor.ForRazaoSocial;
+                    txtCnpj.Text = modeloFornecedor.ForCnpj;
+                    txtInscEstadual.Text = modeloFornecedor.ForInscricaoEstadual;
+                    txtCEP.Text = modeloFornecedor.ForCep;
+                    txtEndereco.Text = modeloFornecedor.ForEndereco;
+                    txtNumero.Text = modeloFornecedor.ForEndNumero;
+                    txtBairro.Text = modeloFornecedor.ForBairro;
+                    txtCidade.Text = modeloFornecedor.ForCidade;
+                    txtEstadoUF.Text = modeloFornecedor.ForEstado;
+                    txtTelefone.Text = modeloFornecedor.ForTelefone;
+                    txtCelular.Text = modeloFornecedor.ForCelular;
+                    txtEmail.Text = modeloFornecedor.ForEmail;
+
+                    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+                }
+                else
+                {
+                    this.LimparDadosDaTela();
+                    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+                }
             }
         }
     }

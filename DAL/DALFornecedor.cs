@@ -38,8 +38,8 @@ namespace DAL
 
         command.Parameters.AddWithValue("@CODIGO", modelo.ForCod);
         command.Parameters.AddWithValue("@NOME", modelo.ForNome);
-        command.Parameters.AddWithValue("@CPFCNPJ", modelo.ForCnpj);
-        command.Parameters.AddWithValue("@RGIE", modelo.ForInscricaoEstadual);
+        command.Parameters.AddWithValue("@CNPJ", modelo.ForCnpj);
+        command.Parameters.AddWithValue("@IE", modelo.ForInscricaoEstadual);
         command.Parameters.AddWithValue("@RSOCIAL", modelo.ForRazaoSocial);
         command.Parameters.AddWithValue("@CEP", modelo.ForCep);
         command.Parameters.AddWithValue("@ENDERECO", modelo.ForEndereco);

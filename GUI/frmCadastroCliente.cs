@@ -166,6 +166,8 @@ namespace GUI
     private void btnCancelar_Click(object sender, EventArgs e)
     {
       this.LimparDadosDaTela();
+      lblMsgConsistCpfCpnj.Visible = false;
+      
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
     }
 
