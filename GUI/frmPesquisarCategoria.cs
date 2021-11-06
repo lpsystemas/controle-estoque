@@ -2,6 +2,7 @@
 using DAL;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
@@ -45,12 +46,9 @@ namespace GUI
 
     private void frmPesquisarCategoria_Load(object sender, EventArgs e)
     {
-      btnLocalizar_Click(sender, e);
-
-      dgvDados.Columns[0].HeaderText = "Código da Categoria";
-      dgvDados.Columns[0].Width = 54;
-      dgvDados.Columns[1].HeaderText = "Nome da Categoria";
-      dgvDados.Columns[1].Width = 400;
+            BackColor = Color.LightBlue;
+            btnLocalizar_Click(sender, e);
+            ConfiguraColunasGrid();
     }
 
     private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -61,5 +59,16 @@ namespace GUI
         this.Close();
       }      
     }
-  }
+
+        #region Metodos Auxiliares
+
+        private void ConfiguraColunasGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 60;
+            dgvDados.Columns[1].HeaderText = "Categoria";
+            dgvDados.Columns[1].Width = 400;
+        }
+        #endregion
+    }
 }

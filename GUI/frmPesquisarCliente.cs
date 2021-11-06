@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using Ferramentas;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -40,10 +41,9 @@ namespace GUI
 
     private void frmPesquisarCliente_Load(object sender, EventArgs e)
     {
-      BackColor = Color.LightBlue;
-      btnLocalizar.Enabled = false;
+      BackColor = Color.LightBlue;      
       rbNomeCliente.Checked = true;
-
+      btnLocalizar.Enabled = false;
       btnLocalizar_Click(sender, e);
       ConfiguraColunasGrid();
       ConfiguraVisibilidadeGrid();
@@ -124,45 +124,26 @@ namespace GUI
     {
       dgvDados.Columns["CLI_TIPO"].Visible = false;      
     }
-    private void TrataPesquisaPorCPF()
-    {
-      if (rbCpfCliente.Checked == true && txtValorPesquisaCliente.TextLength < 11)
-        btnLocalizar.Enabled = false;
+    
+        private void HabilitaBotaoLocalizar()
+        {
+            if (rbCpfCliente.Checked == true && txtValorPesquisaCliente.TextLength == 14)
+                btnLocalizar.Enabled = true;
 
-      if (rbCpfCliente.Checked == true && txtValorPesquisaCliente.TextLength == 11)
-      {
-        btnLocalizar.Enabled = true;
-        txtValorPesquisaCliente.MaxLength = 11;
-      }
+            if (rbCnpjCliente.Checked == true && txtValorPesquisaCliente.TextLength == 18)
+                btnLocalizar.Enabled = true;
 
-      if (rbCpfCliente.Checked == true && txtValorPesquisaCliente.TextLength > 11)
-        txtValorPesquisaCliente.Clear();
-    }
-    private void TrataPesquisaPorCNPJ()
-    {
-      if (rbCnpjCliente.Checked == true && txtValorPesquisaCliente.TextLength < 14)
-      {
-        btnLocalizar.Enabled = false;
-        txtValorPesquisaCliente.MaxLength = 14;
-      }
+            if (rbNomeCliente.Checked == true && txtValorPesquisaCliente.TextLength > 3)
+            {
+                btnLocalizar.Enabled = true;
+                txtValorPesquisaCliente.MaxLength = 50;
+            }
+        }
 
-      if (rbCnpjCliente.Checked == true && txtValorPesquisaCliente.TextLength == 14)
-      {
-        btnLocalizar.Enabled = true;
-        txtValorPesquisaCliente.MaxLength = 14;
-      }
-
-      if (rbCnpjCliente.Checked == true && txtValorPesquisaCliente.TextLength > 14)
-        txtValorPesquisaCliente.Clear();
-    }
-    private void TrataPesquisaPorNome()
-    {
-      if (rbNomeCliente.Checked == true && txtValorPesquisaCliente.TextLength > 3)
-      {
-        btnLocalizar.Enabled = true;
-        txtValorPesquisaCliente.MaxLength = 50;
-      }
-    }
+        private void LimpaCampoPesquisa()
+        {
+            txtValorPesquisaCliente.Clear();          
+        }
     #endregion
 
 
@@ -189,14 +170,74 @@ namespace GUI
 
     private void txtValorPesquisaCliente_TextChanged(object sender, EventArgs e)
     {
-      if (txtValorPesquisaCliente.TextLength <= 0)
-        btnLocalizar.Enabled = false;
+            
+            if (txtValorPesquisaCliente.TextLength <= 0)
+                btnLocalizar.Enabled = false;
 
-      TrataPesquisaPorCPF();
-      TrataPesquisaPorCNPJ();
-      TrataPesquisaPorNome();
-
-      
+            HabilitaBotaoLocalizar();            
     }
-  }
+
+        private void txtValorPesquisaCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)8)
+            {
+                CampoParaFormatacao campo;
+
+                if (rbCpfCliente.Checked)
+                {
+                    if (!char.IsDigit(e.KeyChar))
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Com o tipo de pesquisa marcado como CPF, o campo VALOR aceita somente numeros");                        
+                    }                    
+
+                    campo = CampoParaFormatacao.CPF;
+                    FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtValorPesquisaCliente);
+                }                    
+
+                if (rbCnpjCliente.Checked)
+                {
+                    if (!char.IsDigit(e.KeyChar))
+                    {
+                        e.Handled = true;
+                        MessageBox.Show("Com o tipo de pesquisa marcado como CNPJ, o campo VALOR aceita somente numeros");                        
+                    }                         
+
+                    campo = CampoParaFormatacao.CNPJ;
+                    FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtValorPesquisaCliente);
+                } 
+            }
+
+            if (string.IsNullOrEmpty(txtValorPesquisaCliente.Text))
+                lblMsgConsisteCpfCnpj.Visible = false;
+        }
+
+        private void txtValorPesquisaCliente_Leave(object sender, EventArgs e)
+        {
+            if (rbCpfCliente.Checked == true && !string.IsNullOrEmpty(txtValorPesquisaCliente.Text))
+                lblMsgConsisteCpfCnpj.Visible = true ? !Validacao.ValidaCpf(txtValorPesquisaCliente.Text) : lblMsgConsisteCpfCnpj.Visible = false;
+
+            if (rbCnpjCliente.Checked == true && !string.IsNullOrEmpty(txtValorPesquisaCliente.Text))
+                lblMsgConsisteCpfCnpj.Visible = true ? !Validacao.ValidaCnpj(txtValorPesquisaCliente.Text) : lblMsgConsisteCpfCnpj.Visible = false;
+        }
+
+        private void rbCnpjCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            LimpaCampoPesquisa();
+            lblMsgConsisteCpfCnpj.Visible = false;
+        }
+
+        private void rbCpfCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            LimpaCampoPesquisa();
+            lblMsgConsisteCpfCnpj.Visible = false;
+        }
+
+        private void rbNomeCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            LimpaCampoPesquisa();
+            lblMsgConsisteCpfCnpj.Visible = false;
+
+        }
+    }
 }

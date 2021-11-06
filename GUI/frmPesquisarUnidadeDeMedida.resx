@@ -123,10 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnLocalizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 42</value>
+    <value>443, 27</value>
+  </data>
+  <data name="btnLocalizar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnLocalizar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 32</value>
+    <value>68, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnLocalizar.TabIndex" type="System.Int32, mscorlib">
@@ -148,10 +151,13 @@
     <value>1</value>
   </data>
   <data name="txtNomeUmed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 45</value>
+    <value>11, 29</value>
+  </data>
+  <data name="txtNomeUmed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtNomeUmed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 26</value>
+    <value>429, 20</value>
   </data>
   <data name="txtNomeUmed.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -178,10 +184,13 @@
     <value>NoControl</value>
   </data>
   <data name="lblUnidadeMedida.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 20</value>
+    <value>8, 13</value>
+  </data>
+  <data name="lblUnidadeMedida.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblUnidadeMedida.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 20</value>
+    <value>121, 13</value>
   </data>
   <data name="lblUnidadeMedida.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -202,13 +211,16 @@
     <value>3</value>
   </data>
   <data name="dgvDados.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 89</value>
+    <value>8, 58</value>
+  </data>
+  <data name="dgvDados.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="dgvDados.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="dgvDados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>754, 443</value>
+    <value>503, 288</value>
   </data>
   <data name="dgvDados.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -229,10 +241,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>778, 545</value>
+    <value>519, 354</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI
@@ -37,16 +38,9 @@ namespace GUI
 
     private void frmPesquisarSubCategoria_Load(object sender, EventArgs e)
     {
-      btnLocalizar_Click(sender, e);
-      
-      dgvDados.Columns[0].HeaderText = "Código da SubCategoria";
-      dgvDados.Columns[0].Width = 150;
-      dgvDados.Columns[1].HeaderText = "Nome da SubCategoria";
-      dgvDados.Columns[1].Width = 200;
-      dgvDados.Columns[2].HeaderText = "Código da Categoria";
-      dgvDados.Columns[2].Width = 150;
-      dgvDados.Columns[3].HeaderText = "Nome da Categoria";
-      dgvDados.Columns[3].Width = 200;
+            BackColor = Color.LightBlue;
+            btnLocalizar_Click(sender, e);
+            ConfiguraColunasGrid();      
     }
 
     private void btnLocalizar_Click(object sender, EventArgs e)
@@ -62,5 +56,20 @@ namespace GUI
         this.Close();
       }
     }
-  }
+
+        #region Metodos Auxiliares
+
+        private void ConfiguraColunasGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 60;
+            dgvDados.Columns[1].HeaderText = "Nome";
+            dgvDados.Columns[1].Width = 400;
+            dgvDados.Columns[2].HeaderText = "Cod. Categoria";
+            dgvDados.Columns[2].Width = 60;
+            dgvDados.Columns[3].HeaderText = "Categoria";
+            dgvDados.Columns[3].Width = 400;
+        }
+        #endregion
+    }
 }

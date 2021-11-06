@@ -45,12 +45,9 @@ namespace GUI
     
     private void frmPesquisarUnidadeDeMedida_Load(object sender, EventArgs e)
     {
-      btnLocalizar_Click(sender, e);
-
-      dgvDados.Columns[0].HeaderText = "Código da Unidade de Medida";
-      dgvDados.Columns[0].Width = 180;
-      dgvDados.Columns[1].HeaderText = "Nome da Unidade de Medida";
-      dgvDados.Columns[1].Width = 262;
+            BackColor = Color.LightBlue;
+            btnLocalizar_Click(sender, e);
+            ConfiguraColunasGrid();
     }
 
     private void btnLocalizar_Click(object sender, EventArgs e)
@@ -66,5 +63,16 @@ namespace GUI
         this.Close();
       }
     }
-  }
+
+        #region Metodos Auxiliares
+
+        private void ConfiguraColunasGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 60;
+            dgvDados.Columns[1].HeaderText = "Unidade de Medida";
+            dgvDados.Columns[1].Width = 400;
+        }
+        #endregion
+    }
 }

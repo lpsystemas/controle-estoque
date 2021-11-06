@@ -194,6 +194,7 @@
             // 
             this.fornecedorToolStripMenuItem1.Name = "fornecedorToolStripMenuItem1";
             resources.ApplyResources(this.fornecedorToolStripMenuItem1, "fornecedorToolStripMenuItem1");
+            this.fornecedorToolStripMenuItem1.Click += new System.EventHandler(this.fornecedorToolStripMenuItem1_Click);
             // 
             // movimentaçãoToolStripMenuItem
             // 

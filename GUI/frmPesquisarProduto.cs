@@ -65,7 +65,7 @@ namespace GUI
         colunas.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[0].HeaderText = "Código";
-      dgvDados.Columns[0].Width = 50;
+      dgvDados.Columns[0].Width = 60;
       dgvDados.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[1].HeaderText = "Nome";

@@ -51,12 +51,11 @@ namespace GUI
 
     private void frmPesquisarTipoDePagamento_Load(object sender, EventArgs e)
     {
-      btnLocalizar_Click(sender, e);
+            BackColor = Color.LightBlue;
+            btnLocalizar_Click(sender, e);
+            ConfiguraColunasGrid();
 
-      dgvDados.Columns[0].HeaderText = "Código do Tipo de Pagamento";
-      dgvDados.Columns[0].Width = 54;
-      dgvDados.Columns[1].HeaderText = "Nome do Tipo de Pagamento";
-      dgvDados.Columns[1].Width = 400;
+      
     }
 
     private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -67,5 +66,16 @@ namespace GUI
         this.Close();
       }
     }
-  }
+
+        #region Metodos Auxiliares
+
+        private void ConfiguraColunasGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 60;
+            dgvDados.Columns[1].HeaderText = "Tipo de Pagamento";
+            dgvDados.Columns[1].Width = 400;
+        }
+        #endregion
+    }
 }
