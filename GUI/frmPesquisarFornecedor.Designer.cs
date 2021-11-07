@@ -82,6 +82,9 @@ namespace GUI
             // 
             this.dgvDados.AllowUserToAddRows = false;
             this.dgvDados.AllowUserToDeleteRows = false;
+            this.dgvDados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Location = new System.Drawing.Point(8, 119);
             this.dgvDados.Margin = new System.Windows.Forms.Padding(2);
@@ -97,6 +100,7 @@ namespace GUI
             // 
             // btnLocalizar
             // 
+            this.btnLocalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLocalizar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLocalizar.Location = new System.Drawing.Point(443, 85);
             this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2);
@@ -109,6 +113,8 @@ namespace GUI
             // 
             // txtValorPesquisaFornecedor
             // 
+            this.txtValorPesquisaFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtValorPesquisaFornecedor.Location = new System.Drawing.Point(11, 87);
             this.txtValorPesquisaFornecedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorPesquisaFornecedor.Name = "txtValorPesquisaFornecedor";
@@ -132,6 +138,7 @@ namespace GUI
             // 
             // lblMsgConsistCnpj
             // 
+            this.lblMsgConsistCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMsgConsistCnpj.AutoSize = true;
             this.lblMsgConsistCnpj.ForeColor = System.Drawing.Color.Crimson;
             this.lblMsgConsistCnpj.ImeMode = System.Windows.Forms.ImeMode.NoControl;

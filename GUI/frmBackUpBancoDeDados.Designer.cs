@@ -54,7 +54,10 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnRestaurarBanco);
             this.Controls.Add(this.btnBackUpBanco);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmBackUpBancoDeDados";
+            this.Load += new System.EventHandler(this.frmBackUpBancoDeDados_Load);
             this.ResumeLayout(false);
 
     }

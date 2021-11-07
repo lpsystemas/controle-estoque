@@ -29,89 +29,91 @@ namespace GUI
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracaoBancoDeDados));
-      this.lblServidor = new System.Windows.Forms.Label();
-      this.lblBanco = new System.Windows.Forms.Label();
-      this.lblUsuario = new System.Windows.Forms.Label();
-      this.lblSenha = new System.Windows.Forms.Label();
-      this.txtServidor = new System.Windows.Forms.TextBox();
-      this.txtBanco = new System.Windows.Forms.TextBox();
-      this.txtUsuario = new System.Windows.Forms.TextBox();
-      this.txtSenha = new System.Windows.Forms.TextBox();
-      this.btnSalvar = new System.Windows.Forms.Button();
-      this.progressBarConfigDB = new System.Windows.Forms.ProgressBar();
-      this.SuspendLayout();
-      // 
-      // lblServidor
-      // 
-      resources.ApplyResources(this.lblServidor, "lblServidor");
-      this.lblServidor.Name = "lblServidor";
-      // 
-      // lblBanco
-      // 
-      resources.ApplyResources(this.lblBanco, "lblBanco");
-      this.lblBanco.Name = "lblBanco";
-      // 
-      // lblUsuario
-      // 
-      resources.ApplyResources(this.lblUsuario, "lblUsuario");
-      this.lblUsuario.Name = "lblUsuario";
-      // 
-      // lblSenha
-      // 
-      resources.ApplyResources(this.lblSenha, "lblSenha");
-      this.lblSenha.Name = "lblSenha";
-      // 
-      // txtServidor
-      // 
-      resources.ApplyResources(this.txtServidor, "txtServidor");
-      this.txtServidor.Name = "txtServidor";
-      // 
-      // txtBanco
-      // 
-      resources.ApplyResources(this.txtBanco, "txtBanco");
-      this.txtBanco.Name = "txtBanco";
-      // 
-      // txtUsuario
-      // 
-      resources.ApplyResources(this.txtUsuario, "txtUsuario");
-      this.txtUsuario.Name = "txtUsuario";
-      // 
-      // txtSenha
-      // 
-      resources.ApplyResources(this.txtSenha, "txtSenha");
-      this.txtSenha.Name = "txtSenha";
-      // 
-      // btnSalvar
-      // 
-      resources.ApplyResources(this.btnSalvar, "btnSalvar");
-      this.btnSalvar.Name = "btnSalvar";
-      this.btnSalvar.UseVisualStyleBackColor = true;
-      this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-      // 
-      // progressBarConfigDB
-      // 
-      resources.ApplyResources(this.progressBarConfigDB, "progressBarConfigDB");
-      this.progressBarConfigDB.Name = "progressBarConfigDB";
-      // 
-      // frmConfiguracaoBancoDeDados
-      // 
-      resources.ApplyResources(this, "$this");
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.Controls.Add(this.progressBarConfigDB);
-      this.Controls.Add(this.btnSalvar);
-      this.Controls.Add(this.txtSenha);
-      this.Controls.Add(this.txtUsuario);
-      this.Controls.Add(this.txtBanco);
-      this.Controls.Add(this.txtServidor);
-      this.Controls.Add(this.lblSenha);
-      this.Controls.Add(this.lblUsuario);
-      this.Controls.Add(this.lblBanco);
-      this.Controls.Add(this.lblServidor);
-      this.Name = "frmConfiguracaoBancoDeDados";
-      this.Load += new System.EventHandler(this.frmConfiguracaoBancoDeDados_Load);
-      this.ResumeLayout(false);
-      this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracaoBancoDeDados));
+            this.lblServidor = new System.Windows.Forms.Label();
+            this.lblBanco = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.txtServidor = new System.Windows.Forms.TextBox();
+            this.txtBanco = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.progressBarConfigDB = new System.Windows.Forms.ProgressBar();
+            this.SuspendLayout();
+            // 
+            // lblServidor
+            // 
+            resources.ApplyResources(this.lblServidor, "lblServidor");
+            this.lblServidor.Name = "lblServidor";
+            // 
+            // lblBanco
+            // 
+            resources.ApplyResources(this.lblBanco, "lblBanco");
+            this.lblBanco.Name = "lblBanco";
+            // 
+            // lblUsuario
+            // 
+            resources.ApplyResources(this.lblUsuario, "lblUsuario");
+            this.lblUsuario.Name = "lblUsuario";
+            // 
+            // lblSenha
+            // 
+            resources.ApplyResources(this.lblSenha, "lblSenha");
+            this.lblSenha.Name = "lblSenha";
+            // 
+            // txtServidor
+            // 
+            resources.ApplyResources(this.txtServidor, "txtServidor");
+            this.txtServidor.Name = "txtServidor";
+            // 
+            // txtBanco
+            // 
+            resources.ApplyResources(this.txtBanco, "txtBanco");
+            this.txtBanco.Name = "txtBanco";
+            // 
+            // txtUsuario
+            // 
+            resources.ApplyResources(this.txtUsuario, "txtUsuario");
+            this.txtUsuario.Name = "txtUsuario";
+            // 
+            // txtSenha
+            // 
+            resources.ApplyResources(this.txtSenha, "txtSenha");
+            this.txtSenha.Name = "txtSenha";
+            // 
+            // btnSalvar
+            // 
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // progressBarConfigDB
+            // 
+            resources.ApplyResources(this.progressBarConfigDB, "progressBarConfigDB");
+            this.progressBarConfigDB.Name = "progressBarConfigDB";
+            // 
+            // frmConfiguracaoBancoDeDados
+            // 
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.progressBarConfigDB);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtBanco);
+            this.Controls.Add(this.txtServidor);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblBanco);
+            this.Controls.Add(this.lblServidor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "frmConfiguracaoBancoDeDados";
+            this.Load += new System.EventHandler(this.frmConfiguracaoBancoDeDados_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
 

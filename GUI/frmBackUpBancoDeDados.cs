@@ -1,6 +1,7 @@
 ﻿using DAL;
 using Ferramentas;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GUI
@@ -64,5 +65,10 @@ namespace GUI
         MessageBox.Show(erro.Message);
       }
     }
-  }
+
+        private void frmBackUpBancoDeDados_Load(object sender, EventArgs e)
+        {
+            BackColor = Color.LightBlue;
+        }
+    }
 }

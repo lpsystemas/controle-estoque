@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using static ConstsEnumerados.Constantes;
@@ -58,8 +59,9 @@ namespace GUI
 
     private void frmConfiguracaoBancoDeDados_Load(object sender, EventArgs e)
     {
-      CarregaForm();
-      ConfiguraVisibilidadeComponetesForm();
+            BackColor = Color.LightBlue;
+            CarregaForm();
+            ConfiguraVisibilidadeComponetesForm();
     }
 
     #region Metodos Auxiliares

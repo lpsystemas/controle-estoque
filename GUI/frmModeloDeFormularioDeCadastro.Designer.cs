@@ -28,86 +28,88 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModeloDeFormularioDeCadastro));
-      this.pnDados = new System.Windows.Forms.Panel();
-      this.pnBotoes = new System.Windows.Forms.Panel();
-      this.btnCancelar = new System.Windows.Forms.Button();
-      this.btnSalvar = new System.Windows.Forms.Button();
-      this.btnExcluir = new System.Windows.Forms.Button();
-      this.btnAlterar = new System.Windows.Forms.Button();
-      this.btnLocalizar = new System.Windows.Forms.Button();
-      this.btnInserir = new System.Windows.Forms.Button();
-      this.pnBotoes.SuspendLayout();
-      this.SuspendLayout();
-      // 
-      // pnDados
-      // 
-      resources.ApplyResources(this.pnDados, "pnDados");
-      this.pnDados.Name = "pnDados";
-      // 
-      // pnBotoes
-      // 
-      this.pnBotoes.Controls.Add(this.btnCancelar);
-      this.pnBotoes.Controls.Add(this.btnSalvar);
-      this.pnBotoes.Controls.Add(this.btnExcluir);
-      this.pnBotoes.Controls.Add(this.btnAlterar);
-      this.pnBotoes.Controls.Add(this.btnLocalizar);
-      this.pnBotoes.Controls.Add(this.btnInserir);
-      resources.ApplyResources(this.pnBotoes, "pnBotoes");
-      this.pnBotoes.Name = "pnBotoes";
-      // 
-      // btnCancelar
-      // 
-      resources.ApplyResources(this.btnCancelar, "btnCancelar");
-      this.btnCancelar.Image = global::GUI.Properties.Resources.Cancelar;
-      this.btnCancelar.Name = "btnCancelar";
-      this.btnCancelar.UseVisualStyleBackColor = true;
-      // 
-      // btnSalvar
-      // 
-      resources.ApplyResources(this.btnSalvar, "btnSalvar");
-      this.btnSalvar.Image = global::GUI.Properties.Resources.Salvar1_fw;
-      this.btnSalvar.Name = "btnSalvar";
-      this.btnSalvar.UseVisualStyleBackColor = true;
-      // 
-      // btnExcluir
-      // 
-      resources.ApplyResources(this.btnExcluir, "btnExcluir");
-      this.btnExcluir.Image = global::GUI.Properties.Resources.Excluir;
-      this.btnExcluir.Name = "btnExcluir";
-      this.btnExcluir.UseVisualStyleBackColor = true;
-      // 
-      // btnAlterar
-      // 
-      resources.ApplyResources(this.btnAlterar, "btnAlterar");
-      this.btnAlterar.Image = global::GUI.Properties.Resources.Alterar;
-      this.btnAlterar.Name = "btnAlterar";
-      this.btnAlterar.UseVisualStyleBackColor = true;
-      // 
-      // btnLocalizar
-      // 
-      resources.ApplyResources(this.btnLocalizar, "btnLocalizar");
-      this.btnLocalizar.Image = global::GUI.Properties.Resources.localizar_fw;
-      this.btnLocalizar.Name = "btnLocalizar";
-      this.btnLocalizar.UseVisualStyleBackColor = true;
-      // 
-      // btnInserir
-      // 
-      resources.ApplyResources(this.btnInserir, "btnInserir");
-      this.btnInserir.Image = global::GUI.Properties.Resources.Novo;
-      this.btnInserir.Name = "btnInserir";
-      this.btnInserir.UseVisualStyleBackColor = true;
-      // 
-      // frmModeloDeFormularioDeCadastro
-      // 
-      resources.ApplyResources(this, "$this");
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.Controls.Add(this.pnBotoes);
-      this.Controls.Add(this.pnDados);
-      this.Name = "frmModeloDeFormularioDeCadastro";
-      this.Load += new System.EventHandler(this.frmModeloDeFormularioDeCadastro_Load);
-      this.pnBotoes.ResumeLayout(false);
-      this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModeloDeFormularioDeCadastro));
+            this.pnDados = new System.Windows.Forms.Panel();
+            this.pnBotoes = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.pnBotoes.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnDados
+            // 
+            resources.ApplyResources(this.pnDados, "pnDados");
+            this.pnDados.Name = "pnDados";
+            // 
+            // pnBotoes
+            // 
+            this.pnBotoes.Controls.Add(this.btnCancelar);
+            this.pnBotoes.Controls.Add(this.btnSalvar);
+            this.pnBotoes.Controls.Add(this.btnExcluir);
+            this.pnBotoes.Controls.Add(this.btnAlterar);
+            this.pnBotoes.Controls.Add(this.btnLocalizar);
+            this.pnBotoes.Controls.Add(this.btnInserir);
+            resources.ApplyResources(this.pnBotoes, "pnBotoes");
+            this.pnBotoes.Name = "pnBotoes";
+            // 
+            // btnCancelar
+            // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
+            this.btnCancelar.Image = global::GUI.Properties.Resources.Cancelar;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            resources.ApplyResources(this.btnSalvar, "btnSalvar");
+            this.btnSalvar.Image = global::GUI.Properties.Resources.Salvar1_fw;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            resources.ApplyResources(this.btnExcluir, "btnExcluir");
+            this.btnExcluir.Image = global::GUI.Properties.Resources.Excluir;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar
+            // 
+            resources.ApplyResources(this.btnAlterar, "btnAlterar");
+            this.btnAlterar.Image = global::GUI.Properties.Resources.Alterar;
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnLocalizar
+            // 
+            resources.ApplyResources(this.btnLocalizar, "btnLocalizar");
+            this.btnLocalizar.Image = global::GUI.Properties.Resources.localizar_fw;
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.UseVisualStyleBackColor = true;
+            // 
+            // btnInserir
+            // 
+            resources.ApplyResources(this.btnInserir, "btnInserir");
+            this.btnInserir.Image = global::GUI.Properties.Resources.Novo;
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // frmModeloDeFormularioDeCadastro
+            // 
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnBotoes);
+            this.Controls.Add(this.pnDados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "frmModeloDeFormularioDeCadastro";
+            this.Load += new System.EventHandler(this.frmModeloDeFormularioDeCadastro_Load);
+            this.pnBotoes.ResumeLayout(false);
+            this.ResumeLayout(false);
 
     }
 

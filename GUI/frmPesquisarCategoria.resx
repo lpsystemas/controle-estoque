@@ -126,10 +126,14 @@
     <value>Microsoft Sans Serif, 8pt, style=Bold</value>
   </data>
   <data name="lblCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 21</value>
+    <value>8, 14</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblCategoria.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="lblCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
+    <value>65, 13</value>
   </data>
   <data name="lblCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -149,11 +153,17 @@
   <data name="&gt;&gt;lblCategoria.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="txtNomeCategoria.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="txtNomeCategoria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 44</value>
+    <value>11, 29</value>
+  </data>
+  <data name="txtNomeCategoria.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="txtNomeCategoria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 26</value>
+    <value>429, 20</value>
   </data>
   <data name="txtNomeCategoria.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -170,11 +180,17 @@
   <data name="&gt;&gt;txtNomeCategoria.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnLocalizar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btnLocalizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 41</value>
+    <value>443, 27</value>
+  </data>
+  <data name="btnLocalizar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnLocalizar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 32</value>
+    <value>68, 21</value>
   </data>
   <data name="btnLocalizar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -194,14 +210,20 @@
   <data name="&gt;&gt;btnLocalizar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="dgvDados.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="dgvDados.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 89</value>
+    <value>8, 58</value>
+  </data>
+  <data name="dgvDados.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="dgvDados.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="dgvDados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>754, 443</value>
+    <value>503, 288</value>
   </data>
   <data name="dgvDados.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -222,12 +244,14 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>778, 544</value>
+    <value>519, 354</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

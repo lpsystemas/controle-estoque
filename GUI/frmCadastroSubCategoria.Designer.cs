@@ -28,99 +28,99 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroSubCategoria));
-      this.lblCodigoSubCategoria = new System.Windows.Forms.Label();
-      this.txtCodigoSubCategoria = new System.Windows.Forms.TextBox();
-      this.lblNomeSubCategoria = new System.Windows.Forms.Label();
-      this.txtNomeSubCategoria = new System.Windows.Forms.TextBox();
-      this.lblCategoria = new System.Windows.Forms.Label();
-      this.cbCategoria = new System.Windows.Forms.ComboBox();
-      this.btnNovaCategoria = new System.Windows.Forms.Button();
-      this.pnDados.SuspendLayout();
-      this.pnBotoes.SuspendLayout();
-      this.SuspendLayout();
-      // 
-      // pnDados
-      // 
-      this.pnDados.Controls.Add(this.btnNovaCategoria);
-      this.pnDados.Controls.Add(this.cbCategoria);
-      this.pnDados.Controls.Add(this.lblCategoria);
-      this.pnDados.Controls.Add(this.txtNomeSubCategoria);
-      this.pnDados.Controls.Add(this.lblNomeSubCategoria);
-      this.pnDados.Controls.Add(this.txtCodigoSubCategoria);
-      this.pnDados.Controls.Add(this.lblCodigoSubCategoria);
-      // 
-      // btnCancelar
-      // 
-      this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-      // 
-      // btnSalvar
-      // 
-      this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-      // 
-      // btnExcluir
-      // 
-      this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-      // 
-      // btnAlterar
-      // 
-      this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-      // 
-      // btnLocalizar
-      // 
-      this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
-      // 
-      // btnInserir
-      // 
-      this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-      // 
-      // lblCodigoSubCategoria
-      // 
-      resources.ApplyResources(this.lblCodigoSubCategoria, "lblCodigoSubCategoria");
-      this.lblCodigoSubCategoria.Name = "lblCodigoSubCategoria";
-      // 
-      // txtCodigoSubCategoria
-      // 
-      resources.ApplyResources(this.txtCodigoSubCategoria, "txtCodigoSubCategoria");
-      this.txtCodigoSubCategoria.Name = "txtCodigoSubCategoria";
-      // 
-      // lblNomeSubCategoria
-      // 
-      resources.ApplyResources(this.lblNomeSubCategoria, "lblNomeSubCategoria");
-      this.lblNomeSubCategoria.Name = "lblNomeSubCategoria";
-      // 
-      // txtNomeSubCategoria
-      // 
-      resources.ApplyResources(this.txtNomeSubCategoria, "txtNomeSubCategoria");
-      this.txtNomeSubCategoria.Name = "txtNomeSubCategoria";
-      // 
-      // lblCategoria
-      // 
-      resources.ApplyResources(this.lblCategoria, "lblCategoria");
-      this.lblCategoria.Name = "lblCategoria";
-      // 
-      // cbCategoria
-      // 
-      this.cbCategoria.FormattingEnabled = true;
-      resources.ApplyResources(this.cbCategoria, "cbCategoria");
-      this.cbCategoria.Name = "cbCategoria";
-      // 
-      // btnNovaCategoria
-      // 
-      resources.ApplyResources(this.btnNovaCategoria, "btnNovaCategoria");
-      this.btnNovaCategoria.Name = "btnNovaCategoria";
-      this.btnNovaCategoria.UseVisualStyleBackColor = true;
-      this.btnNovaCategoria.Click += new System.EventHandler(this.btnNovaCategoria_Click);
-      // 
-      // frmCadastroSubCategoria
-      // 
-      resources.ApplyResources(this, "$this");
-      this.Name = "frmCadastroSubCategoria";
-      this.Load += new System.EventHandler(this.frmCadastroSubCategoria_Load);
-      this.pnDados.ResumeLayout(false);
-      this.pnDados.PerformLayout();
-      this.pnBotoes.ResumeLayout(false);
-      this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroSubCategoria));
+            this.lblCodigoSubCategoria = new System.Windows.Forms.Label();
+            this.txtCodigoSubCategoria = new System.Windows.Forms.TextBox();
+            this.lblNomeSubCategoria = new System.Windows.Forms.Label();
+            this.txtNomeSubCategoria = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnNovaCategoria = new System.Windows.Forms.Button();
+            this.pnDados.SuspendLayout();
+            this.pnBotoes.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnDados
+            // 
+            this.pnDados.Controls.Add(this.btnNovaCategoria);
+            this.pnDados.Controls.Add(this.cbCategoria);
+            this.pnDados.Controls.Add(this.lblCategoria);
+            this.pnDados.Controls.Add(this.txtNomeSubCategoria);
+            this.pnDados.Controls.Add(this.lblNomeSubCategoria);
+            this.pnDados.Controls.Add(this.txtCodigoSubCategoria);
+            this.pnDados.Controls.Add(this.lblCodigoSubCategoria);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnLocalizar
+            // 
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // lblCodigoSubCategoria
+            // 
+            resources.ApplyResources(this.lblCodigoSubCategoria, "lblCodigoSubCategoria");
+            this.lblCodigoSubCategoria.Name = "lblCodigoSubCategoria";
+            // 
+            // txtCodigoSubCategoria
+            // 
+            resources.ApplyResources(this.txtCodigoSubCategoria, "txtCodigoSubCategoria");
+            this.txtCodigoSubCategoria.Name = "txtCodigoSubCategoria";
+            // 
+            // lblNomeSubCategoria
+            // 
+            resources.ApplyResources(this.lblNomeSubCategoria, "lblNomeSubCategoria");
+            this.lblNomeSubCategoria.Name = "lblNomeSubCategoria";
+            // 
+            // txtNomeSubCategoria
+            // 
+            resources.ApplyResources(this.txtNomeSubCategoria, "txtNomeSubCategoria");
+            this.txtNomeSubCategoria.Name = "txtNomeSubCategoria";
+            // 
+            // lblCategoria
+            // 
+            resources.ApplyResources(this.lblCategoria, "lblCategoria");
+            this.lblCategoria.Name = "lblCategoria";
+            // 
+            // cbCategoria
+            // 
+            this.cbCategoria.FormattingEnabled = true;
+            resources.ApplyResources(this.cbCategoria, "cbCategoria");
+            this.cbCategoria.Name = "cbCategoria";
+            // 
+            // btnNovaCategoria
+            // 
+            resources.ApplyResources(this.btnNovaCategoria, "btnNovaCategoria");
+            this.btnNovaCategoria.Name = "btnNovaCategoria";
+            this.btnNovaCategoria.UseVisualStyleBackColor = true;
+            this.btnNovaCategoria.Click += new System.EventHandler(this.btnNovaCategoria_Click);
+            // 
+            // frmCadastroSubCategoria
+            // 
+            resources.ApplyResources(this, "$this");
+            this.Name = "frmCadastroSubCategoria";
+            this.Load += new System.EventHandler(this.frmCadastroSubCategoria_Load);
+            this.pnDados.ResumeLayout(false);
+            this.pnDados.PerformLayout();
+            this.pnBotoes.ResumeLayout(false);
+            this.ResumeLayout(false);
 
     }
 
