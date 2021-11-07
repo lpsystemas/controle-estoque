@@ -67,11 +67,11 @@ namespace GUI
                 colunas.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[0].HeaderText = "Código";
-            dgvDados.Columns[0].Width = 50;
+            dgvDados.Columns[0].Width = 60;
             dgvDados.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[1].HeaderText = "Nome";
-            dgvDados.Columns[1].Width = 150;
+            dgvDados.Columns[1].Width = 200;
             dgvDados.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[2].HeaderText = "CNPJ";
@@ -83,15 +83,15 @@ namespace GUI
             dgvDados.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[4].HeaderText = "Razão Social";
-            dgvDados.Columns[4].Width = 150;
+            dgvDados.Columns[4].Width = 100;
             dgvDados.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[5].HeaderText = "CEP";
-            dgvDados.Columns[5].Width = 50;
+            dgvDados.Columns[5].Width = 60;
             dgvDados.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[6].HeaderText = "Endereço";
-            dgvDados.Columns[6].Width = 150;
+            dgvDados.Columns[6].Width = 200;
             dgvDados.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[7].HeaderText = "Bairro";
@@ -111,7 +111,7 @@ namespace GUI
             dgvDados.Columns[10].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[11].HeaderText = "Numero";
-            dgvDados.Columns[11].Width = 50;
+            dgvDados.Columns[11].Width = 60;
             dgvDados.Columns[11].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgvDados.Columns[12].HeaderText = "Cidade";

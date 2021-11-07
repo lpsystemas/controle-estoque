@@ -93,7 +93,7 @@ namespace GUI
       dgvDados.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[7].HeaderText = "Cod. Und. Medida";
-      dgvDados.Columns[7].Width = 50;
+      dgvDados.Columns[7].Width = 60;
       dgvDados.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[8].HeaderText = "Und. Medida";
@@ -101,7 +101,7 @@ namespace GUI
       dgvDados.Columns[8].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[9].HeaderText = "Cod. Categoria";
-      dgvDados.Columns[9].Width = 50;
+      dgvDados.Columns[9].Width = 60;
       dgvDados.Columns[9].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[10].HeaderText = "Categoria";
@@ -109,7 +109,7 @@ namespace GUI
       dgvDados.Columns[10].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[11].HeaderText = "Cod Subcategoria";
-      dgvDados.Columns[11].Width = 50;
+      dgvDados.Columns[11].Width = 60;
       dgvDados.Columns[11].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[12].HeaderText = "Subcategoria";

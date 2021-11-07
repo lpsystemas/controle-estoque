@@ -61,11 +61,11 @@ namespace GUI
         colunas.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[0].HeaderText = "Código";
-      dgvDados.Columns[0].Width = 50;
+      dgvDados.Columns[0].Width = 60;
       dgvDados.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[1].HeaderText = "Nome";
-      dgvDados.Columns[1].Width = 150;
+      dgvDados.Columns[1].Width = 200;
       dgvDados.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[2].HeaderText = "CPF/CNPJ";
@@ -81,15 +81,15 @@ namespace GUI
       dgvDados.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;        
 
       dgvDados.Columns[5].HeaderText = "Tipo";
-      dgvDados.Columns[5].Width = 50;
+      dgvDados.Columns[5].Width = 60;
       dgvDados.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[6].HeaderText = "CEP";
-      dgvDados.Columns[6].Width = 50;
+      dgvDados.Columns[6].Width = 60;
       dgvDados.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[7].HeaderText = "Endereço";
-      dgvDados.Columns[7].Width = 150;
+      dgvDados.Columns[7].Width = 200;
       dgvDados.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[8].HeaderText = "Bairro";
@@ -109,7 +109,7 @@ namespace GUI
       dgvDados.Columns[11].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[12].HeaderText = "Numero";
-      dgvDados.Columns[12].Width = 50;
+      dgvDados.Columns[12].Width = 60;
       dgvDados.Columns[12].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
       dgvDados.Columns[13].HeaderText = "Cidade";

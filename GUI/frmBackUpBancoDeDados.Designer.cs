@@ -29,33 +29,33 @@ namespace GUI
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBackUpBancoDeDados));
-      this.btnBackUpBanco = new System.Windows.Forms.Button();
-      this.btnRestaurarBanco = new System.Windows.Forms.Button();
-      this.SuspendLayout();
-      // 
-      // btnBackUpBanco
-      // 
-      resources.ApplyResources(this.btnBackUpBanco, "btnBackUpBanco");
-      this.btnBackUpBanco.Name = "btnBackUpBanco";
-      this.btnBackUpBanco.UseVisualStyleBackColor = true;
-      this.btnBackUpBanco.Click += new System.EventHandler(this.btnBackUpBanco_Click);
-      // 
-      // btnRestaurarBanco
-      // 
-      resources.ApplyResources(this.btnRestaurarBanco, "btnRestaurarBanco");
-      this.btnRestaurarBanco.Name = "btnRestaurarBanco";
-      this.btnRestaurarBanco.UseVisualStyleBackColor = true;
-      this.btnRestaurarBanco.Click += new System.EventHandler(this.btnRestaurarBanco_Click);
-      // 
-      // frmBackUpBancoDeDados
-      // 
-      resources.ApplyResources(this, "$this");
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.Controls.Add(this.btnRestaurarBanco);
-      this.Controls.Add(this.btnBackUpBanco);
-      this.Name = "frmBackUpBancoDeDados";
-      this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBackUpBancoDeDados));
+            this.btnBackUpBanco = new System.Windows.Forms.Button();
+            this.btnRestaurarBanco = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnBackUpBanco
+            // 
+            resources.ApplyResources(this.btnBackUpBanco, "btnBackUpBanco");
+            this.btnBackUpBanco.Name = "btnBackUpBanco";
+            this.btnBackUpBanco.UseVisualStyleBackColor = true;
+            this.btnBackUpBanco.Click += new System.EventHandler(this.btnBackUpBanco_Click);
+            // 
+            // btnRestaurarBanco
+            // 
+            resources.ApplyResources(this.btnRestaurarBanco, "btnRestaurarBanco");
+            this.btnRestaurarBanco.Name = "btnRestaurarBanco";
+            this.btnRestaurarBanco.UseVisualStyleBackColor = true;
+            this.btnRestaurarBanco.Click += new System.EventHandler(this.btnRestaurarBanco_Click);
+            // 
+            // frmBackUpBancoDeDados
+            // 
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRestaurarBanco);
+            this.Controls.Add(this.btnBackUpBanco);
+            this.Name = "frmBackUpBancoDeDados";
+            this.ResumeLayout(false);
 
     }
 

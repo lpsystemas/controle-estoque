@@ -64,10 +64,20 @@ namespace GUI
 
         private void ConfiguraColunasGrid()
         {
+            dgvDados.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvDados.AlternatingRowsDefaultCellStyle.BackColor = Color.Azure;
+            dgvDados.ColumnHeadersDefaultCellStyle.Font = new Font(DataGridView.DefaultFont, FontStyle.Bold);
+
+            foreach (DataGridViewColumn colunas in dgvDados.Columns)
+                colunas.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgvDados.Columns[0].HeaderText = "Código";
             dgvDados.Columns[0].Width = 60;
+            dgvDados.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgvDados.Columns[1].HeaderText = "Categoria";
-            dgvDados.Columns[1].Width = 400;
+            dgvDados.Columns[1].Width = 150;
+            dgvDados.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
         #endregion
     }
