@@ -174,6 +174,9 @@ namespace GUI
             if (txtValorPesquisaCliente.TextLength <= 0)
                 btnLocalizar.Enabled = false;
 
+            if (string.IsNullOrEmpty(txtValorPesquisaCliente.Text) || txtValorPesquisaCliente.TextLength <= 0)
+                lblMsgConsisteCpfCnpj.Visible = false;
+
             HabilitaBotaoLocalizar();            
     }
 
@@ -206,10 +209,7 @@ namespace GUI
                     campo = CampoParaFormatacao.CNPJ;
                     FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtValorPesquisaCliente);
                 } 
-            }
-
-            if (string.IsNullOrEmpty(txtValorPesquisaCliente.Text))
-                lblMsgConsisteCpfCnpj.Visible = false;
+            }            
         }
 
         private void txtValorPesquisaCliente_Leave(object sender, EventArgs e)

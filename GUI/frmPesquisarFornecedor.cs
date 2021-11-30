@@ -156,10 +156,7 @@ namespace GUI
                     FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtValorPesquisaFornecedor);
                 }
                 
-            }
-
-            if (string.IsNullOrEmpty(txtValorPesquisaFornecedor.Text))
-                lblMsgConsistCnpj.Visible = false;
+            }            
         }
 
         private void txtValorPesquisaFornecedor_Leave(object sender, EventArgs e)
@@ -172,6 +169,9 @@ namespace GUI
         {
             if (txtValorPesquisaFornecedor.TextLength <= 0)
                 btnLocalizar.Enabled = false;
+
+            if (string.IsNullOrEmpty(txtValorPesquisaFornecedor.Text) || txtValorPesquisaFornecedor.TextLength <= 0)
+                lblMsgConsistCnpj.Visible = false;
 
             HabilitaBotaoLocalizar();
         }

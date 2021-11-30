@@ -58,6 +58,8 @@
             this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENDASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOMPRASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,6 +200,9 @@
             // 
             // movimentaçãoToolStripMenuItem
             // 
+            this.movimentaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vENDASToolStripMenuItem,
+            this.cOMPRASToolStripMenuItem});
             this.movimentaçãoToolStripMenuItem.Name = "movimentaçãoToolStripMenuItem";
             resources.ApplyResources(this.movimentaçãoToolStripMenuItem, "movimentaçãoToolStripMenuItem");
             // 
@@ -258,6 +263,16 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             resources.ApplyResources(this.sobreToolStripMenuItem, "sobreToolStripMenuItem");
             // 
+            // vENDASToolStripMenuItem
+            // 
+            this.vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
+            resources.ApplyResources(this.vENDASToolStripMenuItem, "vENDASToolStripMenuItem");
+            // 
+            // cOMPRASToolStripMenuItem
+            // 
+            this.cOMPRASToolStripMenuItem.Name = "cOMPRASToolStripMenuItem";
+            resources.ApplyResources(this.cOMPRASToolStripMenuItem, "cOMPRASToolStripMenuItem");
+            // 
             // frmPrincipal
             // 
             resources.ApplyResources(this, "$this");
@@ -305,6 +320,8 @@
     private System.Windows.Forms.ToolStripMenuItem blocoDeNotasToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem tipoDePagamentotoolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem tPagtotoolStripMenuItem1;
-  }
+        private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cOMPRASToolStripMenuItem;
+    }
 }
 

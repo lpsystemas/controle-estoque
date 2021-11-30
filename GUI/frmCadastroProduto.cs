@@ -65,7 +65,7 @@ namespace GUI
         txtValorVendaPrd.Text = "0,00";
 
       if (string.IsNullOrEmpty(txtQuantidadePrd.Text))
-        txtQuantidadePrd.Text = "0,00";
+        txtQuantidadePrd.Text = "0";
 
       this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
     }

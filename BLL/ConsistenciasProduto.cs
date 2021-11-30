@@ -19,7 +19,7 @@ namespace BLL
       if (modelo.ProdValorVenda <= 0)
         throw new Exception("O Valor de venda do Produto é obrigatório");
 
-      if (modelo.ProdQuantidade <= 0)
+      if (modelo.ProdQuantidade < 0)
         throw new Exception("O quantidade do Produto deve ser maior ou igual a zero");
 
       if (modelo.UmedCod <= 0)
