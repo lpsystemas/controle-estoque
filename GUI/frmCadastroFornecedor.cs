@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.Fornecedor;
 using DAL;
 using Ferramentas;
 using ModeloDB.Fornecedor;

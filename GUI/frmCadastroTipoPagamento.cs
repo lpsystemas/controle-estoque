@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.TipoPagamento;
 using DAL;
 using ModeloDB.TipoPagamento;
 using System;
@@ -8,7 +8,7 @@ using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
-  public partial class frmCadastroTipoPagamento : frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroTipoPagamento : frmModeloDeFormularioDeCadastro
   {    
     public DALConexao Conexao
     {

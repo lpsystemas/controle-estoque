@@ -4,54 +4,64 @@ using System.Data;
 
 namespace BLL.Categoria
 {
-  public class BLLCategoria 
-  {
-    private readonly DALConexao conexao;
-
-    public BLLCategoria(DALConexao conexao)
+    public class BLLCategoria
     {
-      this.conexao = conexao;
-    }
+        private readonly DALConexao conexao;
 
-    #region Propriedades
-    public ICategoria DALObj
-    {
-      get
-      {
-        if (_dalObj == null)
-          _dalObj = new DALCategoria(conexao);
-        return _dalObj;
-      }
-    }
-    private ICategoria _dalObj = null;
+        public BLLCategoria(DALConexao conexao)
+        {
+            this.conexao = conexao;
+        }
 
-    #endregion
+        #region Propriedades
+        public ICategoria DALObj
+        {
+            get
+            {
+                if (_dalObj == null)
+                    _dalObj = new DALCategoria(conexao);
+                return _dalObj;
+            }
+        }
+        private ICategoria _dalObj = null;
 
-    public void IncluirCategoria(ModeloCategoria modelo, string operacao)
-    {
-      ConsistenciasCategoria.ValidaCamposObrigatorios(modelo, operacao);      
-      DALObj.Incluir(modelo);
-    }
+        #endregion
 
-    public void AlterarCategoria(ModeloCategoria modelo, string operacao)
-    {
-      ConsistenciasCategoria.ValidaCamposObrigatorios(modelo, operacao);    
-      DALObj.Alterar(modelo);
-    }
+        public void IncluirCategoria(
+            ModeloCategoria modelo,
+            string operacao)
+        {
+            ConsistenciasCategoria.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public void ExcluirCategoria(int codigo)
-    {      
-      DALObj.Excluir(codigo);
-    }
+            DALObj.Incluir(modelo);
+        }
 
-    public DataTable LocalizarCategoria(string nome)
-    {      
-      return DALObj.Localizar(nome);
-    }
+        public void AlterarCategoria(
+            ModeloCategoria modelo,
+            string operacao)
+        {
+            ConsistenciasCategoria.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public ModeloCategoria CarregaCategoria(int codigo)
-    {      
-      return DALObj.CarregaCategoria(codigo);      
+            DALObj.Alterar(modelo);
+        }
+
+        public void ExcluirCategoria(int codigo)
+        {
+            DALObj.Excluir(codigo);
+        }
+
+        public DataTable LocalizarCategoria(string nome)
+        {
+            return DALObj.Localizar(nome);
+        }
+
+        public ModeloCategoria CarregaCategoria(int codigo)
+        {
+            return DALObj.CarregaCategoria(codigo);
+        }
     }
-  }
 }

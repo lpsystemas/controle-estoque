@@ -1,14 +1,14 @@
-﻿using BLL;
+﻿using BLL.Cliente;
 using DAL;
 using Ferramentas;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static ConstsEnumerados.Enumerados; 
+using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
-  public partial class frmPesquisarCliente : Form
+    public partial class frmPesquisarCliente : Form
   {
     public int codigo;
 

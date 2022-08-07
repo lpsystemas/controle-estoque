@@ -5,41 +5,41 @@ using System.IO;
 
 namespace BLL.Util
 {
-  public class BLLUtils
-  {
-    public BLLUtils()
+    public class BLLUtils
     {
-
-    }
-
-    public bool VerificaConexaoComArquivoDeConfigDB()
-    {
-      using (StreamReader arquivoSalvo = new StreamReader("ConfiguracaoBancoDeDados.txt"))
-      {
-        DadosDaConexao.servidor = arquivoSalvo.ReadLine();
-        DadosDaConexao.banco = arquivoSalvo.ReadLine();
-        DadosDaConexao.usuario = arquivoSalvo.ReadLine();
-        DadosDaConexao.senha = arquivoSalvo.ReadLine();
-      }      
-
-      try
-      {
-        using (SqlConnection conexao = new SqlConnection())
+        public BLLUtils()
         {
-          conexao.ConnectionString = DadosDaConexao.StringDeConexao;
-          conexao.Open();
-          conexao.Close();          
+
         }
 
-        return true;
-      }
-      catch(SqlException)
-      {
-        return false;
-        throw new WarningException("Conexão com o banco falhou.");        
-      }
-      
+        public bool VerificaConexaoComArquivoDeConfigDB()
+        {
+            using (StreamReader arquivoSalvo = new StreamReader("ConfiguracaoBancoDeDados.txt"))
+            {
+                DadosDaConexao.servidor = arquivoSalvo.ReadLine();
+                DadosDaConexao.banco = arquivoSalvo.ReadLine();
+                DadosDaConexao.usuario = arquivoSalvo.ReadLine();
+                DadosDaConexao.senha = arquivoSalvo.ReadLine();
+            }
 
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection())
+                {
+                    conexao.ConnectionString = DadosDaConexao.StringDeConexao;
+                    conexao.Open();
+                    conexao.Close();
+                }
+
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+                throw new WarningException("Conexão com o banco falhou.");
+            }
+
+
+        }
     }
-  }
 }

@@ -1,5 +1,4 @@
-﻿using BLL;
-using DAL;
+﻿using DAL;
 using GUI.Properties;
 using System;
 using System.Windows.Forms;
@@ -7,10 +6,11 @@ using static ConstsEnumerados.Constantes;
 using static ConstsEnumerados.Enumerados;
 using Ferramentas;
 using ModeloDB.Cliente;
+using BLL.Cliente;
 
 namespace GUI
 {
-  public partial class frmCadastroCliente : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroCliente : GUI.frmModeloDeFormularioDeCadastro
   {
     public DALConexao Conexao
     {

@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.Categoria;
 using DAL;
 using System;
 using System.Drawing;
@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-  public partial class frmPesquisarCategoria : Form
+    public partial class frmPesquisarCategoria : Form
   {
     public int codigo = 0;
 

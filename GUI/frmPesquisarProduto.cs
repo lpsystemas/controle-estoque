@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL.Produto;
 using DAL;
-using BLL;
 
 namespace GUI
 {
-  public partial class frmPesquisarProduto : Form
+    public partial class frmPesquisarProduto : Form
   {
     public int codigo;
 

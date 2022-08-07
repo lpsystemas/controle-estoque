@@ -4,54 +4,64 @@ using System.Data;
 
 namespace BLL.TipoPagamento
 {
-  public class BLLTipoPagamento
-  {
-    private readonly DALConexao conexao;
-
-    public BLLTipoPagamento(DALConexao conexao)
+    public class BLLTipoPagamento
     {
-      this.conexao = conexao;
-    }
+        private readonly DALConexao conexao;
 
-    #region Propriedades
-    public ITipoPagamento DALObj
-    {
-      get
-      {
-        if (_dalObj == null)
-          _dalObj = new DALTipoPagamento(conexao);
-        return _dalObj;
-      }
-    }
-    private ITipoPagamento _dalObj = null;
+        public BLLTipoPagamento(DALConexao conexao)
+        {
+            this.conexao = conexao;
+        }
 
-    #endregion
+        #region Propriedades
+        public ITipoPagamento DALObj
+        {
+            get
+            {
+                if (_dalObj == null)
+                    _dalObj = new DALTipoPagamento(conexao);
+                return _dalObj;
+            }
+        }
+        private ITipoPagamento _dalObj = null;
 
-    public void IncluirTipoDePagamento(ModeloTipoPagamento modelo, string operacao)
-    {
-      ConsistenciasTipoPagamento.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Incluir(modelo);
-    }
+        #endregion
 
-    public void AlterarTipoDePagamento(ModeloTipoPagamento modelo, string operacao)
-    {
-      ConsistenciasTipoPagamento.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Alterar(modelo);
-    }
+        public void IncluirTipoDePagamento(
+            ModeloTipoPagamento modelo,
+            string operacao)
+        {
+            ConsistenciasTipoPagamento.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public void ExcluirTipoDePagamento(int codigo)
-    {
-      DALObj.Excluir(codigo);
-    }
+            DALObj.Incluir(modelo);
+        }
 
-    public DataTable LocalizarTipoDePagamento(string nome)
-    {
-      return DALObj.Localizar(nome);
-    }
+        public void AlterarTipoDePagamento(
+            ModeloTipoPagamento modelo,
+            string operacao)
+        {
+            ConsistenciasTipoPagamento.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public ModeloTipoPagamento CarregaTipoDePagamento(int codigo)
-    {
-      return DALObj.CarregaTipoDePagamento(codigo);
+            DALObj.Alterar(modelo);
+        }
+
+        public void ExcluirTipoDePagamento(int codigo)
+        {
+            DALObj.Excluir(codigo);
+        }
+
+        public DataTable LocalizarTipoDePagamento(string nome)
+        {
+            return DALObj.Localizar(nome);
+        }
+
+        public ModeloTipoPagamento CarregaTipoDePagamento(int codigo)
+        {
+            return DALObj.CarregaTipoDePagamento(codigo);
+        }
     }
-  }
 }

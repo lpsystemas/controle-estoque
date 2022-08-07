@@ -1,5 +1,4 @@
-﻿using BLL;
-using DAL;
+﻿using DAL;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -9,10 +8,11 @@ using System.Windows.Forms;
 using static ConstsEnumerados.Enumerados;
 using static ConstsEnumerados.Constantes;
 using ModeloDB.Produto;
+using BLL.Produto;
 
 namespace GUI
 {
-  public partial class frmCadastroProduto : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroProduto : GUI.frmModeloDeFormularioDeCadastro
   {    
     public string foto = string.Empty;
 

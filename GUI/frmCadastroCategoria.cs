@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.Categoria;
 using DAL;
 using ModeloDB.Categoria;
 using System;
@@ -8,7 +8,7 @@ using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
-  public partial class frmCadastroCategoria : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroCategoria : GUI.frmModeloDeFormularioDeCadastro
   {
     public DALConexao Conexao
     {

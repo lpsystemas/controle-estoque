@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.Util;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -8,7 +8,7 @@ using static ConstsEnumerados.Constantes;
 
 namespace GUI
 {
-  public partial class frmConfiguracaoBancoDeDados : Form
+    public partial class frmConfiguracaoBancoDeDados : Form
   {
     public BLLUtils Utils
     {

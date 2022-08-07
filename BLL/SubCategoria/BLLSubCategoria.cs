@@ -5,81 +5,91 @@ using System.Data;
 
 namespace BLL.SubCategoria
 {
-  public class BLLSubCategoria
-  {
-    private readonly DALConexao conexao;
-
-    public BLLSubCategoria(DALConexao conexao)
+    public class BLLSubCategoria
     {
-      this.conexao = conexao;
-    }
+        private readonly DALConexao conexao;
 
-    #region Prorpiedades
-    public ISubCategoria DALObj
-    {
-      get
-      {
-        if (_dalObj == null)
-          _dalObj = new DALSubCategoria(conexao);
-        return _dalObj;
-      }
-    }
-    private ISubCategoria _dalObj = null;
+        public BLLSubCategoria(DALConexao conexao)
+        {
+            this.conexao = conexao;
+        }
 
-    public DALSubCategoria DAL
-    {
-      get
-      {
-        if (_dal == null)
-          _dal = new DALSubCategoria(conexao);
-        return _dal;
-      }
-    }
-    private DALSubCategoria _dal = null;
+        #region Prorpiedades
+        public ISubCategoria DALObj
+        {
+            get
+            {
+                if (_dalObj == null)
+                    _dalObj = new DALSubCategoria(conexao);
+                return _dalObj;
+            }
+        }
+        private ISubCategoria _dalObj = null;
 
-    public DALUtils Utils
-    {
-      get
-      {
-        if (_utils == null)
-          _utils = new DALUtils(conexao);
-        return _utils;
-      }
-    }
-    private DALUtils _utils = null;
+        public DALSubCategoria DAL
+        {
+            get
+            {
+                if (_dal == null)
+                    _dal = new DALSubCategoria(conexao);
+                return _dal;
+            }
+        }
+        private DALSubCategoria _dal = null;
 
-    #endregion
+        public DALUtils Utils
+        {
+            get
+            {
+                if (_utils == null)
+                    _utils = new DALUtils(conexao);
+                return _utils;
+            }
+        }
+        private DALUtils _utils = null;
 
-    public void AlterarSubCategoria(ModeloSubCategoria modelo, string operacao)
-    {
-      ConsistenciasSubCategoria.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Alterar(modelo);
-    }
+        #endregion
 
-    public ModeloSubCategoria CarregaSubCategoria(int codigo)
-    {      
-      return DALObj.CarregaSubCategoria(codigo);
-    }
+        public void AlterarSubCategoria(
+            ModeloSubCategoria modelo,
+            string operacao)
+        {
+            ConsistenciasSubCategoria.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public void ExcluirSubCategoria(int codigo)
-    {      
-      DALObj.Excluir(codigo);
-    }
+            DALObj.Alterar(modelo);
+        }
 
-    public void IncluirSubCategoria(ModeloSubCategoria modelo, string operacao)
-    {
-      ConsistenciasSubCategoria.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Incluir(modelo);
-    }
+        public ModeloSubCategoria CarregaSubCategoria(int codigo)
+        {
+            return DALObj.CarregaSubCategoria(codigo);
+        }
 
-    public DataTable LocalizarSubCategoria(string nome)
-    {      
-      return DALObj.Localizar(nome);
-    }
+        public void ExcluirSubCategoria(int codigo)
+        {
+            DALObj.Excluir(codigo);
+        }
 
-    public DataTable CarregarCategoria()
-    {
-      return Utils.CarregaComboBoxCategoria();
+        public void IncluirSubCategoria(
+            ModeloSubCategoria modelo,
+            string operacao)
+        {
+            ConsistenciasSubCategoria.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
+
+            DALObj.Incluir(modelo);
+        }
+
+        public DataTable LocalizarSubCategoria(string nome)
+        {
+            return DALObj.Localizar(nome);
+        }
+
+        public DataTable CarregarCategoria()
+        {
+            return Utils.CarregaComboBoxCategoria();
+        }
     }
-  }
 }

@@ -4,65 +4,75 @@ using System.Data;
 
 namespace BLL.Produto
 {
-  public class BLLProduto
-  {
-    private readonly DALConexao conexao;
-
-    public BLLProduto(DALConexao conexao)
+    public class BLLProduto
     {
-      this.conexao = conexao;
-    }
+        private readonly DALConexao conexao;
 
-    #region Propriedades
-    public IProduto DALObj
-    {
-      get
-      {
-        if (_dalObj == null)
-          _dalObj = new DALProduto(conexao);
-        return _dalObj;
-      }
-    }
-    private IProduto _dalObj = null;
+        public BLLProduto(DALConexao conexao)
+        {
+            this.conexao = conexao;
+        }
 
-    public DALUtils Utils
-    {
-      get
-      {
-        if (_utils == null)
-          _utils = new DALUtils(conexao);
-        return _utils;
-      }
-    }
-    private DALUtils _utils = null;
+        #region Propriedades
+        public IProduto DALObj
+        {
+            get
+            {
+                if (_dalObj == null)
+                    _dalObj = new DALProduto(conexao);
+                return _dalObj;
+            }
+        }
+        private IProduto _dalObj = null;
 
-    #endregion
+        public DALUtils Utils
+        {
+            get
+            {
+                if (_utils == null)
+                    _utils = new DALUtils(conexao);
+                return _utils;
+            }
+        }
+        private DALUtils _utils = null;
 
-    public void IncluirProduto(ModeloProduto modelo, string operacao)
-    {
-      ConsistenciasProduto.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Incluir(modelo);
-    }
+        #endregion
 
-    public void AlterarProduto(ModeloProduto modelo, string operacao)
-    {
-      ConsistenciasProduto.ValidaCamposObrigatorios(modelo, operacao);
-      DALObj.Alterar(modelo);
-    }
+        public void IncluirProduto(
+            ModeloProduto modelo,
+            string operacao)
+        {
+            ConsistenciasProduto.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public void ExcluirProduto(int codigo)
-    {
-      DALObj.Excluir(codigo);
-    }
+            DALObj.Incluir(modelo);
+        }
 
-    public DataTable LocalizarProduto(string nome)
-    {
-      return DALObj.Localizar(nome);
-    }
+        public void AlterarProduto(
+            ModeloProduto modelo,
+            string operacao)
+        {
+            ConsistenciasProduto.ValidaCamposObrigatorios(
+                modelo,
+                operacao);
 
-    public ModeloProduto CarregaProduto(int codigo)
-    {
-      return DALObj.CarregaProduto(codigo);
+            DALObj.Alterar(modelo);
+        }
+
+        public void ExcluirProduto(int codigo)
+        {
+            DALObj.Excluir(codigo);
+        }
+
+        public DataTable LocalizarProduto(string nome)
+        {
+            return DALObj.Localizar(nome);
+        }
+
+        public ModeloProduto CarregaProduto(int codigo)
+        {
+            return DALObj.CarregaProduto(codigo);
+        }
     }
-  }
 }

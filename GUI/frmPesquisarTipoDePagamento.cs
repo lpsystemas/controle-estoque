@@ -1,4 +1,4 @@
-﻿using BLL;
+﻿using BLL.TipoPagamento;
 using DAL;
 using System;
 using System.Drawing;
@@ -6,60 +6,60 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-  public partial class frmPesquisarTipoDePagamento : Form
-  {
-
-    public int codigo = 0;
-
-    public DALConexao Conexao
+    public partial class frmPesquisarTipoDePagamento : Form
     {
-      get
-      {
-        if (_conexao == null)
-          _conexao = new DALConexao(DadosDaConexao.StringDeConexao);
-        return _conexao;
-      }
-    }
-    private DALConexao _conexao = null;
 
-    public BLLTipoPagamento QueryDB
-    {
-      get
-      {
-        if (_queryDB == null)
-          _queryDB = new BLLTipoPagamento(Conexao);
-        return _queryDB;
-      }
-    }
-    private BLLTipoPagamento _queryDB = null;
+        public int codigo = 0;
 
-    public frmPesquisarTipoDePagamento()
-    {
-      InitializeComponent();
-    }
+        public DALConexao Conexao
+        {
+            get
+            {
+                if (_conexao == null)
+                    _conexao = new DALConexao(DadosDaConexao.StringDeConexao);
+                return _conexao;
+            }
+        }
+        private DALConexao _conexao = null;
 
-    private void btnLocalizar_Click(object sender, EventArgs e)
-    {
-      dgvDados.DataSource = QueryDB.LocalizarTipoDePagamento(Convert.ToString(txtNomeTipoDePagamento.Text));
-    }
+        public BLLTipoPagamento QueryDB
+        {
+            get
+            {
+                if (_queryDB == null)
+                    _queryDB = new BLLTipoPagamento(Conexao);
+                return _queryDB;
+            }
+        }
+        private BLLTipoPagamento _queryDB = null;
 
-    private void frmPesquisarTipoDePagamento_Load(object sender, EventArgs e)
-    {
+        public frmPesquisarTipoDePagamento()
+        {
+            InitializeComponent();
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            dgvDados.DataSource = QueryDB.LocalizarTipoDePagamento(Convert.ToString(txtNomeTipoDePagamento.Text));
+        }
+
+        private void frmPesquisarTipoDePagamento_Load(object sender, EventArgs e)
+        {
             BackColor = Color.LightBlue;
             btnLocalizar_Click(sender, e);
             ConfiguraColunasGrid();
 
-      
-    }
 
-    private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-    {
-      if (e.RowIndex >= 0)
-      {
-        this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-        this.Close();
-      }
-    }
+        }
+
+        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                this.Close();
+            }
+        }
 
         #region Metodos Auxiliares
 
