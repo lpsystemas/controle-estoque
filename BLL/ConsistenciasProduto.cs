@@ -4,7 +4,7 @@ using static ConstsEnumerados.Constantes;
 
 namespace BLL
 {
-    public static class ConsistenciasProduto
+  public static class ConsistenciasProduto
   {
     public static void ValidaCamposObrigatorios(ModeloProduto modelo, string operacao)
     {

@@ -6,7 +6,7 @@ using static ConstsEnumerados.Enumerados;
 
 namespace BLL
 {
-    public static class ConsistenciasCliente
+  public static class ConsistenciasCliente
   {
 
     public static void ValidaCamposObrigatorios(ModeloCliente modelo, string operacao)

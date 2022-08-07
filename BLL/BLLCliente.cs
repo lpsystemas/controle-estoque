@@ -4,7 +4,7 @@ using System.Data;
 
 namespace BLL
 {
-    public class BLLCliente
+  public class BLLCliente
   {
     private readonly DALConexao conexao;
 

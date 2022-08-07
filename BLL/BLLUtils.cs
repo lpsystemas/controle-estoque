@@ -5,7 +5,7 @@ using System.IO;
 
 namespace BLL
 {
-    public class BLLUtils
+  public class BLLUtils
   {
     public BLLUtils()
     {

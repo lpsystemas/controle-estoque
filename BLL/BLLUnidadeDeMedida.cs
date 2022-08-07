@@ -5,7 +5,7 @@ using System.Data;
 
 namespace BLL
 {
-    public class BLLUnidadeDeMedida
+  public class BLLUnidadeDeMedida
   {
     private readonly DALConexao conexao;
 
