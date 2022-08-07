@@ -1,14 +1,12 @@
 ﻿using BLL;
-using DAL;
 using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
 namespace GUI
 {
-  public partial class frmPrincipal : Form
+    public partial class frmPrincipal : Form
   {
     public BLLUtils Utils
     {

@@ -1,14 +1,12 @@
 ﻿using BLL;
 using DAL;
 using System;
-using System.ComponentModel;
 using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace GUI
 {
-  public partial class frmPesquisarCategoria : Form
+    public partial class frmPesquisarCategoria : Form
   {
     public int codigo = 0;
 
