@@ -42,7 +42,7 @@ namespace Ferramentas
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 endereco = string.Empty;
                 bairro = string.Empty;

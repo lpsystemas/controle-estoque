@@ -1,13 +1,13 @@
 ﻿using System;
-using ModeloDB;
 using System.Data.SqlClient;
 using System.Data;
+using ModeloDB.TipoPagamento;
 
 namespace DAL
 {
-    public class DALTipoPagamento : ITipoPagamento
+  public class DALTipoPagamento : ITipoPagamento
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALTipoPagamento(DALConexao conn)
     {

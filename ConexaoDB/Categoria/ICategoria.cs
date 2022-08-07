@@ -1,7 +1,7 @@
 ﻿using System.Data;
 
 
-namespace ModeloDB
+namespace ModeloDB.Categoria
 {
   public interface ICategoria
   { 

@@ -1,7 +1,7 @@
 ﻿using System.Data;
 
 
-namespace ModeloDB
+namespace ModeloDB.Produto
 {
   public interface IProduto
   {

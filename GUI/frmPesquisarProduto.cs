@@ -6,7 +6,7 @@ using BLL;
 
 namespace GUI
 {
-    public partial class frmPesquisarProduto : Form
+  public partial class frmPesquisarProduto : Form
   {
     public int codigo;
 

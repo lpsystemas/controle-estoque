@@ -1,4 +1,4 @@
-﻿using ModeloDB;
+﻿using ModeloDB.SubCategoria;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,7 +7,7 @@ namespace DAL
 {
   public class DALSubCategoria : ISubCategoria
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALSubCategoria(DALConexao conn)
     {

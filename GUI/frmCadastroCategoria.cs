@@ -1,6 +1,6 @@
 ﻿using BLL;
 using DAL;
-using ModeloDB;
+using ModeloDB.Categoria;
 using System;
 using System.Windows.Forms;
 using static ConstsEnumerados.Constantes;

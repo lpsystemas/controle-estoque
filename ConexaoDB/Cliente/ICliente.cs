@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ModeloDB
+namespace ModeloDB.Cliente
 {
   public interface ICliente
   {

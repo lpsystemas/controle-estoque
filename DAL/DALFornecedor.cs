@@ -1,4 +1,4 @@
-﻿using ModeloDB;
+﻿using ModeloDB.Fornecedor;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,7 +9,7 @@ namespace DAL
 {
   public class DALFornecedor : IFornecedor
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALFornecedor(DALConexao conexao)
     {

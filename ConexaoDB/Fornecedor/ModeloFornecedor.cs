@@ -1,4 +1,4 @@
-﻿namespace ModeloDB
+﻿namespace ModeloDB.Fornecedor
 {
     public class ModeloFornecedor
   {

@@ -1,5 +1,5 @@
 ﻿using DAL;
-using ModeloDB;
+using ModeloDB.UnidadeDeMedida;
 using System;
 using System.Data;
 
@@ -7,7 +7,7 @@ namespace BLL
 {
     public class BLLUnidadeDeMedida
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public BLLUnidadeDeMedida(DALConexao conexao)
     {

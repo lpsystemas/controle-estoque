@@ -1,6 +1,6 @@
 ﻿using BLL;
 using DAL;
-using ModeloDB;
+using ModeloDB.UnidadeDeMedida;
 using System;
 using System.Windows.Forms;
 using static ConstsEnumerados.Constantes;
@@ -8,7 +8,7 @@ using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
-  public partial class frmCadastroUnidadeDeMedida : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroUnidadeDeMedida : GUI.frmModeloDeFormularioDeCadastro
   {    
     public frmCadastroUnidadeDeMedida()
     {

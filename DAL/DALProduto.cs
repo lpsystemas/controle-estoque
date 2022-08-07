@@ -1,13 +1,13 @@
-﻿using ModeloDB;
+﻿using ModeloDB.Produto;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class DALProduto : IProduto
+  public class DALProduto : IProduto
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALProduto(DALConexao conexao)
     {

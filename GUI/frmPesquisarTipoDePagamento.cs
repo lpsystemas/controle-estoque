@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPesquisarTipoDePagamento : Form
+  public partial class frmPesquisarTipoDePagamento : Form
   {
 
     public int codigo = 0;

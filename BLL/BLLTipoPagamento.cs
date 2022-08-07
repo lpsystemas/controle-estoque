@@ -1,12 +1,12 @@
 ﻿using DAL;
-using ModeloDB;
+using ModeloDB.TipoPagamento;
 using System.Data;
 
 namespace BLL
 {
-    public class BLLTipoPagamento
+  public class BLLTipoPagamento
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public BLLTipoPagamento(DALConexao conexao)
     {

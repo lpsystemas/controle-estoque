@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmPesquisarCategoria : Form
+  public partial class frmPesquisarCategoria : Form
   {
     public int codigo = 0;
 

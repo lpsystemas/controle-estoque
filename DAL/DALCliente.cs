@@ -1,4 +1,4 @@
-﻿using ModeloDB;
+﻿using ModeloDB.Cliente;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,7 +9,7 @@ namespace DAL
 {
   public class DALCliente : ICliente
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALCliente(DALConexao conexao)
     {

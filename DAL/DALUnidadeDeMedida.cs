@@ -1,4 +1,4 @@
-﻿using ModeloDB;
+﻿using ModeloDB.UnidadeDeMedida;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,7 +7,7 @@ namespace DAL
 {
     public class DALUnidadeDeMedida : IUnidadeDeMedida
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public DALUnidadeDeMedida(DALConexao conexao)
     {

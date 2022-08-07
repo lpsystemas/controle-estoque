@@ -1,13 +1,13 @@
 ﻿using BLL;
 using DAL;
-using ModeloDB;
+using ModeloDB.SubCategoria;
 using System;
 using System.Windows.Forms;
 using static ConstsEnumerados.Enumerados;
 
 namespace GUI
 {
-  public partial class frmCadastroSubCategoria : GUI.frmModeloDeFormularioDeCadastro
+    public partial class frmCadastroSubCategoria : GUI.frmModeloDeFormularioDeCadastro
   {
     #region Constantes
     private const string Inserir = "Inserir";

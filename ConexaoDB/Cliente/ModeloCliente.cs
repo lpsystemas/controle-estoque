@@ -1,7 +1,7 @@
 ﻿using System;
 using static ConstsEnumerados.Enumerados;
 
-namespace ModeloDB
+namespace ModeloDB.Cliente
 {
     public class ModeloCliente
   {

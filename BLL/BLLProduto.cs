@@ -1,12 +1,12 @@
 ﻿using DAL;
-using ModeloDB;
+using ModeloDB.Produto;
 using System.Data;
 
 namespace BLL
 {
     public class BLLProduto
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public BLLProduto(DALConexao conexao)
     {

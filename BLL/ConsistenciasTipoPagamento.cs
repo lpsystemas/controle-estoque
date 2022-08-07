@@ -1,4 +1,4 @@
-﻿using ModeloDB;
+﻿using ModeloDB.TipoPagamento;
 using System;
 using static ConstsEnumerados.Constantes;
 

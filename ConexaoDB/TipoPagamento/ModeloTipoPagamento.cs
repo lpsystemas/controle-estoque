@@ -1,4 +1,4 @@
-﻿namespace ModeloDB
+﻿namespace ModeloDB.TipoPagamento
 {
     public class ModeloTipoPagamento
   {

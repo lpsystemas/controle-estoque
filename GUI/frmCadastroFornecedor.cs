@@ -1,7 +1,7 @@
 ﻿using BLL;
 using DAL;
 using Ferramentas;
-using ModeloDB;
+using ModeloDB.Fornecedor;
 using System;
 using System.Windows.Forms;
 using static ConstsEnumerados.Constantes;

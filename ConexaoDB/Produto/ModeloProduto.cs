@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ModeloDB
+namespace ModeloDB.Produto
 {
     public class ModeloProduto
   {

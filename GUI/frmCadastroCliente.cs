@@ -1,12 +1,12 @@
 ﻿using BLL;
 using DAL;
 using GUI.Properties;
-using ModeloDB;
 using System;
 using System.Windows.Forms;
 using static ConstsEnumerados.Constantes;
 using static ConstsEnumerados.Enumerados;
 using Ferramentas;
+using ModeloDB.Cliente;
 
 namespace GUI
 {

@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class DALUtils
+  public class DALUtils
   {
-    private DALConexao conexao = null;
+    private readonly DALConexao conexao = null;
 
     public DALUtils(DALConexao conn)
     {

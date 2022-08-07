@@ -1,5 +1,5 @@
 ﻿using DAL;
-using ModeloDB;
+using ModeloDB.SubCategoria;
 using System.Data;
 
 
@@ -7,7 +7,7 @@ namespace BLL
 {
     public class BLLSubCategoria
   {
-    private DALConexao conexao;
+    private readonly DALConexao conexao;
 
     public BLLSubCategoria(DALConexao conexao)
     {

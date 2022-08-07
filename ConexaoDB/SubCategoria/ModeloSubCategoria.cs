@@ -1,4 +1,4 @@
-﻿namespace ModeloDB
+﻿namespace ModeloDB.SubCategoria
 {
     public class ModeloSubCategoria
   {

@@ -1,5 +1,5 @@
 ﻿using Ferramentas;
-using ModeloDB;
+using ModeloDB.Fornecedor;
 using System;
 using static ConstsEnumerados.Constantes;
 

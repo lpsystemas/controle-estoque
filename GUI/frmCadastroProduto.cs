@@ -1,6 +1,5 @@
 ﻿using BLL;
 using DAL;
-using ModeloDB;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,7 @@ using System.IO;
 using System.Windows.Forms;
 using static ConstsEnumerados.Enumerados;
 using static ConstsEnumerados.Constantes;
+using ModeloDB.Produto;
 
 namespace GUI
 {

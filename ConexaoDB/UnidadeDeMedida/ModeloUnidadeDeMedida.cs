@@ -1,6 +1,7 @@
-﻿namespace ModeloDB
+﻿namespace ModeloDB.UnidadeDeMedida
+
 {
-    public class ModeloUnidadeDeMedida
+  public class ModeloUnidadeDeMedida
   {
     private int umed_cod;
     public int UmedCod
