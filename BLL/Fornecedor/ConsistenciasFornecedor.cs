@@ -3,7 +3,7 @@ using ModeloDB.Fornecedor;
 using System;
 using static ConstsEnumerados.Constantes;
 
-namespace BLL
+namespace BLL.Fornecedor
 {
   public static class ConsistenciasFornecedor
   {

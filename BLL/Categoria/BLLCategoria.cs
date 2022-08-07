@@ -2,7 +2,7 @@
 using ModeloDB.Categoria;
 using System.Data;
 
-namespace BLL
+namespace BLL.Categoria
 {
   public class BLLCategoria 
   {

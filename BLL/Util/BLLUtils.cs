@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Data.SqlClient;
 using System.IO;
 
-namespace BLL
+namespace BLL.Util
 {
   public class BLLUtils
   {

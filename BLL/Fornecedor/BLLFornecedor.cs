@@ -2,7 +2,7 @@
 using ModeloDB.Fornecedor;
 using System.Data;
 
-namespace BLL
+namespace BLL.Fornecedor
 {
   public class BLLFornecedor
   {

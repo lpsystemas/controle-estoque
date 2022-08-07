@@ -2,7 +2,7 @@
 using ModeloDB.Cliente;
 using System.Data;
 
-namespace BLL
+namespace BLL.Cliente
 {
   public class BLLCliente
   {

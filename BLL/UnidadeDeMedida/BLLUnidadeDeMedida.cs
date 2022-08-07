@@ -3,7 +3,7 @@ using ModeloDB.UnidadeDeMedida;
 using System;
 using System.Data;
 
-namespace BLL
+namespace BLL.UnidadeDeMedida
 {
   public class BLLUnidadeDeMedida
   {

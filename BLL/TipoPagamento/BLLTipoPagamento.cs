@@ -2,7 +2,7 @@
 using ModeloDB.TipoPagamento;
 using System.Data;
 
-namespace BLL
+namespace BLL.TipoPagamento
 {
   public class BLLTipoPagamento
   {

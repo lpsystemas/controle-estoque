@@ -2,7 +2,7 @@
 using ModeloDB.Produto;
 using System.Data;
 
-namespace BLL
+namespace BLL.Produto
 {
   public class BLLProduto
   {

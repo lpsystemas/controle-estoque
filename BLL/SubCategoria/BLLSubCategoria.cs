@@ -3,7 +3,7 @@ using ModeloDB.SubCategoria;
 using System.Data;
 
 
-namespace BLL
+namespace BLL.SubCategoria
 {
   public class BLLSubCategoria
   {

@@ -42,21 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLLCategoria.cs" />
-    <Compile Include="BLLFornecedor.cs" />
-    <Compile Include="BLLCliente.cs" />
-    <Compile Include="BLLProduto.cs" />
-    <Compile Include="BLLSubCategoria.cs" />
-    <Compile Include="BLLTipoPagamento.cs" />
-    <Compile Include="BLLUnidadeDeMedida.cs" />
-    <Compile Include="BLLUtils.cs" />
-    <Compile Include="ConsistenciasFornecedor.cs" />
-    <Compile Include="ConsistenciasProduto.cs" />
-    <Compile Include="ConsistenciasUnidadeDeMedida.cs" />
-    <Compile Include="ConsistenciasTipoPagamento.cs" />
-    <Compile Include="ConsistenciasSubCategoria.cs" />
-    <Compile Include="ConsistenciasCategoria.cs" />
-    <Compile Include="ConsistenciasCliente.cs" />
+    <Compile Include="Categoria\BLLCategoria.cs" />
+    <Compile Include="Fornecedor\BLLFornecedor.cs" />
+    <Compile Include="Cliente\BLLCliente.cs" />
+    <Compile Include="Produto\BLLProduto.cs" />
+    <Compile Include="SubCategoria\BLLSubCategoria.cs" />
+    <Compile Include="TipoPagamento\BLLTipoPagamento.cs" />
+    <Compile Include="UnidadeDeMedida\BLLUnidadeDeMedida.cs" />
+    <Compile Include="Util\BLLUtils.cs" />
+    <Compile Include="Fornecedor\ConsistenciasFornecedor.cs" />
+    <Compile Include="Produto\ConsistenciasProduto.cs" />
+    <Compile Include="UnidadeDeMedida\ConsistenciasUnidadeDeMedida.cs" />
+    <Compile Include="TipoPagamento\ConsistenciasTipoPagamento.cs" />
+    <Compile Include="SubCategoria\ConsistenciasSubCategoria.cs" />
+    <Compile Include="Categoria\ConsistenciasCategoria.cs" />
+    <Compile Include="Cliente\ConsistenciasCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,5 +77,6 @@
       <Name>Ferramentas</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

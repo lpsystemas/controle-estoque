@@ -4,7 +4,7 @@ using System;
 using static ConstsEnumerados.Constantes;
 using static ConstsEnumerados.Enumerados;
 
-namespace BLL
+namespace BLL.Cliente
 {
   public static class ConsistenciasCliente
   {
