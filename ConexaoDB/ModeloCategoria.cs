@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ModeloDB
+﻿namespace ModeloDB
 {
-  public class ModeloCategoria
+    public class ModeloCategoria
   {
     //Codigo da Categoria
     private int cat_cod;

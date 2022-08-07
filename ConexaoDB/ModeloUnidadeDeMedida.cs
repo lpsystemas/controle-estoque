@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ModeloDB
+﻿namespace ModeloDB
 {
-  public class ModeloUnidadeDeMedida
+    public class ModeloUnidadeDeMedida
   {
     private int umed_cod;
     public int UmedCod

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static ConstsEnumerados.Enumerados;
 
 namespace ModeloDB
 {
-  public class ModeloCliente
+    public class ModeloCliente
   {
     #region Propriedades
 

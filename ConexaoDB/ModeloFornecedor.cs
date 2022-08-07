@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static ConstsEnumerados.Constantes;
-
-namespace ModeloDB
+﻿namespace ModeloDB
 {
-  public class ModeloFornecedor
+    public class ModeloFornecedor
   {
     #region Propriedades
 
