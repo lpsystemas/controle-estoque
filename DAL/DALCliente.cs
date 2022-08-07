@@ -7,252 +7,279 @@ using static ConstsEnumerados.Enumerados;
 
 namespace DAL
 {
-  public class DALCliente : ICliente
-  {
-    private readonly DALConexao conexao;
-
-    public DALCliente(DALConexao conexao)
+    public class DALCliente : ICliente
     {
-      this.conexao = conexao;
-    }
-    public void Alterar(ModeloCliente modelo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
+        private readonly DALConexao conexao;
 
-        command.CommandText = @"UPDATE CLIENTE SET CLI_NOME = @NOME,
-                                                   CLI_CPFCNPJ = @CPFCNPJ,
-                                                   CLI_RGIE = @RGIE,
-                                                   CLI_RSOCIAL = @RSOCIAL,
-                                                   CLI_TIPO = @TIPO,
-                                                   CLI_CEP = @CEP,
-                                                   CLI_ENDERECO = @ENDERECO,
-                                                   CLI_BAIRRO = @BAIRRO,
-                                                   CLI_FONE = @FONE,
-                                                   CLI_CEL = @CEL,
-                                                   CLI_EMAIL = @EMAIL,
-                                                   CLI_ENDNUMERO = @ENDNUMERO,
-                                                   CLI_CIDADE = @CIDADE,
-                                                   CLI_ESTADO = @ESTADO 
-                                             WHERE CLI_COD = @CODIGO";
-
-        command.Parameters.AddWithValue("@CODIGO", modelo.CliCod);
-        command.Parameters.AddWithValue("@NOME", modelo.CliNome);
-        command.Parameters.AddWithValue("@CPFCNPJ", modelo.CliCpfCnpj);
-        command.Parameters.AddWithValue("@RGIE", modelo.CliRgInscricaoEstadual);
-        command.Parameters.AddWithValue("@RSOCIAL", modelo.CliRazaoSocial);
-        command.Parameters.AddWithValue("@TIPO", modelo.CliTipo);
-        command.Parameters.AddWithValue("@CEP", modelo.CliCep);
-        command.Parameters.AddWithValue("@ENDERECO", modelo.CliEndereco);
-        command.Parameters.AddWithValue("@BAIRRO", modelo.CliBairro);
-        command.Parameters.AddWithValue("@FONE", modelo.CliTelefone);
-        command.Parameters.AddWithValue("@CEL", modelo.CliCelular);
-        command.Parameters.AddWithValue("@EMAIL", modelo.CliEmail);
-        command.Parameters.AddWithValue("@ENDNUMERO", modelo.CliEndNumero);
-        command.Parameters.AddWithValue("@CIDADE", modelo.CliCidade);
-        command.Parameters.AddWithValue("@ESTADO", modelo.CliEstado);
-
-        conexao.Conectar();
-        command.ExecuteNonQuery();
-        conexao.Desconectar();
-      }
-    }
-    public ModeloCliente CarregaClientePorCodigo(int codigo)
-    {
-      ModeloCliente modelo_Cliente = new ModeloCliente();
-
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = @"SELECT CLIENTE.CLI_COD,
-                                       CLIENTE.CLI_NOME,
-                                       CLIENTE.CLI_CPFCNPJ,
-                                       CLIENTE.CLI_RGIE,
-                                       CLIENTE.CLI_RSOCIAL,
-                                       CLIENTE.CLI_TIPO,
-                                       CLIENTE.CLI_CEP,
-                                       CLIENTE.CLI_ENDERECO,
-                                       CLIENTE.CLI_BAIRRO,
-                                       CLIENTE.CLI_FONE,
-                                       CLIENTE.CLI_CEL,
-                                       CLIENTE.CLI_EMAIL,
-                                       CLIENTE.CLI_ENDNUMERO,
-                                       CLIENTE.CLI_CIDADE,
-                                       CLIENTE.CLI_ESTADO
-	                                     FROM CLIENTE (NOLOCK)
-                                 WHERE CLIENTE.CLI_COD = @CODIGO";
-
-        command.Parameters.AddWithValue("@CODIGO", codigo);
-
-        conexao.Conectar();
-        SqlDataReader registro = command.ExecuteReader();
-
-        if (registro.HasRows)
+        public DALCliente(DALConexao conexao)
         {
-          registro.Read();
-
-          modelo_Cliente.CliCod = Convert.ToInt32(registro["CLI_COD"]);
-          modelo_Cliente.CliNome = Convert.ToString(registro["CLI_NOME"]);
-          modelo_Cliente.CliCpfCnpj = Convert.ToString(registro["CLI_CPFCNPJ"]);
-          modelo_Cliente.CliRgInscricaoEstadual = Convert.ToString(registro["CLI_RGIE"]);
-          modelo_Cliente.CliRazaoSocial = Convert.ToString(registro["CLI_RSOCIAL"]);
-          modelo_Cliente.CliTipo = Convert.ToInt32(registro["CLI_TIPO"]);
-          modelo_Cliente.CliCep = Convert.ToString(registro["CLI_CEP"]);
-          modelo_Cliente.CliEndereco = Convert.ToString(registro["CLI_ENDERECO"]);
-          modelo_Cliente.CliBairro = Convert.ToString(registro["CLI_BAIRRO"]);
-          modelo_Cliente.CliTelefone = Convert.ToString(registro["CLI_FONE"]);
-          modelo_Cliente.CliCelular = Convert.ToString(registro["CLI_CEL"]);
-          modelo_Cliente.CliEmail = Convert.ToString(registro["CLI_EMAIL"]);
-          modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
-          modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
-          modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
+            this.conexao = conexao;
         }
-
-        conexao.Desconectar();
-        return modelo_Cliente;
-      }
-    }
-    public ModeloCliente CarregaClientePorCpfCnpj(string cpfCnpj)
-    {
-      ModeloCliente modelo_Cliente = new ModeloCliente();
-
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = @"SELECT CLIENTE.CLI_COD,
-                                       CLIENTE.CLI_NOME,
-                                       CLIENTE.CLI_CPFCNPJ,
-                                       CLIENTE.CLI_RGIE,
-                                       CLIENTE.CLI_RSOCIAL,
-                                       CLIENTE.CLI_TIPO,
-                                       CLIENTE.CLI_CEP,
-                                       CLIENTE.CLI_ENDERECO,
-                                       CLIENTE.CLI_BAIRRO,
-                                       CLIENTE.CLI_FONE,
-                                       CLIENTE.CLI_CEL,
-                                       CLIENTE.CLI_EMAIL,
-                                       CLIENTE.CLI_ENDNUMERO,
-                                       CLIENTE.CLI_CIDADE,
-                                       CLIENTE.CLI_ESTADO
-	                                     FROM CLIENTE (NOLOCK)
-                                 WHERE CLIENTE.CLI_CPFCNPJ = @CPFCNPJ";
-
-        command.Parameters.AddWithValue("@CPFCNPJ", cpfCnpj);
-
-        conexao.Conectar();
-        SqlDataReader registro = command.ExecuteReader();
-
-        if (registro.HasRows)
+        public void Alterar(ModeloCliente modelo)
         {
-          registro.Read();
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
 
-          modelo_Cliente.CliCod = Convert.ToInt32(registro["CLI_COD"]);
-          modelo_Cliente.CliNome = Convert.ToString(registro["CLI_NOME"]);
-          modelo_Cliente.CliCpfCnpj = Convert.ToString(registro["CLI_CPFCNPJ"]);
-          modelo_Cliente.CliRgInscricaoEstadual = Convert.ToString(registro["CLI_RGIE"]);
-          modelo_Cliente.CliRazaoSocial = Convert.ToString(registro["CLI_RSOCIAL"]);
-          modelo_Cliente.CliTipo = Convert.ToInt32(registro["CLI_TIPO"]);
-          modelo_Cliente.CliCep = Convert.ToString(registro["CLI_CEP"]);
-          modelo_Cliente.CliEndereco = Convert.ToString(registro["CLI_ENDERECO"]);
-          modelo_Cliente.CliBairro = Convert.ToString(registro["CLI_BAIRRO"]);
-          modelo_Cliente.CliTelefone = Convert.ToString(registro["CLI_FONE"]);
-          modelo_Cliente.CliCelular = Convert.ToString(registro["CLI_CEL"]);
-          modelo_Cliente.CliEmail = Convert.ToString(registro["CLI_EMAIL"]);
-          modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
-          modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
-          modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
+                command.CommandText = @"UPDATE CLIENTE SET CLI_NOME = @NOME,
+                                                           CLI_CPFCNPJ = @CPFCNPJ,
+                                                           CLI_RGIE = @RGIE,
+                                                           CLI_RSOCIAL = @RSOCIAL,
+                                                           CLI_TIPO = @TIPO,
+                                                           CLI_CEP = @CEP,
+                                                           CLI_ENDERECO = @ENDERECO,
+                                                           CLI_BAIRRO = @BAIRRO,
+                                                           CLI_FONE = @FONE,
+                                                           CLI_CEL = @CEL,
+                                                           CLI_EMAIL = @EMAIL,
+                                                           CLI_ENDNUMERO = @ENDNUMERO,
+                                                           CLI_CIDADE = @CIDADE,
+                                                           CLI_ESTADO = @ESTADO 
+                                                     WHERE CLI_COD = @CODIGO";
+
+                command.Parameters.AddWithValue("@CODIGO", modelo.CliCod);
+                command.Parameters.AddWithValue("@NOME", modelo.CliNome);
+                command.Parameters.AddWithValue("@CPFCNPJ", modelo.CliCpfCnpj);
+                command.Parameters.AddWithValue("@RGIE", modelo.CliRgInscricaoEstadual);
+                command.Parameters.AddWithValue("@RSOCIAL", modelo.CliRazaoSocial);
+                command.Parameters.AddWithValue("@TIPO", modelo.CliTipo);
+                command.Parameters.AddWithValue("@CEP", modelo.CliCep);
+                command.Parameters.AddWithValue("@ENDERECO", modelo.CliEndereco);
+                command.Parameters.AddWithValue("@BAIRRO", modelo.CliBairro);
+                command.Parameters.AddWithValue("@FONE", modelo.CliTelefone);
+                command.Parameters.AddWithValue("@CEL", modelo.CliCelular);
+                command.Parameters.AddWithValue("@EMAIL", modelo.CliEmail);
+                command.Parameters.AddWithValue("@ENDNUMERO", modelo.CliEndNumero);
+                command.Parameters.AddWithValue("@CIDADE", modelo.CliCidade);
+                command.Parameters.AddWithValue("@ESTADO", modelo.CliEstado);
+
+                conexao.Conectar();
+                command.ExecuteNonQuery();
+                conexao.Desconectar();
+            }
         }
+        public ModeloCliente CarregaClientePorCodigo(int codigo)
+        {
+            ModeloCliente modelo_Cliente = new ModeloCliente();
 
-        conexao.Desconectar();
-        return modelo_Cliente;
-      }
-    }
-    public void Excluir(int codigo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
 
-        command.CommandText = @"DELETE FROM CLIENTE 
-                                 WHERE CLI_COD = @CODIGO";
-        command.Parameters.AddWithValue("@CODIGO", codigo);
+                command.CommandText = @"SELECT CLIENTE.CLI_COD,
+                                               CLIENTE.CLI_NOME,
+                                               CLIENTE.CLI_CPFCNPJ,
+                                               CLIENTE.CLI_RGIE,
+                                               CLIENTE.CLI_RSOCIAL,
+                                               CLIENTE.CLI_TIPO,
+                                               CLIENTE.CLI_CEP,
+                                               CLIENTE.CLI_ENDERECO,
+                                               CLIENTE.CLI_BAIRRO,
+                                               CLIENTE.CLI_FONE,
+                                               CLIENTE.CLI_CEL,
+                                               CLIENTE.CLI_EMAIL,
+                                               CLIENTE.CLI_ENDNUMERO,
+                                               CLIENTE.CLI_CIDADE,
+                                               CLIENTE.CLI_ESTADO
+	                                      FROM CLIENTE (NOLOCK)
+                                         WHERE CLIENTE.CLI_COD = @CODIGO";
 
-        conexao.Conectar();
-        command.ExecuteNonQuery();
-        conexao.Desconectar();
-      }
-    }
-    public void Incluir(ModeloCliente modelo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
+                command.Parameters.AddWithValue("@CODIGO", codigo);
 
-        command.CommandText = @"INSERT INTO CLIENTE(CLI_NOME, CLI_CPFCNPJ, CLI_RGIE, CLI_RSOCIAL, CLI_TIPO, CLI_CEP, CLI_ENDERECO, 
-                                                    CLI_BAIRRO, CLI_FONE, CLI_CEL, CLI_EMAIL, CLI_ENDNUMERO, CLI_CIDADE, CLI_ESTADO) 
+                conexao.Conectar();
+                SqlDataReader registro = command.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+
+                    modelo_Cliente.CliCod = Convert.ToInt32(registro["CLI_COD"]);
+                    modelo_Cliente.CliNome = Convert.ToString(registro["CLI_NOME"]);
+                    modelo_Cliente.CliCpfCnpj = Convert.ToString(registro["CLI_CPFCNPJ"]);
+                    modelo_Cliente.CliRgInscricaoEstadual = Convert.ToString(registro["CLI_RGIE"]);
+                    modelo_Cliente.CliRazaoSocial = Convert.ToString(registro["CLI_RSOCIAL"]);
+                    modelo_Cliente.CliTipo = Convert.ToInt32(registro["CLI_TIPO"]);
+                    modelo_Cliente.CliCep = Convert.ToString(registro["CLI_CEP"]);
+                    modelo_Cliente.CliEndereco = Convert.ToString(registro["CLI_ENDERECO"]);
+                    modelo_Cliente.CliBairro = Convert.ToString(registro["CLI_BAIRRO"]);
+                    modelo_Cliente.CliTelefone = Convert.ToString(registro["CLI_FONE"]);
+                    modelo_Cliente.CliCelular = Convert.ToString(registro["CLI_CEL"]);
+                    modelo_Cliente.CliEmail = Convert.ToString(registro["CLI_EMAIL"]);
+                    modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
+                    modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
+                    modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
+                }
+
+                conexao.Desconectar();
+                return modelo_Cliente;
+            }
+        }
+        public ModeloCliente CarregaClientePorCpfCnpj(string cpfCnpj)
+        {
+            ModeloCliente modelo_Cliente = new ModeloCliente();
+
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"SELECT CLIENTE.CLI_COD,
+                                               CLIENTE.CLI_NOME,
+                                               CLIENTE.CLI_CPFCNPJ,
+                                               CLIENTE.CLI_RGIE,
+                                               CLIENTE.CLI_RSOCIAL,
+                                               CLIENTE.CLI_TIPO,
+                                               CLIENTE.CLI_CEP,
+                                               CLIENTE.CLI_ENDERECO,
+                                               CLIENTE.CLI_BAIRRO,
+                                               CLIENTE.CLI_FONE,
+                                               CLIENTE.CLI_CEL,
+                                               CLIENTE.CLI_EMAIL,
+                                               CLIENTE.CLI_ENDNUMERO,
+                                               CLIENTE.CLI_CIDADE,
+                                               CLIENTE.CLI_ESTADO
+	                                      FROM CLIENTE (NOLOCK)
+                                         WHERE CLIENTE.CLI_CPFCNPJ = @CPFCNPJ";
+
+                command.Parameters.AddWithValue("@CPFCNPJ", cpfCnpj);
+
+                conexao.Conectar();
+                SqlDataReader registro = command.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+
+                    modelo_Cliente.CliCod = Convert.ToInt32(registro["CLI_COD"]);
+                    modelo_Cliente.CliNome = Convert.ToString(registro["CLI_NOME"]);
+                    modelo_Cliente.CliCpfCnpj = Convert.ToString(registro["CLI_CPFCNPJ"]);
+                    modelo_Cliente.CliRgInscricaoEstadual = Convert.ToString(registro["CLI_RGIE"]);
+                    modelo_Cliente.CliRazaoSocial = Convert.ToString(registro["CLI_RSOCIAL"]);
+                    modelo_Cliente.CliTipo = Convert.ToInt32(registro["CLI_TIPO"]);
+                    modelo_Cliente.CliCep = Convert.ToString(registro["CLI_CEP"]);
+                    modelo_Cliente.CliEndereco = Convert.ToString(registro["CLI_ENDERECO"]);
+                    modelo_Cliente.CliBairro = Convert.ToString(registro["CLI_BAIRRO"]);
+                    modelo_Cliente.CliTelefone = Convert.ToString(registro["CLI_FONE"]);
+                    modelo_Cliente.CliCelular = Convert.ToString(registro["CLI_CEL"]);
+                    modelo_Cliente.CliEmail = Convert.ToString(registro["CLI_EMAIL"]);
+                    modelo_Cliente.CliEndNumero = Convert.ToString(registro["CLI_ENDNUMERO"]);
+                    modelo_Cliente.CliCidade = Convert.ToString(registro["CLI_CIDADE"]);
+                    modelo_Cliente.CliEstado = Convert.ToString(registro["CLI_ESTADO"]);
+                }
+
+                conexao.Desconectar();
+                return modelo_Cliente;
+            }
+        }
+        public void Excluir(int codigo)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"DELETE FROM CLIENTE 
+                                              WHERE CLI_COD = @CODIGO";
+
+                command.Parameters.AddWithValue("@CODIGO", codigo);
+
+                conexao.Conectar();
+                command.ExecuteNonQuery();
+                conexao.Desconectar();
+            }
+        }
+        public void Incluir(ModeloCliente modelo)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"INSERT INTO CLIENTE(CLI_NOME, 
+                                                            CLI_CPFCNPJ, 
+                                                            CLI_RGIE, 
+                                                            CLI_RSOCIAL, 
+                                                            CLI_TIPO, 
+                                                            CLI_CEP, 
+                                                            CLI_ENDERECO, 
+                                                            CLI_BAIRRO, 
+                                                            CLI_FONE, 
+                                                            CLI_CEL, 
+                                                            CLI_EMAIL, 
+                                                            CLI_ENDNUMERO, 
+                                                            CLI_CIDADE, 
+                                                            CLI_ESTADO) 
                                              
-                                             VALUES(@NOME, @CPFCNPJ, @RGIE, @RSOCIAL, @TIPO, @CEP, @ENDERECO, @BAIRRO, @FONE, @CEL,
-                                                    @EMAIL, @ENDNUMERO, @CIDADE, @ESTADO); SELECT @@IDENTITY;";
+                                                     VALUES(@NOME, 
+                                                            @CPFCNPJ, 
+                                                            @RGIE, 
+                                                            @RSOCIAL, 
+                                                            @TIPO, 
+                                                            @CEP, 
+                                                            @ENDERECO, 
+                                                            @BAIRRO, 
+                                                            @FONE, 
+                                                            @CEL,
+                                                            @EMAIL, 
+                                                            @ENDNUMERO, 
+                                                            @CIDADE, 
+                                                            @ESTADO); SELECT @@IDENTITY;";
 
-        command.Parameters.AddWithValue("@NOME", modelo.CliNome);
-        command.Parameters.AddWithValue("@CPFCNPJ", modelo.CliCpfCnpj);
-        command.Parameters.AddWithValue("@RGIE", modelo.CliRgInscricaoEstadual);
-        command.Parameters.AddWithValue("@RSOCIAL", modelo.CliRazaoSocial);
-        command.Parameters.AddWithValue("@TIPO", modelo.CliTipo);
-        command.Parameters.AddWithValue("@CEP", modelo.CliCep);
-        command.Parameters.AddWithValue("@ENDERECO", modelo.CliEndereco);
-        command.Parameters.AddWithValue("@BAIRRO", modelo.CliBairro);
-        command.Parameters.AddWithValue("@FONE", modelo.CliTelefone);
-        command.Parameters.AddWithValue("@CEL", modelo.CliCelular);
-        command.Parameters.AddWithValue("@EMAIL", modelo.CliEmail);
-        command.Parameters.AddWithValue("@ENDNUMERO", modelo.CliEndNumero);
-        command.Parameters.AddWithValue("@CIDADE", modelo.CliCidade);
-        command.Parameters.AddWithValue("@ESTADO", modelo.CliEstado);
+                command.Parameters.AddWithValue("@NOME", modelo.CliNome);
+                command.Parameters.AddWithValue("@CPFCNPJ", modelo.CliCpfCnpj);
+                command.Parameters.AddWithValue("@RGIE", modelo.CliRgInscricaoEstadual);
+                command.Parameters.AddWithValue("@RSOCIAL", modelo.CliRazaoSocial);
+                command.Parameters.AddWithValue("@TIPO", modelo.CliTipo);
+                command.Parameters.AddWithValue("@CEP", modelo.CliCep);
+                command.Parameters.AddWithValue("@ENDERECO", modelo.CliEndereco);
+                command.Parameters.AddWithValue("@BAIRRO", modelo.CliBairro);
+                command.Parameters.AddWithValue("@FONE", modelo.CliTelefone);
+                command.Parameters.AddWithValue("@CEL", modelo.CliCelular);
+                command.Parameters.AddWithValue("@EMAIL", modelo.CliEmail);
+                command.Parameters.AddWithValue("@ENDNUMERO", modelo.CliEndNumero);
+                command.Parameters.AddWithValue("@CIDADE", modelo.CliCidade);
+                command.Parameters.AddWithValue("@ESTADO", modelo.CliEstado);
 
-        conexao.Conectar();
-        modelo.CliCod = Convert.ToInt32(command.ExecuteScalar());
-        conexao.Desconectar();
-      }
+                conexao.Conectar();
+                modelo.CliCod = Convert.ToInt32(command.ExecuteScalar());
+                conexao.Desconectar();
+            }
+        }
+        public DataTable Localizar(
+            int tipoPesquisaCliente,
+            string valorPesquisa)
+        {
+            string filter = string.Empty;
+
+            if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.NOME))
+                filter = "CLIENTE.CLI_NOME LIKE '{0}%'";
+
+            if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPF) || 
+                tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPNJ))
+                filter = "CLIENTE.CLI_CPFCNPJ = '{0}'";
+
+            using (DataTable tabela = new DataTable())
+            {
+                string sql = string.Format($@"SELECT CLIENTE.CLI_COD,
+                                                     CLIENTE.CLI_NOME,
+                                                     CLIENTE.CLI_CPFCNPJ,
+                                                     CLIENTE.CLI_RGIE,
+                                                     CLIENTE.CLI_RSOCIAL,
+                                                     CLIENTE.CLI_TIPO,
+                                                     CLIENTE.CLI_CEP,
+                                                     CLIENTE.CLI_ENDERECO,
+                                                     CLIENTE.CLI_BAIRRO,
+                                                     CLIENTE.CLI_FONE,
+                                                     CLIENTE.CLI_CEL,
+                                                     CLIENTE.CLI_EMAIL,
+                                                     CLIENTE.CLI_ENDNUMERO,
+                                                     CLIENTE.CLI_CIDADE,
+                                                     CLIENTE.CLI_ESTADO
+	                                            FROM CLIENTE (NOLOCK)
+                                                WHERE {filter}", valorPesquisa);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conexao.StringConexao);
+                adapter.Fill(tabela);
+
+                return tabela;
+            }
+        }
     }
-    public DataTable Localizar(int tipoPesquisaCliente, string valorPesquisa)
-    {
-      string filter = string.Empty;
-
-      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.NOME))
-        filter = "CLIENTE.CLI_NOME LIKE '{0}%'";
-      
-      if (tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPF) || tipoPesquisaCliente == Convert.ToInt32(TipoPesquisa.CPNJ))
-        filter = "CLIENTE.CLI_CPFCNPJ = '{0}'";
-
-      using (DataTable tabela = new DataTable())
-      {
-        string sql = string.Format($@"SELECT CLIENTE.CLI_COD,
-                                            CLIENTE.CLI_NOME,
-                                            CLIENTE.CLI_CPFCNPJ,
-                                            CLIENTE.CLI_RGIE,
-                                            CLIENTE.CLI_RSOCIAL,
-                                            CLIENTE.CLI_TIPO,
-                                            CLIENTE.CLI_CEP,
-                                            CLIENTE.CLI_ENDERECO,
-                                            CLIENTE.CLI_BAIRRO,
-                                            CLIENTE.CLI_FONE,
-                                            CLIENTE.CLI_CEL,
-                                            CLIENTE.CLI_EMAIL,
-                                            CLIENTE.CLI_ENDNUMERO,
-                                            CLIENTE.CLI_CIDADE,
-                                            CLIENTE.CLI_ESTADO
-	                                     FROM CLIENTE (NOLOCK)
-                                       WHERE {filter}", 
-                                             valorPesquisa);       
-
-        SqlDataAdapter adapter = new SqlDataAdapter(sql, conexao.StringConexao);
-        adapter.Fill(tabela);
-
-        return tabela;
-      }
-    }
-  }
 }

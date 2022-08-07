@@ -5,113 +5,115 @@ using ModeloDB.TipoPagamento;
 
 namespace DAL
 {
-  public class DALTipoPagamento : ITipoPagamento
-  {
-    private readonly DALConexao conexao;
-
-    public DALTipoPagamento(DALConexao conn)
+    public class DALTipoPagamento : ITipoPagamento
     {
-      this.conexao = conn;
-    }
+        private readonly DALConexao conexao;
 
-    public void Incluir(ModeloTipoPagamento modelo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = "INSERT INTO TIPOPAGAMENTO(TPA_NOME) " +
-          "                         VALUES (@NOME); SELECT @@IDENTITY;";
-        command.Parameters.AddWithValue("@NOME", modelo.TPagtoNome);
-
-        conexao.Conectar();
-        modelo.TPagtoCod = Convert.ToInt32(command.ExecuteScalar());
-        conexao.Desconectar();
-      }
-    }
-
-    public void Alterar(ModeloTipoPagamento modelo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = "UPDATE TIPOPAGAMENTO SET TPA_NOME = @NOME " +
-          "                                   WHERE TPA_COD = @CODIGO";
-
-        command.Parameters.AddWithValue("@NOME", modelo.TPagtoNome);
-        command.Parameters.AddWithValue("@CODIGO", modelo.TPagtoCod);
-
-        conexao.Conectar();
-        command.ExecuteNonQuery();
-        conexao.Desconectar();
-      }
-    }
-
-    public void Excluir(int codigo)
-    {
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = @"DELETE FROM TIPOPAGAMENTO 
-                                      WHERE TPA_COD = @CODIGO";
-
-        command.Parameters.AddWithValue("@CODIGO", codigo);
-
-        conexao.Conectar();
-        command.ExecuteNonQuery();
-        conexao.Desconectar();
-      }
-    }
-
-    public DataTable Localizar(string nome)
-    {
-      using (DataTable tabela = new DataTable())
-      {
-        string sql = string.Format(@"SELECT TIPOPAGAMENTO.TPA_COD,
-                                            TIPOPAGAMENTO.TPA_NOME
-                                       FROM TIPOPAGAMENTO 
-                                      WHERE TIPOPAGAMENTO.TPA_NOME LIKE '{0}%'", nome);
-
-        SqlDataAdapter Adapter = new SqlDataAdapter(sql, conexao.StringConexao);
-        Adapter.Fill(tabela);
-
-        return tabela;
-      }
-    }
-
-    public ModeloTipoPagamento CarregaTipoDePagamento(int codigo)
-    {
-      ModeloTipoPagamento modelo_Tpagto = new ModeloTipoPagamento();
-
-      using (SqlCommand command = new SqlCommand())
-      {
-        command.Connection = conexao.ObjetoConexao;
-
-        command.CommandText = @"SELECT TIPOPAGAMENTO.TPA_COD,
-                                       TIPOPAGAMENTO.TPA_NOME
-                                  FROM TIPOPAGAMENTO
-                                 WHERE TIPOPAGAMENTO.TPA_COD = @CODIGO";
-
-        command.Parameters.AddWithValue("@CODIGO", codigo);
-
-        conexao.Conectar();
-        SqlDataReader registro = command.ExecuteReader();
-
-        if (registro.HasRows)
+        public DALTipoPagamento(DALConexao conn)
         {
-          registro.Read();
-
-          modelo_Tpagto.TPagtoCod = Convert.ToInt32(registro["TPA_COD"]);
-          modelo_Tpagto.TPagtoNome = Convert.ToString(registro["TPA_NOME"]);
+            this.conexao = conn;
         }
 
-        conexao.Desconectar();
+        public void Incluir(ModeloTipoPagamento modelo)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
 
-        return modelo_Tpagto;
-      }
+                command.CommandText = @"INSERT INTO TIPOPAGAMENTO (TPA_NOME) 
+
+                                                           VALUES (@NOME); SELECT @@IDENTITY;";
+
+                command.Parameters.AddWithValue("@NOME", modelo.TPagtoNome);
+
+                conexao.Conectar();
+                modelo.TPagtoCod = Convert.ToInt32(command.ExecuteScalar());
+                conexao.Desconectar();
+            }
+        }
+
+        public void Alterar(ModeloTipoPagamento modelo)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"UPDATE TIPOPAGAMENTO SET TPA_NOME = @NOME
+                                                           WHERE TPA_COD = @CODIGO";
+
+                command.Parameters.AddWithValue("@NOME", modelo.TPagtoNome);
+                command.Parameters.AddWithValue("@CODIGO", modelo.TPagtoCod);
+
+                conexao.Conectar();
+                command.ExecuteNonQuery();
+                conexao.Desconectar();
+            }
+        }
+
+        public void Excluir(int codigo)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"DELETE FROM TIPOPAGAMENTO 
+                                              WHERE TPA_COD = @CODIGO";
+
+                command.Parameters.AddWithValue("@CODIGO", codigo);
+
+                conexao.Conectar();
+                command.ExecuteNonQuery();
+                conexao.Desconectar();
+            }
+        }
+
+        public DataTable Localizar(string nome)
+        {
+            using (DataTable tabela = new DataTable())
+            {
+                string sql = string.Format(@"SELECT TIPOPAGAMENTO.TPA_COD,
+                                                    TIPOPAGAMENTO.TPA_NOME
+                                               FROM TIPOPAGAMENTO 
+                                              WHERE TIPOPAGAMENTO.TPA_NOME LIKE '{0}%'", nome);
+
+                SqlDataAdapter Adapter = new SqlDataAdapter(sql, conexao.StringConexao);
+                Adapter.Fill(tabela);
+
+                return tabela;
+            }
+        }
+
+        public ModeloTipoPagamento CarregaTipoDePagamento(int codigo)
+        {
+            ModeloTipoPagamento modelo_Tpagto = new ModeloTipoPagamento();
+
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = conexao.ObjetoConexao;
+
+                command.CommandText = @"SELECT TIPOPAGAMENTO.TPA_COD,
+                                               TIPOPAGAMENTO.TPA_NOME
+                                          FROM TIPOPAGAMENTO
+                                         WHERE TIPOPAGAMENTO.TPA_COD = @CODIGO";
+
+                command.Parameters.AddWithValue("@CODIGO", codigo);
+
+                conexao.Conectar();
+                SqlDataReader registro = command.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+
+                    modelo_Tpagto.TPagtoCod = Convert.ToInt32(registro["TPA_COD"]);
+                    modelo_Tpagto.TPagtoNome = Convert.ToString(registro["TPA_NOME"]);
+                }
+
+                conexao.Desconectar();
+
+                return modelo_Tpagto;
+            }
+        }
+
     }
-
-  }
 }
