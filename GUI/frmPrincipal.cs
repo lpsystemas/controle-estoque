@@ -102,8 +102,8 @@ namespace GUI
 
         private void VerificaConexaoComBancoDeDados()
         {
-            string message = "Não foi possivel estabelecer uma conexão com o banco de dados.\n\n" +
-                             "Acesse [Ferramentas - Configurações de Banco de Dados] e informe os dados corretamente.";
+            string message = @"Não foi possivel estabelecer uma conexão com o banco de dados.\n\n
+                               Acesse [Ferramentas - Configurações de Banco de Dados] e informe os dados corretamente.";
 
             if (File.Exists("ConfiguracaoBancoDeDados.txt") && Utils.VerificaConexaoComArquivoDeConfigDB())
             {

@@ -46,7 +46,7 @@ namespace GUI
             rbNomeFornecedor.Checked = true;
 
             btnLocalizar_Click(sender, e);
-            ConfiguraColunasGrid();            
+            ConfiguraColunasGrid();
         }
 
         #region Metodos Auxiliares
@@ -115,7 +115,7 @@ namespace GUI
             dgvDados.Columns[13].HeaderText = "Estado";
             dgvDados.Columns[13].Width = 100;
             dgvDados.Columns[13].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }       
+        }
         private void HabilitaBotaoLocalizar()
         {
             if (rbCnpjFornecedor.Checked == true && txtValorPesquisaFornecedor.TextLength == 18)
@@ -138,7 +138,7 @@ namespace GUI
         {
             if (e.KeyChar != (char)8)
             {
-                if(rbCnpjFornecedor.Checked)
+                if (rbCnpjFornecedor.Checked)
                 {
                     if (!char.IsDigit(e.KeyChar))
                     {
@@ -149,14 +149,16 @@ namespace GUI
                     CampoParaFormatacao campo = CampoParaFormatacao.CNPJ;
                     FormataMascaraDeCampos.FormataMascaraCampoCpfCnpj(campo, txtValorPesquisaFornecedor);
                 }
-                
-            }            
+
+            }
         }
 
         private void txtValorPesquisaFornecedor_Leave(object sender, EventArgs e)
         {
             if (rbCnpjFornecedor.Checked == true && !string.IsNullOrEmpty(txtValorPesquisaFornecedor.Text))
-                lblMsgConsistCnpj.Visible = true ? !Validacao.ValidaCnpj(txtValorPesquisaFornecedor.Text) : lblMsgConsistCnpj.Visible = false;
+                lblMsgConsistCnpj.Visible = true ? 
+                    !Validacao.ValidaCnpj(txtValorPesquisaFornecedor.Text) : 
+                    lblMsgConsistCnpj.Visible = false;
         }
 
         private void txtValorPesquisaFornecedor_TextChanged(object sender, EventArgs e)
@@ -182,10 +184,14 @@ namespace GUI
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
             if (rbNomeFornecedor.Checked == true)
-                dgvDados.DataSource = QueryDB.LocalizarFornecedor(Convert.ToInt32(TipoPesquisa.NOME), txtValorPesquisaFornecedor.Text);            
+                dgvDados.DataSource = QueryDB.LocalizarFornecedor(
+                    Convert.ToInt32(TipoPesquisa.NOME),
+                    txtValorPesquisaFornecedor.Text);
 
             if (rbCnpjFornecedor.Checked == true)
-                dgvDados.DataSource = QueryDB.LocalizarFornecedor(Convert.ToInt32(TipoPesquisa.CPNJ), txtValorPesquisaFornecedor.Text);
+                dgvDados.DataSource = QueryDB.LocalizarFornecedor(
+                    Convert.ToInt32(TipoPesquisa.CPNJ),
+                    txtValorPesquisaFornecedor.Text);
         }
 
         private void rbNomeFornecedor_CheckedChanged(object sender, EventArgs e)

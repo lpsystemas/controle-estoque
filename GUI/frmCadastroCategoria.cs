@@ -9,136 +9,136 @@ using static ConstsEnumerados.Enumerados;
 namespace GUI
 {
     public partial class frmCadastroCategoria : GUI.frmModeloDeFormularioDeCadastro
-  {
-    public DALConexao Conexao
     {
-      get
-      {
-        if (_conexao == null)
-          _conexao = new DALConexao(DadosDaConexao.StringDeConexao);
-        return _conexao;
-      }
-    }
-    private DALConexao _conexao = null;
-
-    public BLLCategoria QueryDB
-    {
-      get
-      {
-        if (_queryDB == null)
-          _queryDB = new BLLCategoria(Conexao);
-        return _queryDB;
-      }
-    }
-    private BLLCategoria _queryDB = null;
-
-    public frmCadastroCategoria()
-    {
-      InitializeComponent();
-    }
-
-    public void LimparDadosDaTela()
-    {
-      txtCodigo.Clear();
-      txtNome.Clear();
-    }
-
-    private void frmCadastroCategoria_Load(object sender, EventArgs e)
-    {
-      this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-    }
-
-    private void btnInserir_Click(object sender, EventArgs e)
-    {
-      this.operacao = Inserir;
-
-      this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
-    }
-
-    private void btnCancelar_Click(object sender, EventArgs e)
-    {
-      this.LimparDadosDaTela();
-      this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-    }
-
-    private void btnSalvar_Click(object sender, EventArgs e)
-    {
-      try
-      {
-        ModeloCategoria modeloCategoria = new ModeloCategoria();
-        
-        modeloCategoria.CatNome = txtNome.Text;      
-
-        if(this.operacao == Inserir)
+        public DALConexao Conexao
         {
-          QueryDB.IncluirCategoria(modeloCategoria, operacao);
-          MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloCategoria.CatCod.ToString());
+            get
+            {
+                if (_conexao == null)
+                    _conexao = new DALConexao(DadosDaConexao.StringDeConexao);
+                return _conexao;
+            }
         }
-        else 
-        {
-          modeloCategoria.CatCod = Convert.ToInt32(txtCodigo.Text);
+        private DALConexao _conexao = null;
 
-          QueryDB.AlterarCategoria(modeloCategoria, operacao);
-          MessageBox.Show("Cadastro alterado com sucesso!!");
+        public BLLCategoria QueryDB
+        {
+            get
+            {
+                if (_queryDB == null)
+                    _queryDB = new BLLCategoria(Conexao);
+                return _queryDB;
+            }
+        }
+        private BLLCategoria _queryDB = null;
+
+        public frmCadastroCategoria()
+        {
+            InitializeComponent();
         }
 
-        this.LimparDadosDaTela();
-        this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
-      }
-      catch(Exception Error)
-      {
-        MessageBox.Show(Error.Message);
-      }
-    }
-    private void btnAlterar_Click(object sender, EventArgs e)
-    {
-      this.operacao = Alterar;
-      
-      this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
-    }
-
-    private void btnExcluir_Click(object sender, EventArgs e)
-    {
-      try
-      {
-        DialogResult exclusao = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
-
-        if(exclusao.ToString() == "Yes")
+        public void LimparDadosDaTela()
         {
-          QueryDB.ExcluirCategoria(Convert.ToInt32(txtCodigo.Text));
-          
-          LimparDadosDaTela();
-          AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+            txtCodigo.Clear();
+            txtNome.Clear();
         }
-      }
-      catch
-      {
-        MessageBox.Show("Impossivél excluir o registro. \nO registro está sendo utilizado em outro local.");
-        this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
-      }
-    }
 
-    private void btnLocalizar_Click(object sender, EventArgs e)
-    {
-      using(frmPesquisarCategoria pesquisar = new frmPesquisarCategoria())
-      {
-        pesquisar.ShowDialog();
-
-        if (pesquisar.codigo != 0)
+        private void frmCadastroCategoria_Load(object sender, EventArgs e)
         {
-          ModeloCategoria modeloCategoria = QueryDB.CarregaCategoria(pesquisar.codigo);
-
-          txtCodigo.Text = Convert.ToString(modeloCategoria.CatCod);
-          txtNome.Text = modeloCategoria.CatNome;
-
-          this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+            this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
         }
-        else
+
+        private void btnInserir_Click(object sender, EventArgs e)
         {
-          this.LimparDadosDaTela();
-          this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+            this.operacao = Inserir;
+
+            this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
         }
-      }      
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.LimparDadosDaTela();
+            this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ModeloCategoria modeloCategoria = new ModeloCategoria();
+
+                modeloCategoria.CatNome = txtNome.Text;
+
+                if (this.operacao == Inserir)
+                {
+                    QueryDB.IncluirCategoria(modeloCategoria, operacao);
+                    MessageBox.Show("Cadastro efetuado com sucesso!! \nCódigo: " + modeloCategoria.CatCod.ToString());
+                }
+                else
+                {
+                    modeloCategoria.CatCod = Convert.ToInt32(txtCodigo.Text);
+
+                    QueryDB.AlterarCategoria(modeloCategoria, operacao);
+                    MessageBox.Show("Cadastro alterado com sucesso!!");
+                }
+
+                this.LimparDadosDaTela();
+                this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+            }
+        }
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            this.operacao = Alterar;
+
+            this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Salvar_Cancelar));
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult exclusao = MessageBox.Show("Deseja excluir o registro?", "Aviso", MessageBoxButtons.YesNo);
+
+                if (exclusao.ToString() == "Yes")
+                {
+                    QueryDB.ExcluirCategoria(Convert.ToInt32(txtCodigo.Text));
+
+                    LimparDadosDaTela();
+                    AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Impossivél excluir o registro. \nO registro está sendo utilizado em outro local.");
+                this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+            }
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            using (frmPesquisarCategoria pesquisar = new frmPesquisarCategoria())
+            {
+                pesquisar.ShowDialog();
+
+                if (pesquisar.codigo != 0)
+                {
+                    ModeloCategoria modeloCategoria = QueryDB.CarregaCategoria(pesquisar.codigo);
+
+                    txtCodigo.Text = Convert.ToString(modeloCategoria.CatCod);
+                    txtNome.Text = modeloCategoria.CatNome;
+
+                    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Alterar_Excluir_Cancelar));
+                }
+                else
+                {
+                    this.LimparDadosDaTela();
+                    this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+                }
+            }
+        }
     }
-  }
 }
