@@ -1,15 +1,11 @@
 ﻿using ModeloDB;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
-  public class DALCategoria : ICategoria 
+    public class DALCategoria : ICategoria 
   {
     private DALConexao conexao;
 
