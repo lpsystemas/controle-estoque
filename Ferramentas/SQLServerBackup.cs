@@ -12,13 +12,13 @@ namespace Ferramentas
 
             //criou a conexao
             SqlConnection cn = new SqlConnection(ConnString);
-            
-      //criou o comando
+
+            //criou o comando
             SqlCommand cm = new SqlCommand();
             cm.Connection = cn;
             cm.CommandText = "SELECT [name] FROM sysdatabases";
-           
-      //criou o datareader
+
+            //criou o datareader
             SqlDataReader dr;
             try
             {
@@ -41,7 +41,10 @@ namespace Ferramentas
             return lista;
         }
 
-        public static void BackupDataBase(String ConnString, string nomeDB, string backupFile)
+        public static void BackupDataBase(
+            String ConnString,
+            string nomeDB,
+            string backupFile)
         {
             //string backup="";
             //criou a conexao
@@ -67,7 +70,10 @@ namespace Ferramentas
 
         }
 
-        public static void RestauraDatabase(String ConnString, string nomeDB, string backupFile)
+        public static void RestauraDatabase(
+            String ConnString,
+            string nomeDB,
+            string backupFile)
         {
             SqlConnection.ClearAllPools();
             SqlConnection cn = new SqlConnection(ConnString);

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using static ConstsEnumerados.Constantes; 
+using static ConstsEnumerados.Constantes;
 
 
 
@@ -25,22 +25,22 @@ namespace Ferramentas
 
                 if (ds.Tables[0].Rows[0]["resultado"].ToString() == CepNaoEncontrado)
                 {
-                  endereco = string.Empty;
-                  bairro = string.Empty;
-                  cidade = string.Empty;
-                  estado = string.Empty;                  
-                  flag = false;                  
-                }                  
-                else 
-                {
-                  endereco = ds.Tables[0].Rows[0]["logradouro"].ToString();
-                  bairro = ds.Tables[0].Rows[0]["bairro"].ToString();
-                  cidade = ds.Tables[0].Rows[0]["cidade"].ToString();
-                  estado = ds.Tables[0].Rows[0]["uf"].ToString();
-                  cep = CEP;
-                  flag = true;
+                    endereco = string.Empty;
+                    bairro = string.Empty;
+                    cidade = string.Empty;
+                    estado = string.Empty;
+                    flag = false;
                 }
-                
+                else
+                {
+                    endereco = ds.Tables[0].Rows[0]["logradouro"].ToString();
+                    bairro = ds.Tables[0].Rows[0]["bairro"].ToString();
+                    cidade = ds.Tables[0].Rows[0]["cidade"].ToString();
+                    estado = ds.Tables[0].Rows[0]["uf"].ToString();
+                    cep = CEP;
+                    flag = true;
+                }
+
             }
             catch (Exception)
             {
