@@ -2,11 +2,10 @@
 using ModeloDB;
 using System;
 using System.Data;
-using System.Security;
 
 namespace BLL
 {
-  public class BLLUnidadeDeMedida
+    public class BLLUnidadeDeMedida
   {
     private DALConexao conexao;
 

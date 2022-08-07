@@ -2,11 +2,10 @@
 using ModeloDB;
 using System;
 using static ConstsEnumerados.Constantes;
-using System.Collections.Generic;
 
 namespace BLL
 {
-  public static class ConsistenciasFornecedor
+    public static class ConsistenciasFornecedor
   {
 
     public static void ValidaCamposObrigatorios(ModeloFornecedor modelo, string operacao)

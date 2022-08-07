@@ -1,12 +1,10 @@
-﻿using Ferramentas;
-using ModeloDB;
+﻿using ModeloDB;
 using System;
 using static ConstsEnumerados.Constantes;
-using System.Collections.Generic;
 
 namespace BLL
 {
-  public static class ConsistenciasUnidadeDeMedida
+    public static class ConsistenciasUnidadeDeMedida
   {
 
     public static void ValidaCamposObrigatorios(ModeloUnidadeDeMedida modelo, string operacao)

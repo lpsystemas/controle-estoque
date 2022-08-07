@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConstsEnumerados
+﻿namespace ConstsEnumerados
 {
-  public class Constantes
+    public class Constantes
   {
     //Operação a ser executada pelo formulario
     public const string Inserir = "Inserir";

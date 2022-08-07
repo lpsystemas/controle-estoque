@@ -1,12 +1,10 @@
-﻿using Ferramentas;
-using ModeloDB;
+﻿using ModeloDB;
 using System;
 using static ConstsEnumerados.Constantes;
-using System.Collections.Generic;
 
 namespace BLL
 {
-  public static class ConsistenciasCategoria
+    public static class ConsistenciasCategoria
   {
     public static void ValidaCamposObrigatorios(ModeloCategoria modelo, string operacao)
     {

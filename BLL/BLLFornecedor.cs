@@ -1,17 +1,10 @@
 ﻿using DAL;
-using Ferramentas;
 using ModeloDB;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static ConstsEnumerados.Constantes;
 
 namespace BLL
 {
-  public class BLLFornecedor
+    public class BLLFornecedor
   {
     private DALConexao conexao;
 

@@ -1,17 +1,11 @@
 ﻿using DAL;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BLL
 {
-  public class BLLUtils
+    public class BLLUtils
   {
     public BLLUtils()
     {
