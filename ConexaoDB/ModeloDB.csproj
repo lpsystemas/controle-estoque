@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria\ICategoria.cs" />
+    <Compile Include="Compra\ICompra.cs" />
+    <Compile Include="Compra\ModeloCompra.cs" />
     <Compile Include="Fornecedor\IFornecedor.cs" />
     <Compile Include="Cliente\ICliente.cs" />
     <Compile Include="Produto\IProduto.cs" />

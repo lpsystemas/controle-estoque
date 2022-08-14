@@ -7,17 +7,17 @@ namespace DAL
 {
     public class DALProduto : IProduto
     {
-        private readonly DALConexao conexao;
+        private readonly DALConexao _conexao;
 
         public DALProduto(DALConexao conexao)
         {
-            this.conexao = conexao;
+            _conexao = conexao;
         }
         public void Alterar(ModeloProduto modelo)
         {
             using (SqlCommand command = new SqlCommand())
             {
-                command.Connection = conexao.ObjetoConexao;
+                command.Connection = _conexao.ObjetoConexao;
 
                 command.CommandText = @"UPDATE PRODUTO SET PRO_NOME = @NOME,
                                                            PRO_DESCRICAO = @DESC,
@@ -47,9 +47,9 @@ namespace DAL
                 command.Parameters.AddWithValue("@CATEGORIA", modelo.CatCod);
                 command.Parameters.AddWithValue("@SUBCAT", modelo.SCatCod);
 
-                conexao.Conectar();
+                _conexao.Conectar();
                 command.ExecuteNonQuery();
-                conexao.Desconectar();
+                _conexao.Desconectar();
             }
         }
 
@@ -59,7 +59,7 @@ namespace DAL
 
             using (SqlCommand command = new SqlCommand())
             {
-                command.Connection = conexao.ObjetoConexao;
+                command.Connection = _conexao.ObjetoConexao;
 
                 command.CommandText = @"SELECT PRODUTO.PRO_COD,
                                                PRODUTO.PRO_NOME,
@@ -76,7 +76,7 @@ namespace DAL
 
                 command.Parameters.AddWithValue("@CODIGO", codigo);
 
-                conexao.Conectar();
+                _conexao.Conectar();
                 SqlDataReader registro = command.ExecuteReader();
 
                 if (registro.HasRows)
@@ -102,7 +102,7 @@ namespace DAL
 
                 }
 
-                conexao.Desconectar();
+                _conexao.Desconectar();
                 return modelo_Produto;
             }
         }
@@ -111,16 +111,16 @@ namespace DAL
         {
             using (SqlCommand command = new SqlCommand())
             {
-                command.Connection = conexao.ObjetoConexao;
+                command.Connection = _conexao.ObjetoConexao;
 
                 command.CommandText = @"DELETE FROM PRODUTO 
                                               WHERE PRO_COD = @CODIGO";
 
                 command.Parameters.AddWithValue("@CODIGO", codigo);
 
-                conexao.Conectar();
+                _conexao.Conectar();
                 command.ExecuteNonQuery();
-                conexao.Desconectar();
+                _conexao.Desconectar();
             }
         }
 
@@ -128,7 +128,7 @@ namespace DAL
         {
             using (SqlCommand command = new SqlCommand())
             {
-                command.Connection = conexao.ObjetoConexao;
+                command.Connection = _conexao.ObjetoConexao;
 
                 command.CommandText = @"INSERT INTO PRODUTO(PRO_NOME, 
                                                             PRO_DESCRICAO, 
@@ -166,9 +166,9 @@ namespace DAL
                 command.Parameters.AddWithValue("@CATEGORIA", modelo.CatCod);
                 command.Parameters.AddWithValue("@SUBCAT", modelo.SCatCod);
 
-                conexao.Conectar();
+                _conexao.Conectar();
                 modelo.ProdCod = Convert.ToInt32(command.ExecuteScalar());
-                conexao.Desconectar();
+                _conexao.Desconectar();
             }
         }
 
@@ -202,7 +202,7 @@ namespace DAL
                                     
                                               WHERE PRODUTO.PRO_NOME LIKE '{0}%'", nome);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conexao.StringConexao);
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, _conexao.StringConexao);
                 adapter.Fill(tabela);
 
                 return tabela;

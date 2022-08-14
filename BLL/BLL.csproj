@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria\BLLCategoria.cs" />
+    <Compile Include="Compra\BLLCompra.cs" />
     <Compile Include="Fornecedor\BLLFornecedor.cs" />
     <Compile Include="Cliente\BLLCliente.cs" />
     <Compile Include="Produto\BLLProduto.cs" />
