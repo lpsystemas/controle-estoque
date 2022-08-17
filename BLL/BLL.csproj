@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="Categoria\BLLCategoria.cs" />
     <Compile Include="Compra\BLLCompra.cs" />
+    <Compile Include="Compra\BLLItensCompra.cs" />
+    <Compile Include="Compra\ConsistenciasCompra.cs" />
+    <Compile Include="Compra\ConsistenciasItensCompra.cs" />
     <Compile Include="Fornecedor\BLLFornecedor.cs" />
     <Compile Include="Cliente\BLLCliente.cs" />
     <Compile Include="Produto\BLLProduto.cs" />

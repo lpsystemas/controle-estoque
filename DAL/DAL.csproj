@@ -47,6 +47,7 @@
     <Compile Include="DALFornecedor.cs" />
     <Compile Include="DALCliente.cs" />
     <Compile Include="DALConexao.cs" />
+    <Compile Include="DALItensCompra.cs" />
     <Compile Include="DALProduto.cs" />
     <Compile Include="DALSubCategoria.cs" />
     <Compile Include="DALTipoPagamento.cs" />

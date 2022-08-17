@@ -43,9 +43,9 @@ namespace BLL.Compra
             ModeloCompra modelo,
             string operacao)
         {
-            //consistenciasproduto.validacamposobrigatorios(
-            //    modelo,
-            //    operacao);
+            ConsistenciasCompra.ValidaCamposObrigatoriosCompra(
+                modelo,
+                operacao);
 
             DALObj.Incluir(modelo);
         }
@@ -54,9 +54,9 @@ namespace BLL.Compra
             ModeloCompra modelo,
             string operacao)
         {
-            //ConsistenciasProduto.ValidaCamposObrigatorios(
-            //    modelo,
-            //    operacao);
+            ConsistenciasCompra.ValidaCamposObrigatoriosCompra(
+                modelo,
+                operacao);
 
             DALObj.Alterar(modelo);
         }
