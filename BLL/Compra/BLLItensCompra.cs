@@ -37,7 +37,7 @@ namespace BLL.Compra
         }
         private DALUtils _utils = null;
 
-        public void Alterar(
+        public void AlterarItensCompra(
             ModeloItensCompra modelo,
             string operacao)
         {
@@ -53,7 +53,7 @@ namespace BLL.Compra
             throw new System.NotImplementedException();
         }
 
-        public void Excluir(
+        public void ExcluirItemCompra(
             ModeloItensCompra modelo,
             string operacao)
         {
@@ -69,7 +69,7 @@ namespace BLL.Compra
             DALObj.ExcluirTodosOsItens(codigo);
         }
 
-        public void Incluir(
+        public void IncluirItens(
             ModeloItensCompra modelo,
             string operacao)
         {

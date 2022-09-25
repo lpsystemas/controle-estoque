@@ -48,6 +48,7 @@
     <Compile Include="Compra\BLLParcelasCompra.cs" />
     <Compile Include="Compra\Consistencias\ConsistenciasCompra.cs" />
     <Compile Include="Compra\Consistencias\ConsistenciasItensCompra.cs" />
+    <Compile Include="Compra\Consistencias\ConsistenciasParcelasCompra.cs" />
     <Compile Include="Fornecedor\BLLFornecedor.cs" />
     <Compile Include="Cliente\BLLCliente.cs" />
     <Compile Include="Produto\BLLProduto.cs" />

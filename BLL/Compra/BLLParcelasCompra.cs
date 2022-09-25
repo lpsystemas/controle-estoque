@@ -2,6 +2,7 @@
 using DAL;
 using ModeloDB.Compra;
 using ModeloDB.Compra.Interfaces;
+using System.Data;
 
 namespace BLL.Compra
 {
@@ -73,15 +74,17 @@ namespace BLL.Compra
             DALObj.Excluir(modelo);
         }
 
-        public void ExcluirTodasParcelas(
-            ModeloParcelasCompra modelo,
-            string operacao)
+        public DataTable LocalizarPorCodigoDaCompra(
+            ModeloParcelasCompra modelo)
         {
-            ConsistenciasParcelasCompra.ValidaCamposObrigatoriosParcelasCompra(
-                modelo,
-                operacao);
-
-            DALObj.ExcluirTodasAsParcelas(modelo.ComCod);
+            return DALObj.Localizar(modelo.ComCod);
         }
+
+        public ModeloParcelasCompra CarregaParcelasDaCompra(int codigoParcela, int codigoCompra)
+        {
+            return DALObj.CarregaParcelasCompra(codigoParcela, codigoCompra);
+        }
+
+
     }
 }
