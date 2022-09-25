@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ModeloDB.Fornecedor
+namespace ModeloDB.Fornecedor.Interfaces
 {
     public interface IFornecedor
     {

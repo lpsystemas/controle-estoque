@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ModeloDB.Compra
+namespace ModeloDB.Compra.Interfaces
 {
     public interface IItensCompra
     {

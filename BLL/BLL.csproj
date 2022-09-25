@@ -45,22 +45,23 @@
     <Compile Include="Categoria\BLLCategoria.cs" />
     <Compile Include="Compra\BLLCompra.cs" />
     <Compile Include="Compra\BLLItensCompra.cs" />
-    <Compile Include="Compra\ConsistenciasCompra.cs" />
-    <Compile Include="Compra\ConsistenciasItensCompra.cs" />
+    <Compile Include="Compra\BLLParcelasCompra.cs" />
+    <Compile Include="Compra\Consistencias\ConsistenciasCompra.cs" />
+    <Compile Include="Compra\Consistencias\ConsistenciasItensCompra.cs" />
     <Compile Include="Fornecedor\BLLFornecedor.cs" />
     <Compile Include="Cliente\BLLCliente.cs" />
     <Compile Include="Produto\BLLProduto.cs" />
     <Compile Include="SubCategoria\BLLSubCategoria.cs" />
     <Compile Include="TipoPagamento\BLLTipoPagamento.cs" />
     <Compile Include="UnidadeDeMedida\BLLUnidadeDeMedida.cs" />
-    <Compile Include="Util\BLLUtils.cs" />
-    <Compile Include="Fornecedor\ConsistenciasFornecedor.cs" />
-    <Compile Include="Produto\ConsistenciasProduto.cs" />
-    <Compile Include="UnidadeDeMedida\ConsistenciasUnidadeDeMedida.cs" />
-    <Compile Include="TipoPagamento\ConsistenciasTipoPagamento.cs" />
-    <Compile Include="SubCategoria\ConsistenciasSubCategoria.cs" />
-    <Compile Include="Categoria\ConsistenciasCategoria.cs" />
-    <Compile Include="Cliente\ConsistenciasCliente.cs" />
+    <Compile Include="Util\ValidaArquivoConfigDB.cs" />
+    <Compile Include="Fornecedor\Consistencias\ConsistenciasFornecedor.cs" />
+    <Compile Include="Produto\Consistencias\ConsistenciasProduto.cs" />
+    <Compile Include="UnidadeDeMedida\Consistencias\ConsistenciasUnidadeDeMedida.cs" />
+    <Compile Include="TipoPagamento\Consistencias\ConsistenciasTipoPagamento.cs" />
+    <Compile Include="SubCategoria\Consistencias\ConsistenciasSubCategoria.cs" />
+    <Compile Include="Categoria\Consistencias\ConsistenciasCategoria.cs" />
+    <Compile Include="Cliente\Consistencias\ConsistenciasCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

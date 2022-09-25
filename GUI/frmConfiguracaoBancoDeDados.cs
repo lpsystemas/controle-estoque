@@ -10,16 +10,16 @@ namespace GUI
 {
     public partial class frmConfiguracaoBancoDeDados : Form
     {
-        public BLLUtils Utils
+        public ValidaArquivoConfigDB Utils
         {
             get
             {
                 if (_utils == null)
-                    _utils = new BLLUtils();
+                    _utils = new ValidaArquivoConfigDB();
                 return _utils;
             }
         }
-        private BLLUtils _utils = null;
+        private ValidaArquivoConfigDB _utils = null;
 
         public frmConfiguracaoBancoDeDados()
         {

@@ -5,9 +5,9 @@ using System.IO;
 
 namespace BLL.Util
 {
-    public class BLLUtils
+    public class ValidaArquivoConfigDB
     {
-        public BLLUtils()
+        public ValidaArquivoConfigDB()
         {
 
         }

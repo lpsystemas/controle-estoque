@@ -1,4 +1,5 @@
 ﻿using ModeloDB.Fornecedor;
+using ModeloDB.Fornecedor.Interfaces;
 using System;
 using System.Data;
 using System.Data.SqlClient;

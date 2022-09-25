@@ -2,7 +2,7 @@
 using System;
 using static ConstsEnumerados.Constantes;
 
-namespace BLL.UnidadeDeMedida
+namespace BLL.UnidadeDeMedida.Consistencias
 {
     public static class ConsistenciasUnidadeDeMedida
     {

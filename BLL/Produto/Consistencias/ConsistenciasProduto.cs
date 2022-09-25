@@ -2,7 +2,7 @@
 using System;
 using static ConstsEnumerados.Constantes;
 
-namespace BLL.Produto
+namespace BLL.Produto.Consistencias
 {
     public static class ConsistenciasProduto
     {

@@ -8,16 +8,16 @@ namespace GUI
 {
     public partial class frmPrincipal : Form
     {
-        public BLLUtils Utils
+        public ValidaArquivoConfigDB Utils
         {
             get
             {
                 if (_utils == null)
-                    _utils = new BLLUtils();
+                    _utils = new ValidaArquivoConfigDB();
                 return _utils;
             }
         }
-        private BLLUtils _utils = null;
+        private ValidaArquivoConfigDB _utils = null;
 
         public frmPrincipal()
         {

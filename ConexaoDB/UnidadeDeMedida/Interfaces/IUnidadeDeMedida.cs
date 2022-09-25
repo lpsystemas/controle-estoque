@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ModeloDB.UnidadeDeMedida
+namespace ModeloDB.UnidadeDeMedida.Interfaces
 {
     public interface IUnidadeDeMedida
     {

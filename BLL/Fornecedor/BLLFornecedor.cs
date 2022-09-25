@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.Fornecedor.Consistencias;
+using DAL;
 using ModeloDB.Fornecedor;
+using ModeloDB.Fornecedor.Interfaces;
 using System.Data;
 
 namespace BLL.Fornecedor

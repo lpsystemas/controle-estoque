@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.UnidadeDeMedida.Consistencias;
+using DAL;
 using ModeloDB.UnidadeDeMedida;
+using ModeloDB.UnidadeDeMedida.Interfaces;
 using System;
 using System.Data;
 

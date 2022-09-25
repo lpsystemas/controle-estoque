@@ -1,4 +1,5 @@
 ﻿using ModeloDB.Compra;
+using ModeloDB.Compra.Interfaces;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -148,7 +149,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@PRO_COD", modelo.ProCod);
 
                 _conexao.Conectar();
-                modelo.ComCod = Convert.ToInt32(command.ExecuteScalar());
+                command.ExecuteScalar();
                 _conexao.Desconectar();
             }
         }

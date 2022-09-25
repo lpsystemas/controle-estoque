@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace ModeloDB.SubCategoria
+namespace ModeloDB.SubCategoria.Interfaces
 {
     public interface ISubCategoria
     {

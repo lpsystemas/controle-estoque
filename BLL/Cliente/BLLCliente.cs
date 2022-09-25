@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.Cliente.Consistencias;
+using DAL;
 using ModeloDB.Cliente;
+using ModeloDB.Cliente.Interfaces;
 using System.Data;
 
 namespace BLL.Cliente

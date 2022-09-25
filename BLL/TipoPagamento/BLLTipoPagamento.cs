@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BLL.TipoPagamento.Consistencias;
+using DAL;
 using ModeloDB.TipoPagamento;
 using System.Data;
 

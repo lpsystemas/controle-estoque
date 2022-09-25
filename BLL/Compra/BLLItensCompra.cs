@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.Compra.Consistencias;
+using DAL;
 using ModeloDB.Compra;
+using ModeloDB.Compra.Interfaces;
 using System.Data;
 
 namespace BLL.Compra

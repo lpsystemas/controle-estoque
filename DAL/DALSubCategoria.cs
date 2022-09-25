@@ -1,4 +1,5 @@
 ﻿using ModeloDB.SubCategoria;
+using ModeloDB.SubCategoria.Interfaces;
 using System;
 using System.Data;
 using System.Data.SqlClient;

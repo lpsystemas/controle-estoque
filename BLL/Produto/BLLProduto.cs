@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.Produto.Consistencias;
+using DAL;
 using ModeloDB.Produto;
+using ModeloDB.Produto.Interfaces;
 using System.Data;
 
 namespace BLL.Produto

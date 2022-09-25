@@ -1,4 +1,5 @@
 ﻿using ModeloDB.UnidadeDeMedida;
+using ModeloDB.UnidadeDeMedida.Interfaces;
 using System;
 using System.Data;
 using System.Data.SqlClient;

@@ -41,17 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categoria\ICategoria.cs" />
-    <Compile Include="Compra\ICompra.cs" />
-    <Compile Include="Compra\IItensCompra.cs" />
+    <Compile Include="Categoria\Interfaces\ICategoria.cs" />
+    <Compile Include="Compra\Interfaces\ICompra.cs" />
+    <Compile Include="Compra\Interfaces\IItensCompra.cs" />
+    <Compile Include="Compra\Interfaces\IParcelasCompra.cs" />
     <Compile Include="Compra\ModeloCompra.cs" />
     <Compile Include="Compra\ModeloItensCompra.cs" />
-    <Compile Include="Fornecedor\IFornecedor.cs" />
-    <Compile Include="Cliente\ICliente.cs" />
-    <Compile Include="Produto\IProduto.cs" />
-    <Compile Include="SubCategoria\ISubCategoria.cs" />
-    <Compile Include="TipoPagamento\ITipoPagamento.cs" />
-    <Compile Include="UnidadeDeMedida\IUnidadeDeMedida.cs" />
+    <Compile Include="Compra\ModeloParcelasCompra.cs" />
+    <Compile Include="Fornecedor\Interfaces\IFornecedor.cs" />
+    <Compile Include="Cliente\Interfaces\ICliente.cs" />
+    <Compile Include="Produto\Interfaces\IProduto.cs" />
+    <Compile Include="SubCategoria\Interfaces\ISubCategoria.cs" />
+    <Compile Include="TipoPagamento\Interfaces\ITipoPagamento.cs" />
+    <Compile Include="UnidadeDeMedida\Interfaces\IUnidadeDeMedida.cs" />
     <Compile Include="Categoria\ModeloCategoria.cs" />
     <Compile Include="Fornecedor\ModeloFornecedor.cs" />
     <Compile Include="Cliente\ModeloCliente.cs" />
@@ -60,6 +62,12 @@
     <Compile Include="TipoPagamento\ModeloTipoPagamento.cs" />
     <Compile Include="UnidadeDeMedida\ModeloUnidadeDeMedida.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Venda\Interfaces\IItensVenda.cs" />
+    <Compile Include="Venda\Interfaces\IParcelasVenda.cs" />
+    <Compile Include="Venda\Interfaces\IVenda.cs" />
+    <Compile Include="Venda\ModeloItensVenda.cs" />
+    <Compile Include="Venda\ModeloParcelasVenda.cs" />
+    <Compile Include="Venda\ModeloVenda.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Consts\ConstsEnumerados.csproj">

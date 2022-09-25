@@ -1,4 +1,5 @@
 ﻿using ModeloDB.Compra;
+using ModeloDB.Compra.Interfaces;
 using System;
 using System.Data;
 using System.Data.SqlClient;

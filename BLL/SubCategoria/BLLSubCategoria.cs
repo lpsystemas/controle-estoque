@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.SubCategoria.Consistencias;
+using DAL;
 using ModeloDB.SubCategoria;
+using ModeloDB.SubCategoria.Interfaces;
 using System.Data;
 
 

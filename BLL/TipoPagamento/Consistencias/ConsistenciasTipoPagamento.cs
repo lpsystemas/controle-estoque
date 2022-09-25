@@ -2,7 +2,7 @@
 using System;
 using static ConstsEnumerados.Constantes;
 
-namespace BLL.TipoPagamento
+namespace BLL.TipoPagamento.Consistencias
 {
     public static class ConsistenciasTipoPagamento
     {

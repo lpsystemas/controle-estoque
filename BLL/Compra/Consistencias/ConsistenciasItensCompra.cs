@@ -2,7 +2,7 @@
 using System;
 using static ConstsEnumerados.Constantes;
 
-namespace BLL.Compra
+namespace BLL.Compra.Consistencias
 {
     public static class ConsistenciasItensCompra
     {

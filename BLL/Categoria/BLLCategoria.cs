@@ -1,5 +1,7 @@
-﻿using DAL;
+﻿using BLL.Categoria.Consistencias;
+using DAL;
 using ModeloDB.Categoria;
+using ModeloDB.Categoria.Interfaces;
 using System.Data;
 
 namespace BLL.Categoria
