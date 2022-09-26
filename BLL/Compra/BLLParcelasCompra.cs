@@ -74,6 +74,17 @@ namespace BLL.Compra
             DALObj.Excluir(modelo);
         }
 
+        public void ExcluirTodasAsParcela(
+            ModeloParcelasCompra modelo,
+            string operacao)
+        {
+            ConsistenciasParcelasCompra.ValidaCamposObrigatoriosParcelasCompra(
+                modelo,
+                operacao);
+
+            DALObj.ExcluirTodasAsParcelas(modelo.ComCod);
+        }
+
         public DataTable LocalizarPorCodigoDaCompra(
             ModeloParcelasCompra modelo)
         {
@@ -85,6 +96,15 @@ namespace BLL.Compra
             return DALObj.CarregaParcelasCompra(codigoParcela, codigoCompra);
         }
 
+        public void EfetuarPagamentoParcelas(
+            ModeloParcelasCompra modelo)
+        {
+            ConsistenciasParcelasCompra.ConsisteDataPagamentoPreenchida(modelo.PcoDataPagto);
 
+            DALObj.EfetuaPagamentoParcela(
+                modelo.ComCod,
+                modelo.PcoCod,
+                modelo.PcoDataPagto);                
+        }
     }
 }

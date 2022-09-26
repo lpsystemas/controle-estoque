@@ -33,5 +33,11 @@ namespace BLL.Compra.Consistencias
             if (dataVencimento.Year < data.Year)
                 throw new Exception("Ano de vencimento da parcela inferior ao ano atual");
         }
+
+        public static void ConsisteDataPagamentoPreenchida(DateTime dtPagamento)
+        {
+            if(dtPagamento == null)
+                throw new ArgumentException("Data de pagamento é obrigatório");
+        }
     }
 }

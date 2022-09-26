@@ -52,7 +52,7 @@ namespace BLL.Compra
             DALObj.Incluir(modelo);
         }
 
-        public void AlterarProduto(
+        public void AlterarCompra(
             ModeloCompra modelo,
             string operacao)
         {
@@ -63,7 +63,7 @@ namespace BLL.Compra
             DALObj.Alterar(modelo);
         }
 
-        public void ExcluirProduto(int codigo)
+        public void ExcluirCompra(int codigo)
         {
             DALObj.Excluir(codigo);
         }
@@ -93,7 +93,7 @@ namespace BLL.Compra
             return DALObj.LocalizarTodas();
         }
 
-        public ModeloCompra CarregaCompra(int codigo)
+        public ModeloCompra CarregarCompra(int codigo)
         {
             return DALObj.CarregaCompra(codigo);
         }

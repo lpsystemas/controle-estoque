@@ -45,6 +45,17 @@ namespace GUI
         }
         private BLLItensCompra _queryDB_ItensCompra = null;
 
+        public BLLParcelasCompra QueryDB_ParcelaCompra
+        {
+            get
+            {
+                if (_queryDB_ParcelaCompra == null)
+                    _queryDB_ParcelaCompra = new BLLParcelasCompra(Conexao);
+                return _queryDB_ParcelaCompra;
+            }
+        }
+        private BLLParcelasCompra _queryDB_ParcelaCompra = null;
+
         public frmMovimentacaoCompra()
         {
             InitializeComponent();
@@ -136,10 +147,14 @@ namespace GUI
 
         private void btSalvarFinal_Click(object sender, EventArgs e)
         {
+            Conexao.Conectar();
+            Conexao.IniciarTransacao();
+
             try
             {
                 ModeloCompra modeloCompra = new ModeloCompra();
                 ModeloItensCompra itensCompra = new ModeloItensCompra();
+                ModeloParcelasCompra parcelasCompra = new ModeloParcelasCompra();
                 
 
                 modeloCompra.ComData = dtDataCompra.Value;
@@ -162,47 +177,82 @@ namespace GUI
                         itensCompra.ProCod = Convert.ToInt32(dgvItens.Rows[i].Cells[0].Value);
                         itensCompra.ItcQtde = Convert.ToDouble(dgvItens.Rows[i].Cells[2].Value);
                         itensCompra.ItcValor = Convert.ToDouble(dgvItens.Rows[i].Cells[3].Value);
-                        QueryDB_ItensCompra.Incluir(itensCompra, Inserir);
+
+                        QueryDB_ItensCompra.IncluirItens(itensCompra, Inserir);
                         //alterar a quantidade de produtos comprados na tabela de produtos
                         //Trigger
                     }
                     // inserir os itens na tabela parcelas compra
                     for (int i = 0; i < dgvParcelas.RowCount; i++)
                     {
-                        mparcelas.ComCod = modeloCompra.ComCod;
-                        mparcelas.PcoCod = Convert.ToInt32(dgvParcelas.Rows[i].Cells[0].Value);
-                        mparcelas.PcoValor = Convert.ToDouble(dgvParcelas.Rows[i].Cells[1].Value);
-                        mparcelas.PcoDataVecto = Convert.ToDateTime(dgvParcelas.Rows[i].Cells[2].Value);
-                        bparcelas.Incluir(mparcelas);
+                        parcelasCompra.ComCod = modeloCompra.ComCod;
+                        parcelasCompra.PcoCod = Convert.ToInt32(dgvParcelas.Rows[i].Cells[0].Value);
+                        parcelasCompra.PcoValor = Convert.ToDouble(dgvParcelas.Rows[i].Cells[1].Value);
+                        parcelasCompra.PcoDataVecto = Convert.ToDateTime(dgvParcelas.Rows[i].Cells[2].Value);
+
+                        QueryDB_ParcelaCompra.IncluirParcelas(parcelasCompra, Inserir);
                     }
                     MessageBox.Show("Compra inserida com sucesso!! \nCódigo da compra: " + modeloCompra.ComCod.ToString());
                 }
                 else
                 {
-                    modeloCompra.ProdCod = Convert.ToInt32(txtCodigoPrd.Text);
+                    //alterar uma compra
+                    modeloCompra.ComCod = Convert.ToInt32(txtComCodigo.Text);
+                    QueryDB_Compra.AlterarCompra(modeloCompra, Alterar);
 
-                    if (this.foto == Alterar)
+                    QueryDB_ItensCompra.ExcluirTodosOsItens(modeloCompra.ComCod);
+                    //cadastrar os itens da compra
+                    for (int i = 0; i < dgvItens.RowCount; i++)
                     {
-                        var modeloTemp = new ModeloProduto();
-                        modeloTemp = QueryDB_Compra.CarregaProduto(modeloCompra.ProdCod);
-                        modeloCompra.ProdFoto = modeloTemp.ProdFoto;
+                        itensCompra.ItcCod = i + 1;
+                        itensCompra.ComCod = modeloCompra.ComCod;
+                        itensCompra.ProCod = Convert.ToInt32(dgvItens.Rows[i].Cells[0].Value);
+                        itensCompra.ItcQtde = Convert.ToDouble(dgvItens.Rows[i].Cells[2].Value);
+                        itensCompra.ItcValor = Convert.ToDouble(dgvItens.Rows[i].Cells[3].Value);
+                        QueryDB_ItensCompra.IncluirItens(itensCompra, Inserir);
+                        //alterar a quantidade de produtos comprados na tabela de produtos
+                        //Trigger
                     }
-                    else
+                    QueryDB_ParcelaCompra.ExcluirTodasAsParcela(parcelasCompra, Excluir);
+                    // inserir os itens na tabela parcelas compra
+                    for (int i = 0; i < dgvParcelas.RowCount; i++)
                     {
-                        modeloCompra.CarregaImagem(this.foto);
+                        parcelasCompra.ComCod = modeloCompra.ComCod;
+                        parcelasCompra.PcoCod = Convert.ToInt32(dgvParcelas.Rows[i].Cells[0].Value);
+                        parcelasCompra.PcoValor = Convert.ToDouble(dgvParcelas.Rows[i].Cells[1].Value);
+                        parcelasCompra.PcoDataVecto = Convert.ToDateTime(dgvParcelas.Rows[i].Cells[2].Value);
+                        QueryDB_ParcelaCompra.IncluirParcelas(parcelasCompra, Inserir);
                     }
-
-                    QueryDB_Compra.AlterarProduto(modeloCompra, operacao);
-                    MessageBox.Show("Cadastro alterado com sucesso!!");
+                    MessageBox.Show("Cadastro alterado com Sucesso");
                 }
 
                 this.LimparDadosDaTela();
+                pnFinalizaCompra.Visible = false;
                 this.AlteraBotoes(Convert.ToInt32(OperacaoFormulario.Inserir_Localizar));
+                Conexao.TerminarTransacao();
+                Conexao.Desconectar();
             }
             catch (Exception Error)
             {
                 MessageBox.Show(Error.Message);
+                Conexao.CancelarTransacao();
+                Conexao.Desconectar();
             }
+        }
+
+        private void LimparDadosDaTela()
+        {
+            txtComCodigo.Clear(); 
+            txtNFiscal.Clear(); 
+            txtForCodigo.Clear(); 
+            txtProCod.Clear();
+
+            lProduto.Text = "Informe o código do produto ou clique em localizar";
+
+            txtQtde.Clear(); 
+            txtValor.Clear(); 
+            txtTotalCompra.Clear();
+            dgvItens.Rows.Clear(); //limpar as linhas da dataGrid
         }
     }
 }
